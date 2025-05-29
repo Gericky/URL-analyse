@@ -39,4 +39,4 @@ def copy_and_clean_files_unique(src_folder, dest_folder):
             print('-' * 40)
 
 # 示例调用
-copy_and_clean_files_unique('../document', './output')
+copy_and_clean_files_unique('../document', '../output')
