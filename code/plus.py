@@ -27,7 +27,7 @@ def copy_and_clean_files_unique(src_folder, dest_folder):
 
             # 自动尝试多种编码打开文件
             success = False
-            for encoding in ['utf-8', 'gb18030', 'latin1']:
+            for encoding in ['utf-8', 'latin1']:
                 try:
                     with open(src_path, 'r', encoding=encoding, errors='strict') as src_file:
                         for line in src_file:
