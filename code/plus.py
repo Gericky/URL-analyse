@@ -4,6 +4,8 @@ import os
 def process_line(line):
     if '|' in line:
         after_pipe = line.split('|', 1)[1].strip()
+        if not after_pipe or not (after_pipe[0].isalnum() or after_pipe[0] == '['):
+            return ''
         if '/' in after_pipe:
             return after_pipe.split('/', 1)[0].strip()
         return after_pipe.strip()
@@ -14,7 +16,6 @@ def copy_and_clean_files_unique(src_folder, dest_folder):
     abs_src = os.path.abspath(src_folder)
     abs_dest = os.path.abspath(dest_folder)
     os.makedirs(abs_dest, exist_ok=True)
-
     # 遍历所有无后缀文件
     for filename in os.listdir(abs_src):
         src_path = os.path.join(abs_src, filename)
