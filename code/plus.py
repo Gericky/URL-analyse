@@ -52,4 +52,10 @@ def copy_and_clean_files_unique(src_folder, dest_folder):
             print('-' * 40)
 
 # 示例调用（可根据你的路径修改）
-copy_and_clean_files_unique('../document', '../output')
+def main():
+    src_folder = '../document'
+    dest_folder = '../output'
+    copy_and_clean_files_unique(src_folder, dest_folder)
+
+if __name__ == "__main__":
+    main()
