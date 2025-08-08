@@ -1,3 +1,4 @@
+#代码功能：处理document文件夹内部的无后缀文件，提取二级域名的内容，并去重后写入到micro_output文件夹中
 import os
 
 # 提取出 "shuc-pc-hunt.ksord.com" 这种格式的内容
@@ -56,10 +57,10 @@ def copy_and_clean_files_unique(src_folder, dest_folder):
             print(f"写入去重后内容到：{dest_path}")
             print('-' * 40)
 
-# 示例调用（可根据你的路径修改）
+
 def main():
-    src_folder = '../document'
-    dest_folder = '../micro_output'
+    src_folder = './document'
+    dest_folder = './micro_output'
     copy_and_clean_files_unique(src_folder, dest_folder)
 
 if __name__ == "__main__":
