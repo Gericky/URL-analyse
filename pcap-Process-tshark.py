@@ -1,3 +1,6 @@
+# 该脚本用于批量处理 pcap 文件，提取包含指定域名关键字的 HTTP 请求，并将结果保存为 JSON 文件。
+# 配置项包括 tshark 路径、pcap 文件夹路径、输出文件夹路径和目标域名关键字。
+
 import subprocess
 import os
 import json
