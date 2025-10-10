@@ -147,29 +147,77 @@ def process_file(filename, label):
 if __name__ == "__main__":
     total_start = perf_counter()
 
-    good_results = process_file("good-10.txt", "normal")
-    bad_results = process_file("bad-10.txt", "attack")
+    good_results = process_file("good-500.txt", "normal")
+    bad_results = process_file("bad-500.txt", "attack")
 
     all_results = good_results + bad_results
 
     total_elapsed = perf_counter() - total_start
     print(f"🎯 全部检测完成，总用时 {total_elapsed:.2f} 秒")
     
-    # 计算准确率统计
-    correct = sum(1 for r in all_results if r['predicted'] == r['true_label'])
+# ========== 详细的混淆矩阵统计 ==========
+    # TP (True Positive): 真实是攻击,预测也是攻击 ✅
+    tp = sum(1 for r in all_results if r['true_label'] == "1" and r['predicted'] == "1")
+    
+    # TN (True Negative): 真实是正常,预测也是正常 ✅
+    tn = sum(1 for r in all_results if r['true_label'] == "0" and r['predicted'] == "0")
+    
+    # FP (False Positive): 真实是正常,预测是攻击 ❌ (误报)
+    fp = sum(1 for r in all_results if r['true_label'] == "0" and r['predicted'] == "1")
+    
+    # FN (False Negative): 真实是攻击,预测是正常 ❌ (漏报)
+    fn = sum(1 for r in all_results if r['true_label'] == "1" and r['predicted'] == "0")
+    
     total = len(all_results)
-    accuracy = (correct / total * 100) if total > 0 else 0
-    print(f"📊 准确率: {correct}/{total} = {accuracy:.2f}%")
-    # 计算召回率
-    relevant = sum(1 for r in all_results if r['true_label'] == "1")
-    retrieved = sum(1 for r in all_results if r['predicted'] == "1")
-    recall = (retrieved / relevant * 100) if relevant > 0 else 0
-    print(f"📈 召回率: {retrieved}/{relevant} = {recall:.2f}%")
-
+    
+    # 准确率 (Accuracy): 所有预测正确的比例
+    accuracy = ((tp + tn) / total * 100) if total > 0 else 0
+    
+    # 召回率 (Recall): 在所有真实攻击中,成功识别的比例
+    recall = (tp / (tp + fn) * 100) if (tp + fn) > 0 else 0
+    
+    # 精确率 (Precision): 在所有预测为攻击的样本中,真正是攻击的比例
+    precision = (tp / (tp + fp) * 100) if (tp + fp) > 0 else 0
+    
+    # F1分数: 精确率和召回率的调和平均数
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0
+    
+    # 打印混淆矩阵
+    print("=" * 50)
+    print("📊 混淆矩阵 (Confusion Matrix)")
+    print("=" * 50)
+    print(f"{'':12} | 预测:正常(0) | 预测:攻击(1)")
+    print("-" * 50)
+    print(f"真实:正常(0) |    TN={tn:3d}     |    FP={fp:3d}     (误报)")
+    print(f"真实:攻击(1) |    FN={fn:3d}     |    TP={tp:3d}     ")
+    print("-" * 50)
+    print(f"            |   (漏报)     |   (正确识别)")
+    print("=" * 50)
+    print()
+    
+    # 打印评估指标
+    print("📈 评估指标")
+    print("=" * 50)
+    print(f"✅ 准确率 (Accuracy):  {accuracy:.2f}%  = {tp+tn}/{total}")
+    print(f"   含义: 所有预测正确的比例")
+    print()
+    print(f"🎯 召回率 (Recall):    {recall:.2f}%  = {tp}/{tp+fn}")
+    print(f"   含义: 在所有真实攻击中,成功识别出的比例")
+    print(f"   (也叫真正率,越高越好,表示不漏掉攻击)")
+    print()
+    print(f"🔍 精确率 (Precision): {precision:.2f}%  = {tp}/{tp+fp}")
+    print(f"   含义: 在预测为攻击的样本中,真正是攻击的比例")
+    print(f"   (越高越好,表示不误报正常URL)")
+    print()
+    print(f"⚖️  F1分数 (F1-Score):  {f1:.2f}%")
+    print(f"   含义: 精确率和召回率的调和平均,综合评价指标")
+    print("=" * 50)
+    print()
+    
     # 保存结果
-    out_all = "./output/slm_results_10_all.json"
-    out_good = "./output/slm_results_10_good.json"
-    out_bad = "./output/slm_results_10_bad.json"
+    out_all = "./output/slm_results_1000_all.json"
+    out_good = "./output/slm_results_500_good.json"
+    out_bad = "./output/slm_results_500_bad.json"
 
     with open(out_all, "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
