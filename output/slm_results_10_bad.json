@@ -1,0 +1,106 @@
+[
+  {
+    "url": "/top.php?stuff='uname >q36497765 #",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为 `'uname >q36497765 #'`，其中 `'` 和 `#` 是SQL注入的常见攻击特征。",
+    "elapsed_time_sec": 1.55,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为 `'uname >q36497765 #'`，其中 `'` 和 `#` 是SQL注入的常见攻击特征。",
+    "true_label": "1"
+  },
+  {
+    "url": "/h21y8w52.nsf?<script>cross_site_scripting.nasl</script>",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：XSS（包含 `<script>` 作为恶意脚本）",
+    "elapsed_time_sec": 0.82,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：XSS（包含 `<script>` 作为恶意脚本）",
+    "true_label": "1"
+  },
+  {
+    "url": "/ca000001.pl?action=showcart&hop=\\\"><script>alert('vulnerable')</script>&path=acatalog/",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为XSS跨站脚本攻击，恶意脚本`<script>alert('vulnerable')</script>`。",
+    "elapsed_time_sec": 1.24,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为XSS跨站脚本攻击，恶意脚本`<script>alert('vulnerable')</script>`。",
+    "true_label": "1"
+  },
+  {
+    "url": "/scripts/edit_image.php?dn=1&userfile=/etc/passwd&userfile_name= ;id;",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为文件包含（`userfile=/etc/passwd`）和路径遍历（`userfile_name= ;id`）。文件包含攻击会尝试访问远程文件，而路径遍历会遍历敏感路径，均属于恶意攻击特征。",
+    "elapsed_time_sec": 2.041,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为文件包含（`userfile=/etc/passwd`）和路径遍历（`userfile_name= ;id`）。文件包含攻击会尝试访问远程文件，而路径遍历会遍历敏感路径，均属于恶意攻击特征。",
+    "true_label": "1"
+  },
+  {
+    "url": "/javascript/mta.exe",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/mta.exe`路径，这属于典型的恶意攻击特征，包括命令执行和路径遍历。",
+    "elapsed_time_sec": 1.332,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含JavaScript代码，且包含`/javascript/mta.exe`路径，这属于典型的恶意攻击特征，包括命令执行和路径遍历。",
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/colors/kernel/loadkernel.php?installpath=/etc/passwd\\x00",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`/etc/passwd` 文件包含，这属于文件包含攻击的一种，可能被恶意用户利用来执行远程命令。",
+    "elapsed_time_sec": 1.441,
+    "raw_response": "- 1 表示异常URL  \n- 具体攻击类型：命令执行  \n- 恶意特征：`/etc/passwd` 文件包含，这属于文件包含攻击的一种，可能被恶意用户利用来执行远程命令。",
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/cal/feedsplitter.php?format=../../../../../../../../../../etc/passwd\\x00&debug=1",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`../../../../../../../../../../etc/passwd`）和文件包含（`../../../../../../../../../../etc/passwd`）。路径遍历攻击会窃取系统文件，而文件包含攻击会利用远程文件路径执行代码。",
+    "elapsed_time_sec": 2.009,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为路径遍历（`../../../../../../../../../../etc/passwd`）和文件包含（`../../../../../../../../../../etc/passwd`）。路径遍历攻击会窃取系统文件，而文件包含攻击会利用远程文件路径执行代码。",
+    "true_label": "1"
+  },
+  {
+    "url": "/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含路径遍历特征，具体为`../../../../../../../../../etc/passwd`，这属于恶意攻击特征中的路径遍历。",
+    "elapsed_time_sec": 1.23,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含路径遍历特征，具体为`../../../../../../../../../etc/passwd`，这属于恶意攻击特征中的路径遍历。",
+    "true_label": "1"
+  },
+  {
+    "url": "/cgi-bin/script/cat_for_gen.php?ad=1&ad_direct=../&m_for_racine=</option></select><?phpinfo();?>",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体包括：  \n  - 文件包含：`<?phpinfo();`，这是一个远程文件包含攻击特征。  \n  - 路径遍历：`../`，这属于路径遍历攻击。",
+    "elapsed_time_sec": 1.826,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体包括：  \n  - 文件包含：`<?phpinfo();`，这是一个远程文件包含攻击特征。  \n  - 路径遍历：`../`，这属于路径遍历攻击。",
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/cal/search.php?allwords=<br><script>foo</script>&cid=0&title=1&desc=1",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为XSS跨站脚本攻击（<script>标签）和SQL注入（`<br>`和`<script>`）。此外，URL中还包含`<?php`、`include`等恶意特征，这些都属于常见的攻击类型。",
+    "elapsed_time_sec": 2.084,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为XSS跨站脚本攻击（<script>标签）和SQL注入（`<br>`和`<script>`）。此外，URL中还包含`<?php`、`include`等恶意特征，这些都属于常见的攻击类型。",
+    "true_label": "1"
+  },
+  {
+    "url": "/hr3/personnel/lzh/lzhdisciplineedit.aspx\trecid=101533; WAITFOR DELAY '0:0:5'--",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为SQL注入和命令执行。恶意特征包括：`recid=101533; WAITFOR DELAY '0:0:5'--`，其中`--`表示SQL注入，`|`表示命令注入。此外，`WAITFOR DELAY '0:0:5'--`也包含命令执行特征。",
+    "elapsed_time_sec": 2.657,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为SQL注入和命令执行。恶意特征包括：`recid=101533; WAITFOR DELAY '0:0:5'--`，其中`--`表示SQL注入，`|`表示命令注入。此外，`WAITFOR DELAY '0:0:5'--`也包含命令执行特征。",
+    "true_label": "1"
+  },
+  {
+    "url": "/hr3/personnel/lzh/lzhdisciplineedit.aspx\trecid=101533 WAITFOR DELAY '0:0:5'--",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为命令执行和路径遍历。其中，`WAITFOR DELAY '0:0:5'--` 表示使用了命令执行，包含 `--`，这属于命令注入攻击。同时，`../` 和 `/etc/passwd` 等路径特征也表明存在路径遍历攻击。",
+    "elapsed_time_sec": 2.538,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含恶意特征，具体为命令执行和路径遍历。其中，`WAITFOR DELAY '0:0:5'--` 表示使用了命令执行，包含 `--`，这属于命令注入攻击。同时，`../` 和 `/etc/passwd` 等路径特征也表明存在路径遍历攻击。",
+    "true_label": "1"
+  },
+  {
+    "url": "/hr3/personnel/lzh/LzhReportEdit.aspx\trecid=101533.')\"(][][.",
+    "predicted": "1",
+    "reason": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为 `'`、`--`、`#`、`union`、`select` 等SQL语句。此外，URL中还包含恶意字符 `[]`，这可能用于编码绕过或测试。",
+    "elapsed_time_sec": 2.0,
+    "raw_response": "- 1 表示异常URL  \n- 判定理由：该URL包含SQL注入特征，具体为 `'`、`--`、`#`、`union`、`select` 等SQL语句。此外，URL中还包含恶意字符 `[]`，这可能用于编码绕过或测试。",
+    "true_label": "1"
+  }
+]
