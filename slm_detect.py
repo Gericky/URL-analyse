@@ -1,4 +1,4 @@
-
+#以0代表正常URL，以1代表异常URL
 import os
 import torch
 import json
@@ -21,36 +21,36 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 print(f"✅ 模型已加载到设备: {model.device}\n")
 
-# === 解析模型回答：得到模型预测(是/否)和仅理由 ===
+# === 解析模型回答：得到模型预测(0/1)和理由 ===
 def analyze_response(response: str):
     """
     从模型的 response 中抽取：
-      - predicted: 模型判定 "是"/"否"
-      - reason: 仅保留理由文本（去掉开头的“是/否”等），如果模型没给理由则为空字符串
+      - predicted: 模型判定 "0"(正常)/"1"(异常)
+      - reason: 仅保留理由文本（去掉开头的"0/1"等），如果模型没给理由则为空字符串
     解析逻辑尽量鲁棒：优先匹配开头的明确回答，否则根据关键词判断。
     """
     text = response.strip()
-    # 优先匹配开头明确的 "回答: 是 ..." / "是。..." / "否，..."
-    m = re.match(r'^\s*(回答[:：]\s*)?(是|否)\s*[\u3000\s,，\.。.:\-：]*([\s\S]*)', text)
+    # 优先匹配开头明确的 "0" / "1" 或 "回答: 0/1"
+    m = re.match(r'^\s*(回答[:：]\s*)?(0|1)\s*[\u3000\s,，\.。.:\-：]*([\s\S]*)', text)
     if m:
-        pred = '是' if m.group(2) == '是' else '否'
+        pred = m.group(2)  # "0" 或 "1"
         reason = m.group(3).strip()
-        # 如果理由中仍然含有「是/否」开头，再去掉
-        reason = re.sub(r'^(是|否)[\s，。:：,-]*', '', reason).strip()
+        # 如果理由中仍然含有「0/1」开头，再去掉
+        reason = re.sub(r'^(0|1)[\s，。:：,-]*', '', reason).strip()
         return pred, reason
 
     # 若无明确开头，用关键字判断（去掉空格和中文标点便于匹配）
-    compact = re.sub(r'[\s，。、“”]', '', text)
-    if re.search(r'(不是攻击|非攻击|安全|正常|否)', compact):
-        pred = '否'
-    elif re.search(r'(是攻击|属于攻击|恶意|SQL注入|XSS|命令注入|攻击)', compact):
-        pred = '是'
+    compact = re.sub(r'[\s，。、""]', '', text)
+    if re.search(r'(不是攻击|非攻击|安全|正常)', compact):
+        pred = '0'
+    elif re.search(r'(是攻击|属于攻击|恶意|异常|SQL注入|XSS|命令注入|攻击)', compact):
+        pred = '1'
     else:
-        # 默认保守判断为否
-        pred = '否'
+        # 默认保守判断为正常
+        pred = '0'
 
-    # 清理理由：去掉首部的“是/否”等，再尽量保留后续文字
-    reason = re.sub(r'^(回答[:：]\s*)?(是|否)[\s，。:：,-]*', '', text).strip()
+    # 清理理由：去掉首部的"0/1"等，再尽量保留后续文字
+    reason = re.sub(r'^(回答[:：]\s*)?(0|1)[\s，。:：,-]*', '', text).strip()
     return pred, reason
 
 # === 主检测函数：返回模型预测、理由、用时等信息 ===
@@ -59,30 +59,41 @@ def query_model_for_url(url: str) -> dict:
     {
         "role": "system",
         "content": (
-            "你是一名经验丰富的网络安全专家，专门负责Web安全检测与威胁识别。"
-            "你的任务是**严格判断**给定的URL是否包含攻击意图。"
-            "请注意：只要URL中存在典型攻击特征就应当判定为恶意攻击请求（如 `../`、`<?php`、`</script>`、`<script>`、`/etc/passwd`、shell命令、注入符号 `'`、`--`、`#`、`;`、`|` 等），"
-            "即使该请求尚未执行或结果未知，也应视为恶意攻击请求。"
-            "没有出现恶意特征的请求应判定为正常访问。不能过度判定为攻击。"
-            "你需要区分三类情况："
-            "（1）正常访问：仅路径或静态资源，无参数或可疑字符。"
-            "（2）可疑访问：带参数但未出现攻击特征。"
-            "（3）攻击访问：包含注入、跨站、远程执行、命令执行、文件包含或目录遍历等迹象。"
-            "请基于安全威胁检测标准（OWASP Top 10）作出判断。"
+            "你是一个专业的Web安全检测系统，负责分析URL请求并识别潜在的安全威胁。"
+            "你的任务是判断给定的URL是否包含恶意攻击特征，并给出明确的分类结果。"
+            "判定规则："
+            "- 输出 0：表示正常URL，即安全的、合法的Web请求"
+            "- 输出 1：表示异常URL，即包含攻击特征的恶意请求"
+            "攻击特征包括但不限于："
+            "• SQL注入：包含 `'`、`--`、`#`、`union`、`select` 等SQL语句"
+            "• XSS跨站脚本：包含 `<script>`、`</script>`、`javascript:`、`onerror=` 等"
+            "• 命令注入：包含 `|`、`;`、`&&`、shell命令等"
+            "• 路径遍历：包含 `../`、`..\\`、`/etc/passwd` 等"
+            "• 文件包含：包含 `<?php`、`include`、远程文件路径等"
+            "• 其他恶意特征：编码绕过、异常字符、敏感路径访问等"
+            "正常请求特征："
+            "• 仅包含常规路径和静态资源访问"
+            "• 参数值为正常的业务数据，无注入符号"
+            "• 符合标准的HTTP请求格式"
+            "请基于OWASP Top 10安全标准进行判断，保持高灵敏度但避免误报。"
         )
     },
     {
         "role": "user",
         "content": (
-            "请判断以下Web请求是否为恶意攻击行为，恶意攻击行为请回答“是”，正常访问请回答“否”：\n"
-             f"请求: {url}\n"
-            "请仅回答：是或者否，并说明理由。"
-            "理由中请指出攻击类型（如SQL注入、XSS、命令执行、路径遍历等），"
-            "若无攻击迹象，请说明该URL为何为正常访问。"
+            "请分析以下URL请求，判断其是否为恶意攻击：\n"
+            f"URL: {url}\n\n"
+            "请按以下格式回答：\n"
+            "首先输出分类结果（0或1）：\n"
+            "- 0 表示正常URL\n"
+            "- 1 表示异常URL\n"
+            "然后说明判断理由，包括：\n"
+            "- 如果是异常URL（1），请指出具体的攻击类型（如SQL注入、XSS、命令执行、路径遍历等）和恶意特征\n"
+            "- 如果是正常URL（0），请说明为何判定为安全请求\n\n"
+            "请直接以数字0或1开头回答。"
         )
     }
 ]
-
 
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, enable_thinking=False)
     inputs = tokenizer([text], return_tensors="pt").to(model.device)
@@ -104,10 +115,10 @@ def query_model_for_url(url: str) -> dict:
 
     return {
         "url": url,
-        "predicted": predicted,             # 模型判定（"是"/"否"）
-        "reason": reason,                   # 仅理由（不包含“是/否”）
+        "predicted": predicted,             # 模型判定（"0"/"1"）
+        "reason": reason,                   # 仅理由（不包含"0/1"）
         "elapsed_time_sec": elapsed,
-        "raw_response": raw_response        # 保留原始完整回复以供调试（可删）
+        "raw_response": raw_response        # 保留原始完整回复以供调试
     }
 
 # === 批量处理文件 ===
@@ -124,12 +135,10 @@ def process_file(filename, label):
     for i, url in enumerate(lines, 1):
         print(f"[{label}] 第 {i}/{len(lines)}: {url}")
         res = query_model_for_url(url)
-        # 把真实标签写进去
-        res["true_label"] = label  # "attack" 或 "normal"
-        # is_attack 字段根据 true_label 决定（按你要求：label为attack即认为它是attack）
-        res["is_attack"] = "是" if label == "attack" else "否"
+        # 把真实标签写进去（0为正常，1为攻击）
+        res["true_label"] = "1" if label == "attack" else "0"
         results.append(res)
-        print(f"  模型判定: {res['predicted']} | 真实标签 is_attack: {res['is_attack']} | 用时: {res['elapsed_time_sec']}s")
+        print(f"  模型判定: {res['predicted']} | 真实标签: {res['true_label']} | 用时: {res['elapsed_time_sec']}s")
         print(f"  理由（简要）: {res['reason']}\n")
     file_elapsed = perf_counter() - file_start
     print(f"⏱️ 文件 {filename} 总用时: {file_elapsed:.2f} 秒\n")
@@ -145,10 +154,22 @@ if __name__ == "__main__":
 
     total_elapsed = perf_counter() - total_start
     print(f"🎯 全部检测完成，总用时 {total_elapsed:.2f} 秒")
+    
+    # 计算准确率统计
+    correct = sum(1 for r in all_results if r['predicted'] == r['true_label'])
+    total = len(all_results)
+    accuracy = (correct / total * 100) if total > 0 else 0
+    print(f"📊 准确率: {correct}/{total} = {accuracy:.2f}%")
+    # 计算召回率
+    relevant = sum(1 for r in all_results if r['true_label'] == "1")
+    retrieved = sum(1 for r in all_results if r['predicted'] == "1")
+    recall = (retrieved / relevant * 100) if relevant > 0 else 0
+    print(f"📈 召回率: {retrieved}/{relevant} = {recall:.2f}%")
+
     # 保存结果
-    out_all = "./output/slm_results_100_all.json"
-    out_good = "./output/slm_results_100_good.json"
-    out_bad = "./output/slm_results_100_bad.json"
+    out_all = "./output/slm_results_10_all.json"
+    out_good = "./output/slm_results_10_good.json"
+    out_bad = "./output/slm_results_10_bad.json"
 
     with open(out_all, "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
