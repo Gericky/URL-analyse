@@ -1,0 +1,13 @@
+{
+  "total": 20,
+  "tp": 10,
+  "tn": 10,
+  "fp": 0,
+  "fn": 0,
+  "accuracy": 100.0,
+  "recall": 100.0,
+  "precision": 100.0,
+  "f1_score": 100.0,
+  "fpr": 0.0,
+  "fnr": 0.0
+}

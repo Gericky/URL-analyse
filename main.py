@@ -9,7 +9,11 @@ from src.analyzer.hybrid_detector import HybridDetector
 from src.analyzer.deep_analyzer import DeepAnalyzer
 from src.rules.rule_loader import load_rule_engine
 from src.until.until import process_file
-from src.analyzer.offline_analysis import analyze_results
+from src.analyzer.result_statistics import (
+    analyze_results,
+    print_stage2_statistics,
+    print_two_stage_summary
+)
 
 
 def main():
@@ -83,34 +87,19 @@ def main():
     all_stage1_results = good_results + bad_results
     stage1_elapsed = perf_counter() - stage1_start
     
-    # 统计第一阶段结果
+    # 筛选异常URL
     anomalous_results = [r for r in all_stage1_results if r['predicted'] == "1"]
-    normal_results = [r for r in all_stage1_results if r['predicted'] == "0"]
     
-    print(f"\n{'='*60}")
-    print(f"📊 第一阶段统计")
-    print(f"{'='*60}")
-    print(f"⏱️  总用时: {stage1_elapsed:.2f} 秒")
-    print(f"✅ 正常URL: {len(normal_results)} 个")
-    print(f"⚠️  异常URL: {len(anomalous_results)} 个")
-    print(f"{'='*60}\n")
-    
-    # 保存第一阶段结果
+    # 保存异常URL列表（用于第二阶段）
     output_dir = config['output']['dir']
     os.makedirs(output_dir, exist_ok=True)
     
-    stage1_all_file = os.path.join(output_dir, config['output']['stage1_all'])
-    with open(stage1_all_file, 'w', encoding='utf-8') as f:
-        json.dump(all_stage1_results, f, ensure_ascii=False, indent=2)
-    
-    # 保存异常URL列表（用于第二阶段）
     stage1_anomalous_file = os.path.join(output_dir, config['output']['stage1_anomalous'])
     with open(stage1_anomalous_file, 'w', encoding='utf-8') as f:
         for item in anomalous_results:
             f.write(f"{item['url']}\n")
-    
-    print(f"💾 第一阶段结果已保存: {stage1_all_file}")
-    print(f"💾 异常URL列表已保存: {stage1_anomalous_file}\n")
+
+    print(f"💾 异常URL列表已保存: {stage1_anomalous_file}")
     
     # ========== 第二阶段：离线深度分析（可选） ==========
     if args.skip_deep_analysis:
@@ -118,43 +107,40 @@ def main():
         print(f"⏭️  跳过第二阶段深度分析")
         print(f"{'='*60}")
         print(f"💡 提示: 如需深度分析，请运行以下命令:")
+        stage1_all_file = os.path.join(output_dir, config['output']['stage1_all'])
         print(f"   python deep_analysis.py --input {stage1_all_file}")
         print(f"{'='*60}\n")
+
+        # 只进行第一阶段评估
+        analyze_results(all_stage1_results, config['output'], stage1_elapsed)
+
     else:
         if len(anomalous_results) == 0:
-            print("✅ 未检测到异常URL，跳过第二阶段分析")
+            print("\n✅ 未检测到异常URL，跳过第二阶段分析")
+            # 进行第一阶段评估
+            analyze_results(all_stage1_results, config['output'], stage1_elapsed)
         else:
+            # 执行深度分析
             deep_analyzer = DeepAnalyzer(model, parser_analyzer, config)
             stage2_start = perf_counter()
-            
+
             deep_results = deep_analyzer.batch_analyze(anomalous_results)
-            
+
             stage2_elapsed = perf_counter() - stage2_start
-            
+
             # 保存第二阶段结果
             stage2_file = os.path.join(output_dir, config['output']['stage2_deep_analysis'])
             with open(stage2_file, 'w', encoding='utf-8') as f:
                 json.dump(deep_results, f, ensure_ascii=False, indent=2)
-            
-            print(f"\n{'='*60}")
-            print(f"📊 第二阶段统计")
-            print(f"{'='*60}")
-            print(f"⏱️  总用时: {stage2_elapsed:.2f} 秒")
-            print(f"📄 深度分析报告已保存: {stage2_file}")
-            print(f"{'='*60}\n")
-            
-            # ========== 总结 ==========
-            total_elapsed = stage1_elapsed + stage2_elapsed
-            print(f"{'='*60}")
-            print(f"🎯 两阶段检测完成")
-            print(f"{'='*60}")
-            print(f"⏱️  第一阶段用时: {stage1_elapsed:.2f} 秒")
-            print(f"⏱️  第二阶段用时: {stage2_elapsed:.2f} 秒")
-            print(f"⏱️  总用时: {total_elapsed:.2f} 秒")
-            print(f"{'='*60}\n")
-    
-    # ========== 评估指标 ==========
-    analyze_results(all_stage1_results, good_results, bad_results, config['output'])
+
+            # 打印第二阶段统计
+            print_stage2_statistics(stage2_elapsed, stage2_file, deep_results)
+
+            # 打印两阶段总结
+            print_two_stage_summary(stage1_elapsed, stage2_elapsed)
+
+            # 进行第一阶段详细评估
+            analyze_results(all_stage1_results, config['output'], stage1_elapsed)
 
 
 if __name__ == "__main__":

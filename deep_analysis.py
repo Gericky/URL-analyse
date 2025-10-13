@@ -11,6 +11,7 @@ from src.until.config_loader import load_config
 from src.models.qwen_model import QwenModel
 from src.analyzer.response_analyse import ResponseAnalyzer
 from src.analyzer.deep_analyzer import DeepAnalyzer
+from src.analyzer.result_statistics import print_stage2_statistics  # ✨ 导入统计函数
 
 
 def load_anomalous_urls(input_file: str):
@@ -164,15 +165,8 @@ def main():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(deep_results, f, ensure_ascii=False, indent=2)
     
-    # ========== 统计信息 ==========
-    print(f"\n{'='*60}")
-    print(f"📊 深度分析统计")
-    print(f"{'='*60}")
-    print(f"⏱️  总用时: {stage2_elapsed:.2f} 秒")
-    print(f"📈 平均每URL用时: {stage2_elapsed/len(deep_results):.2f} 秒")
-    print(f"📊 分析URL数量: {len(deep_results)}")
-    print(f"💾 结果已保存: {output_file}")
-    print(f"{'='*60}\n")
+    # ========== 使用统一的统计函数 ==========
+    print_stage2_statistics(stage2_elapsed, output_file, deep_results)
     
     # ========== 攻击类型统计 ==========
     attack_type_count = {}
@@ -180,7 +174,7 @@ def main():
         attack_type = result.get('attack_type', 'unknown')
         attack_type_count[attack_type] = attack_type_count.get(attack_type, 0) + 1
     
-    print(f"📊 攻击类型分布:")
+    print(f"\n📊 攻击类型分布:")
     print(f"{'='*60}")
     for attack_type, count in sorted(attack_type_count.items(), key=lambda x: x[1], reverse=True):
         percentage = count / len(deep_results) * 100
