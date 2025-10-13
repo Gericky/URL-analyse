@@ -1,15 +1,21 @@
 # 模型配置
 model:
   path: "./Qwen3-0.6B"
-  dtype: "float16"              # 模型精度: "float16" 或 "float32"
-  max_new_tokens: 128           # 最大生成token数
-  temperature: 0.0              # 温度参数: 0.0=确定性输出(贪婪), >0=随机采样
+  dtype: "float16"
+  max_new_tokens: 128
+  temperature: 0.0
 
 # 数据配置
 data:
   dir: "./data"
   normal_file: "good-10.txt"
   attack_file: "bad-10.txt"
+
+# 规则引擎配置
+rules:
+  enabled: true                                    # 是否启用规则引擎
+  #config_file: "./src/rules/rule_store/empty_rules.yaml"  # 规则配置文件路径
+  config_file: "./src/rules/rule_store/test_rules.yaml"  # 切换到测试规则
 
 # 输出配置
 output:

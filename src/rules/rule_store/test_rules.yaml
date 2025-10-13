@@ -1,0 +1,17 @@
+# 测试规则配置 - 包含少量基础规则用于验证
+rules:
+  # SQL注入基础规则
+  - id: "SQL_001"
+    name: "SQL注入 - Union Select"
+    pattern: "union\\s+select"
+    attack_type: "sql_injection"
+    severity: "high"
+    description: "检测到UNION SELECT SQL注入尝试"
+  
+  # XSS基础规则
+  - id: "XSS_001"
+    name: "XSS - Script标签"
+    pattern: "<script[^>]*>"
+    attack_type: "xss"
+    severity: "high"
+    description: "检测到script标签XSS尝试"
