@@ -1,0 +1,45 @@
+# 正常URL规则配置 - 匹配到即判定为正常(0)
+rules:
+  # 静态资源访问
+  - id: "NORMAL_001"
+    name: "静态资源 - 图片文件"
+    pattern: "\\.(jpg|jpeg|png|gif|bmp|svg|ico)$"
+    attack_type: "none"
+    severity: "safe"
+    description: "常见图片文件访问"
+  
+  - id: "NORMAL_002"
+    name: "静态资源 - CSS/JS文件"
+    pattern: "\\.(css|js)$"
+    attack_type: "none"
+    severity: "safe"
+    description: "样式表和脚本文件访问"
+  
+  - id: "NORMAL_003"
+    name: "静态资源 - 字体文件"
+    pattern: "\\.(woff|woff2|ttf|eot)$"
+    attack_type: "none"
+    severity: "safe"
+    description: "字体文件访问"
+  
+  # 标准页面访问
+  - id: "NORMAL_004"
+    name: "标准页面 - 主页"
+    pattern: "^/(index\\.php|index\\.html|home)?$"
+    attack_type: "none"
+    severity: "safe"
+    description: "网站主页访问"
+  
+  - id: "NORMAL_005"
+    name: "标准参数 - 纯数字ID"
+    pattern: "\\?id=\\d+$"
+    attack_type: "none"
+    severity: "safe"
+    description: "仅包含数字ID的正常查询"
+  
+  - id: "NORMAL_006"
+    name: "标准参数 - 页码"
+    pattern: "\\?(page|p)=\\d+$"
+    attack_type: "none"
+    severity: "safe"
+    description: "分页参数"

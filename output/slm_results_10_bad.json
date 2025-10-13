@@ -1,159 +1,233 @@
 [
   {
     "url": "/top.php?stuff='uname >q36497765 #",
-    "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了SQL注入特征，具体为 `'uname >q36497765 #` 中的 `'` 和 `#`，这属于SQL注入攻击。",
-    "elapsed_time_sec": 1.587,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "包含了SQL注入特征，具体为 `'uname >q36497765 #` 中的 `'` 和 `#`，这属于SQL注入攻击。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] 包含了SQL注入特征，具体为 `'uname >q36497765 #` 中的 `'` 和 `#`，这属于SQL注入攻击。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_SQL_002",
+        "rule_name": "SQL注入 - 注释符",
+        "attack_type": "sql_injection",
+        "severity": "high",
+        "matched_text": "#",
+        "description": "检测到SQL注释符"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_SQL_002]: 检测到SQL注释符 (攻击类型: sql_injection, 严重程度: high)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_SQL_002]: 检测到SQL注释符 (攻击类型: sql_injection, 严重程度: high)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/h21y8w52.nsf?<script>cross_site_scripting.nasl</script>",
-    "raw_response": "1\n- 这个URL包含恶意脚本，具体攻击类型为XSS（跨站脚本攻击），恶意特征包括`<script>`标签。",
-    "elapsed_time_sec": 0.973,
+    "predicted": "1",
     "rule_prediction": "1",
     "rule_matched": [
       {
-        "rule_id": "XSS_001",
+        "rule_id": "ANOMALOUS_XSS_001",
         "rule_name": "XSS - Script标签",
         "attack_type": "xss",
-        "severity": "high",
-        "matched_text": "<script>",
-        "description": "检测到script标签XSS尝试"
+        "severity": "critical",
+        "matched_text": "<script>cross_site_scripting.nasl</script>",
+        "description": "检测到script标签"
       }
     ],
-    "rule_summary": "规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高",
-    "model_prediction": "1",
-    "model_reason": "这个URL包含恶意脚本，具体攻击类型为XSS（跨站脚本攻击），恶意特征包括`<script>`标签。",
-    "predicted": "1",
-    "reason": "[规则匹配] 规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高 | [模型判断] 这个URL包含恶意脚本，具体攻击类型为XSS（跨站脚本攻击），恶意特征包括`<script>`标签。",
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/ca000001.pl?action=showcart&hop=\\\"><script>alert('vulnerable')</script>&path=acatalog/",
-    "raw_response": "1\n异常URL\n\n判断理由：该URL包含恶意特征，具体为XSS跨站脚本攻击。恶意特征包括 `<script>` 标签，该标签包含恶意代码，可能导致用户被恶意脚本欺骗。",
-    "elapsed_time_sec": 1.378,
+    "predicted": "1",
     "rule_prediction": "1",
     "rule_matched": [
       {
-        "rule_id": "XSS_001",
+        "rule_id": "ANOMALOUS_XSS_001",
         "rule_name": "XSS - Script标签",
         "attack_type": "xss",
-        "severity": "high",
-        "matched_text": "<script>",
-        "description": "检测到script标签XSS尝试"
+        "severity": "critical",
+        "matched_text": "<script>alert('vulnerable')</script>",
+        "description": "检测到script标签"
       }
     ],
-    "rule_summary": "规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高",
-    "model_prediction": "1",
-    "model_reason": "异常URL\n\n判断理由：该URL包含恶意特征，具体为XSS跨站脚本攻击。恶意特征包括 `<script>` 标签，该标签包含恶意代码，可能导致用户被恶意脚本欺骗。",
-    "predicted": "1",
-    "reason": "[规则匹配] 规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高 | [模型判断] 异常URL\n\n判断理由：该URL包含恶意特征，具体为XSS跨站脚本攻击。恶意特征包括 `<script>` 标签，该标签包含恶意代码，可能导致用户被恶意脚本欺骗。",
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/scripts/edit_image.php?dn=1&userfile=/etc/passwd&userfile_name= ;id;",
-    "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了SQL注入、命令执行和文件包含等恶意特征。具体攻击类型包括：SQL注入（`'`、`--`、`#`、`union`、`select`等），命令注入（`|`、`;`、`&&`、shell命令等），以及文件包含（`/etc/passwd`）。这些特征表明该URL存在潜在的安全风险。",
-    "elapsed_time_sec": 2.76,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "包含了SQL注入、命令执行和文件包含等恶意特征。具体攻击类型包括：SQL注入（`'`、`--`、`#`、`union`、`select`等），命令注入（`|`、`;`、`&&`、shell命令等），以及文件包含（`/etc/passwd`）。这些特征表明该URL存在潜在的安全风险。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] 包含了SQL注入、命令执行和文件包含等恶意特征。具体攻击类型包括：SQL注入（`'`、`--`、`#`、`union`、`select`等），命令注入（`|`、`;`、`&&`、shell命令等），以及文件包含（`/etc/passwd`）。这些特征表明该URL存在潜在的安全风险。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/javascript/mta.exe",
     "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了JavaScript代码，这属于XSS攻击特征，且包含`javascript:`，属于跨站脚本攻击。",
-    "elapsed_time_sec": 1.173,
-    "rule_prediction": "0",
+    "elapsed_time_sec": 1.192,
+    "rule_prediction": null,
     "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
+    "rule_summary": "未匹配到任何规则,需要模型分析",
+    "rule_type": "none",
     "model_prediction": "1",
     "model_reason": "包含了JavaScript代码，这属于XSS攻击特征，且包含`javascript:`，属于跨站脚本攻击。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] 包含了JavaScript代码，这属于XSS攻击特征，且包含`javascript:`，属于跨站脚本攻击。",
+    "reason": "[规则无匹配,模型判断] 包含了JavaScript代码，这属于XSS攻击特征，且包含`javascript:`，属于跨站脚本攻击。",
+    "detection_method": "model_only",
     "true_label": "1"
   },
   {
     "url": "/examples/jsp/colors/kernel/loadkernel.php?installpath=/etc/passwd\\x00",
-    "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了恶意特征 `include`、`/etc/passwd` 和 `xml`，这些特征属于文件包含攻击，可能被用来执行远程代码或窃取敏感信息。",
-    "elapsed_time_sec": 1.528,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "包含了恶意特征 `include`、`/etc/passwd` 和 `xml`，这些特征属于文件包含攻击，可能被用来执行远程代码或窃取敏感信息。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] 包含了恶意特征 `include`、`/etc/passwd` 和 `xml`，这些特征属于文件包含攻击，可能被用来执行远程代码或窃取敏感信息。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_PATH_002",
+        "rule_name": "路径遍历 - 系统敏感文件",
+        "attack_type": "path_traversal",
+        "severity": "critical",
+        "matched_text": "/etc/passwd",
+        "description": "检测到敏感系统文件访问"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_PATH_002]: 检测到敏感系统文件访问 (攻击类型: path_traversal, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_PATH_002]: 检测到敏感系统文件访问 (攻击类型: path_traversal, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/examples/jsp/cal/feedsplitter.php?format=../../../../../../../../../../etc/passwd\\x00&debug=1",
-    "raw_response": "- 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 命令注入：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的路径遍历攻击，可以执行远程代码。\n- 文件包含：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的文件包含攻击，可以读取远程文件内容。",
-    "elapsed_time_sec": 2.036,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "- 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 命令注入：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的路径遍历攻击，可以执行远程代码。\n- 文件包含：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的文件包含攻击，可以读取远程文件内容。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] - 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 命令注入：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的路径遍历攻击，可以执行远程代码。\n- 文件包含：包含 `../../../../../../../../../../etc/passwd`，这是一个典型的文件包含攻击，可以读取远程文件内容。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd",
-    "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了路径遍历特征，具体为 `/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd`，该路径访问了 `/etc/passwd`，这属于典型的恶意攻击特征，特别是路径遍历攻击。",
-    "elapsed_time_sec": 1.872,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "包含了路径遍历特征，具体为 `/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd`，该路径访问了 `/etc/passwd`，这属于典型的恶意攻击特征，特别是路径遍历攻击。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] 包含了路径遍历特征，具体为 `/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd`，该路径访问了 `/etc/passwd`，这属于典型的恶意攻击特征，特别是路径遍历攻击。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_PATH_001",
+        "rule_name": "路径遍历 - 上级目录",
+        "attack_type": "path_traversal",
+        "severity": "high",
+        "matched_text": "../",
+        "description": "检测到目录遍历尝试"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_PATH_001]: 检测到目录遍历尝试 (攻击类型: path_traversal, 严重程度: high)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_PATH_001]: 检测到目录遍历尝试 (攻击类型: path_traversal, 严重程度: high)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/cgi-bin/script/cat_for_gen.php?ad=1&ad_direct=../&m_for_racine=</option></select><?phpinfo();?>",
-    "raw_response": "- 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 路径遍历：包含 `../`，这是一个典型的路径遍历攻击特征。\n- 其他恶意特征：包含 `</option>` 和 `<?phpinfo();`，这些特征也属于恶意攻击的范畴。",
-    "elapsed_time_sec": 1.845,
-    "rule_prediction": "0",
-    "rule_matched": [],
-    "rule_summary": "规则引擎未检测到异常",
-    "model_prediction": "1",
-    "model_reason": "- 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 路径遍历：包含 `../`，这是一个典型的路径遍历攻击特征。\n- 其他恶意特征：包含 `</option>` 和 `<?phpinfo();`，这些特征也属于恶意攻击的范畴。",
     "predicted": "1",
-    "reason": "[规则通过] 规则引擎未检测到异常 | [模型判断] - 1 表示异常URL\n\n具体的攻击类型和恶意特征：\n- 路径遍历：包含 `../`，这是一个典型的路径遍历攻击特征。\n- 其他恶意特征：包含 `</option>` 和 `<?phpinfo();`，这些特征也属于恶意攻击的范畴。",
+    "rule_prediction": "1",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_CMD_001]: 检测到shell元字符 (攻击类型: command_injection, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   },
   {
     "url": "/examples/jsp/cal/search.php?allwords=<br><script>foo</script>&cid=0&title=1&desc=1",
-    "raw_response": "- 1 表示异常URL  \n- 判定理由: 包含了SQL注入、XSS和命令执行的恶意特征。具体攻击类型包括：  \n  - SQL注入：`<br>` 和 `script` 语句  \n  - XSS：`<script>` 语句  \n  - 命令执行：`script` 语句  \n  - 其他恶意特征：`<br>` 和 `script` 语句",
-    "elapsed_time_sec": 2.81,
+    "predicted": "1",
     "rule_prediction": "1",
     "rule_matched": [
       {
-        "rule_id": "XSS_001",
+        "rule_id": "ANOMALOUS_XSS_001",
         "rule_name": "XSS - Script标签",
         "attack_type": "xss",
-        "severity": "high",
-        "matched_text": "<script>",
-        "description": "检测到script标签XSS尝试"
+        "severity": "critical",
+        "matched_text": "<script>foo</script>",
+        "description": "检测到script标签"
       }
     ],
-    "rule_summary": "规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高",
-    "model_prediction": "1",
-    "model_reason": "包含了SQL注入、XSS和命令执行的恶意特征。具体攻击类型包括：  \n  - SQL注入：`<br>` 和 `script` 语句  \n  - XSS：`<script>` 语句  \n  - 命令执行：`script` 语句  \n  - 其他恶意特征：`<br>` 和 `script` 语句",
-    "predicted": "1",
-    "reason": "[规则匹配] 规则引擎检测到 1 条匹配规则: 攻击类型包括 xss; 严重程度: 高 | [模型判断] 包含了SQL注入、XSS和命令执行的恶意特征。具体攻击类型包括：  \n  - SQL注入：`<br>` 和 `script` 语句  \n  - XSS：`<script>` 语句  \n  - 命令执行：`script` 语句  \n  - 其他恶意特征：`<br>` 和 `script` 语句",
+    "rule_summary": "⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "rule_type": "anomalous",
+    "model_prediction": null,
+    "model_reason": "规则直接判定,未调用模型",
+    "reason": "[规则直接判定] ⚠️ 匹配异常规则 [ANOMALOUS_XSS_001]: 检测到script标签 (攻击类型: xss, 严重程度: critical)",
+    "raw_response": null,
+    "elapsed_time_sec": 0,
+    "detection_method": "rule_only",
     "true_label": "1"
   }
 ]

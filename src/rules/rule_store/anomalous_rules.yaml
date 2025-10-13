@@ -1,0 +1,104 @@
+# 异常URL规则配置 - 匹配到即判定为异常(1)
+rules:
+  # === SQL注入攻击 ===
+  - id: "ANOMALOUS_SQL_001"
+    name: "SQL注入 - Union Select"
+    pattern: "union\\s+(all\\s+)?select"
+    attack_type: "sql_injection"
+    severity: "critical"
+    description: "检测到UNION SELECT SQL注入尝试"
+  
+  - id: "ANOMALOUS_SQL_002"
+    name: "SQL注入 - 注释符"
+    pattern: "(--|#|/\\*)"
+    attack_type: "sql_injection"
+    severity: "high"
+    description: "检测到SQL注释符"
+  
+  - id: "ANOMALOUS_SQL_003"
+    name: "SQL注入 - OR条件永真"
+    pattern: "(or|and)\\s+['\"]?\\d+['\"]?\\s*=\\s*['\"]?\\d+['\"]?"
+    attack_type: "sql_injection"
+    severity: "critical"
+    description: "检测到OR/AND永真条件"
+  
+  - id: "ANOMALOUS_SQL_004"
+    name: "SQL注入 - 单引号闭合"
+    pattern: "'\\s*(or|and|union|select|insert|update|delete)"
+    attack_type: "sql_injection"
+    severity: "high"
+    description: "检测到单引号后跟SQL关键字"
+  
+  # === XSS跨站脚本 ===
+  - id: "ANOMALOUS_XSS_001"
+    name: "XSS - Script标签"
+    pattern: "<script[^>]*>.*?</script>"
+    attack_type: "xss"
+    severity: "critical"
+    description: "检测到script标签"
+  
+  - id: "ANOMALOUS_XSS_002"
+    name: "XSS - 事件处理器"
+    pattern: "on(load|error|click|mouseover|focus)\\s*=\\s*['\"]?"
+    attack_type: "xss"
+    severity: "high"
+    description: "检测到HTML事件处理器"
+  
+  - id: "ANOMALOUS_XSS_003"
+    name: "XSS - JavaScript协议"
+    pattern: "javascript:\\s*"
+    attack_type: "xss"
+    severity: "high"
+    description: "检测到javascript:协议"
+  
+  - id: "ANOMALOUS_XSS_004"
+    name: "XSS - Iframe注入"
+    pattern: "<iframe[^>]*>"
+    attack_type: "xss"
+    severity: "high"
+    description: "检测到iframe标签"
+  
+  # === 命令注入 ===
+  - id: "ANOMALOUS_CMD_001"
+    name: "命令注入 - 管道符"
+    pattern: "[|;&`$(){}\\[\\]]"
+    attack_type: "command_injection"
+    severity: "critical"
+    description: "检测到shell元字符"
+  
+  - id: "ANOMALOUS_CMD_002"
+    name: "命令注入 - 系统命令"
+    pattern: "(cat|ls|pwd|whoami|id|uname|wget|curl)\\s"
+    attack_type: "command_injection"
+    severity: "critical"
+    description: "检测到系统命令"
+  
+  # === 路径遍历 ===
+  - id: "ANOMALOUS_PATH_001"
+    name: "路径遍历 - 上级目录"
+    pattern: "\\.\\./|\\.\\.\\\\"
+    attack_type: "path_traversal"
+    severity: "high"
+    description: "检测到目录遍历尝试"
+  
+  - id: "ANOMALOUS_PATH_002"
+    name: "路径遍历 - 系统敏感文件"
+    pattern: "/etc/(passwd|shadow|hosts)|c:\\\\windows\\\\system32"
+    attack_type: "path_traversal"
+    severity: "critical"
+    description: "检测到敏感系统文件访问"
+  
+  # === 文件包含 ===
+  - id: "ANOMALOUS_FILE_001"
+    name: "文件包含 - PHP代码"
+    pattern: "<\\?php|php://"
+    attack_type: "file_inclusion"
+    severity: "critical"
+    description: "检测到PHP代码执行尝试"
+  
+  - id: "ANOMALOUS_FILE_002"
+    name: "文件包含 - 远程URL"
+    pattern: "(http|https|ftp)://"
+    attack_type: "file_inclusion"
+    severity: "high"
+    description: "检测到远程文件包含"

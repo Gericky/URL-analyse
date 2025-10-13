@@ -1,4 +1,3 @@
-#集中放规则匹配函数（加载 src/rules/rule_store 下的正则/关键字规则）。
 import re
 from typing import Dict, List, Tuple, Optional
 
@@ -15,7 +14,7 @@ class Rule:
             name: 规则名称
             pattern: 正则表达式模式
             attack_type: 攻击类型 (如: sql_injection, xss, command_injection等)
-            severity: 严重程度 (low/medium/high/critical)
+            severity: 严重程度 (low/medium/high/critical/safe)
             description: 规则描述
         """
         self.rule_id = rule_id
@@ -49,20 +48,43 @@ class Rule:
 
 
 class RuleEngine:
-    """规则引擎"""
+    """规则引擎 - 支持正常规则和异常规则"""
     
     def __init__(self):
         """初始化规则引擎"""
-        self.rules: List[Rule] = []
+        self.normal_rules: List[Rule] = []      # 正常URL规则
+        self.anomalous_rules: List[Rule] = []   # 异常URL规则
         self.enabled = True
     
-    def add_rule(self, rule: Rule):
-        """添加规则"""
-        self.rules.append(rule)
+    def add_normal_rule(self, rule: Rule):
+        """添加正常规则"""
+        self.normal_rules.append(rule)
     
-    def load_rules(self, rules_config: List[Dict]):
+    def add_anomalous_rule(self, rule: Rule):
+        """添加异常规则"""
+        self.anomalous_rules.append(rule)
+    
+    def load_normal_rules(self, rules_config: List[Dict]):
         """
-        从配置加载规则
+        加载正常规则
+        
+        Args:
+            rules_config: 规则配置列表
+        """
+        for config in rules_config:
+            rule = Rule(
+                rule_id=config.get('id', ''),
+                name=config.get('name', ''),
+                pattern=config.get('pattern', ''),
+                attack_type=config.get('attack_type', 'none'),
+                severity=config.get('severity', 'safe'),
+                description=config.get('description', '')
+            )
+            self.add_normal_rule(rule)
+    
+    def load_anomalous_rules(self, rules_config: List[Dict]):
+        """
+        加载异常规则
         
         Args:
             rules_config: 规则配置列表
@@ -76,61 +98,67 @@ class RuleEngine:
                 severity=config.get('severity', 'medium'),
                 description=config.get('description', '')
             )
-            self.add_rule(rule)
+            self.add_anomalous_rule(rule)
     
-    def detect(self, url: str) -> Tuple[str, List[Dict]]:
+    def detect(self, url: str) -> Tuple[Optional[str], List[Dict], str]:
         """
-        检测URL
+        检测URL - 优先级: 异常规则 > 正常规则 > 无匹配
         
         Args:
             url: 待检测的URL
             
         Returns:
-            tuple: (判定结果 "0"或"1", 匹配的规则列表)
+            tuple: (
+                判定结果: "0"(正常)/"1"(异常)/None(无匹配,需要模型判断),
+                匹配的规则列表,
+                规则类型: "normal"/"anomalous"/"none"
+            )
         """
-        if not self.enabled or not self.rules:
-            # 如果规则引擎未启用或无规则,返回正常
-            return "0", []
+        if not self.enabled:
+            return None, [], "none"
         
-        matched_rules = []
-        for rule in self.rules:
+        # 优先检查异常规则 (严格匹配)
+        for rule in self.anomalous_rules:
             result = rule.match(url)
             if result:
-                matched_rules.append(result)
+                return "1", [result], "anomalous"
         
-        # 如果有匹配的规则,判定为攻击
-        prediction = "1" if matched_rules else "0"
-        return prediction, matched_rules
+        # 然后检查正常规则
+        for rule in self.normal_rules:
+            result = rule.match(url)
+            if result:
+                return "0", [result], "normal"
+        
+        # 无匹配,需要模型判断
+        return None, [], "none"
     
-    def get_detection_summary(self, matched_rules: List[Dict]) -> str:
+    def get_detection_summary(self, matched_rules: List[Dict], rule_type: str, 
+                            prediction: Optional[str]) -> str:
         """
         生成检测摘要
         
         Args:
             matched_rules: 匹配的规则列表
+            rule_type: 规则类型 ("normal"/"anomalous"/"none")
+            prediction: 预测结果
             
         Returns:
             检测摘要字符串
         """
+        if rule_type == "none":
+            return "未匹配到任何规则,需要模型分析"
+        
         if not matched_rules:
             return "规则引擎未检测到异常"
         
-        attack_types = set(r['attack_type'] for r in matched_rules)
-        severities = [r['severity'] for r in matched_rules]
+        rule = matched_rules[0]  # 只会有一条匹配规则
         
-        summary = f"规则引擎检测到 {len(matched_rules)} 条匹配规则: "
-        summary += f"攻击类型包括 {', '.join(attack_types)}; "
+        if rule_type == "normal":
+            return f"✅ 匹配正常规则 [{rule['rule_id']}]: {rule['description']}"
+        elif rule_type == "anomalous":
+            return f"⚠️ 匹配异常规则 [{rule['rule_id']}]: {rule['description']} (攻击类型: {rule['attack_type']}, 严重程度: {rule['severity']})"
         
-        if 'critical' in severities:
-            summary += "严重程度: 严重"
-        elif 'high' in severities:
-            summary += "严重程度: 高"
-        elif 'medium' in severities:
-            summary += "严重程度: 中"
-        else:
-            summary += "严重程度: 低"
-        
-        return summary
+        return "规则检测完成"
     
     def enable(self):
         """启用规则引擎"""
@@ -142,8 +170,9 @@ class RuleEngine:
     
     def clear_rules(self):
         """清空所有规则"""
-        self.rules.clear()
+        self.normal_rules.clear()
+        self.anomalous_rules.clear()
     
-    def get_rules_count(self) -> int:
+    def get_rules_count(self) -> Tuple[int, int]:
         """获取规则数量"""
-        return len(self.rules)
+        return len(self.normal_rules), len(self.anomalous_rules)

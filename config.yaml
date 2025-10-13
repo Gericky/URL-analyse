@@ -14,8 +14,8 @@ data:
 # 规则引擎配置
 rules:
   enabled: true                                    # 是否启用规则引擎
-  #config_file: "./src/rules/rule_store/empty_rules.yaml"  # 规则配置文件路径
-  config_file: "./src/rules/rule_store/test_rules.yaml"  # 切换到测试规则
+  normal_rules_file: "./src/rules/rule_store/normal_rules.yaml"      # 正常规则文件
+  anomalous_rules_file: "./src/rules/rule_store/anomalous_rules.yaml"  # 异常规则文件
 
 # 输出配置
 output:

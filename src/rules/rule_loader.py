@@ -20,24 +20,39 @@ def load_rule_engine(config: dict) -> RuleEngine:
         print("⚠️ 规则引擎已禁用")
         return engine
     
-    # 加载规则文件
-    rule_file = config.get('config_file', '')
-    if not rule_file or not os.path.exists(rule_file):
-        print(f"⚠️ 规则文件不存在或未配置: {rule_file}")
-        print("📝 规则引擎将以空规则运行")
-        return engine
+    # 加载正常规则
+    normal_file = config.get('normal_rules_file', '')
+    if normal_file and os.path.exists(normal_file):
+        try:
+            with open(normal_file, 'r', encoding='utf-8') as f:
+                normal_config = yaml.safe_load(f)
+            
+            normal_rules = normal_config.get('rules', [])
+            engine.load_normal_rules(normal_rules)
+            print(f"✅ 已加载 {len(normal_rules)} 条正常规则")
+            
+        except Exception as e:
+            print(f"❌ 加载正常规则文件失败: {e}")
+    else:
+        print(f"⚠️ 正常规则文件不存在: {normal_file}")
     
-    try:
-        with open(rule_file, 'r', encoding='utf-8') as f:
-            rules_config = yaml.safe_load(f)
-        
-        rules_list = rules_config.get('rules', [])
-        engine.load_rules(rules_list)
-        
-        print(f"✅ 规则引擎已加载 {engine.get_rules_count()} 条规则")
-        
-    except Exception as e:
-        print(f"❌ 加载规则文件失败: {e}")
-        print("📝 规则引擎将以空规则运行")
+    # 加载异常规则
+    anomalous_file = config.get('anomalous_rules_file', '')
+    if anomalous_file and os.path.exists(anomalous_file):
+        try:
+            with open(anomalous_file, 'r', encoding='utf-8') as f:
+                anomalous_config = yaml.safe_load(f)
+            
+            anomalous_rules = anomalous_config.get('rules', [])
+            engine.load_anomalous_rules(anomalous_rules)
+            print(f"✅ 已加载 {len(anomalous_rules)} 条异常规则")
+            
+        except Exception as e:
+            print(f"❌ 加载异常规则文件失败: {e}")
+    else:
+        print(f"⚠️ 异常规则文件不存在: {anomalous_file}")
+    
+    normal_count, anomalous_count = engine.get_rules_count()
+    print(f"📊 规则引擎统计: 正常规则 {normal_count} 条, 异常规则 {anomalous_count} 条")
     
     return engine
