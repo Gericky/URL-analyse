@@ -1,3 +1,1 @@
-完成样例提取一级域名并去重
-
-运行code文件夹extract.py，输出在output文件夹，待处理文件放在document文件夹
+已完成基础SLM进行500样本测试。
