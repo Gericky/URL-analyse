@@ -1,0 +1,19 @@
+# 模型配置
+model:
+  path: "./Qwen3-0.6B"
+  dtype: "float16"              # 模型精度: "float16" 或 "float32"
+  max_new_tokens: 128           # 最大生成token数
+  temperature: 0.0              # 温度参数: 0.0=确定性输出(贪婪), >0=随机采样
+
+# 数据配置
+data:
+  dir: "./data"
+  normal_file: "good-10.txt"
+  attack_file: "bad-10.txt"
+
+# 输出配置
+output:
+  dir: "./output"
+  all_results: "slm_results_10_all.json"
+  good_results: "slm_results_10_good.json"
+  bad_results: "slm_results_10_bad.json"
