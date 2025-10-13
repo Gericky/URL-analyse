@@ -8,8 +8,6 @@ class QwenModel:
         print(f"🚀 正在从本地加载 Qwen 模型: {model_path}...")
         
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-        
-        # 设置dtype
         torch_dtype = torch.float16 if dtype == "float16" else torch.float32
         
         self.model = AutoModelForCausalLM.from_pretrained(
@@ -20,48 +18,72 @@ class QwenModel:
         )
         print(f"✅ 模型已加载到设备: {self.model.device}\n")
     
-    def query(self, url: str, max_new_tokens=128, temperature=0.0) -> dict:
-        """查询模型判断URL"""
+    def fast_detect(self, url: str, max_new_tokens=50, temperature=0.0) -> dict:
+        """
+        第一阶段：快速检测模式
+        - 只输出 label (0/1) 和攻击类型
+        - 不输出详细理由
+        """
         messages = [
             {
                 "role": "system",
                 "content": (
-                    "你是一个专业的Web安全检测系统,负责分析URL请求并识别潜在的安全威胁。"
-                    "你的任务是判断给定的URL是否包含恶意攻击特征,并给出明确的分类结果。"
-                    "判定规则:"
-                    "- 输出 0:表示正常URL,即安全的、合法的Web请求"
-                    "- 输出 1:表示异常URL,即包含攻击特征的恶意请求"
-                    "攻击特征包括但不限于:"
-                    "• SQL注入:包含 `'`、`--`、`#`、`union`、`select` 等SQL语句"
-                    "• XSS跨站脚本:包含 `<script>`、`</script>`、`javascript:`、`onerror=` 等"
-                    "• 命令注入:包含 `|`、`;`、`&&`、shell命令等"
-                    "• 路径遍历:包含 `../`、`..\\`、`/etc/passwd` 等"
-                    "• 文件包含:包含 `<?php`、`include`、远程文件路径等"
-                    "• 其他恶意特征:编码绕过、异常字符、敏感路径访问等"
-                    "正常请求特征:"
-                    "• 仅包含常规路径和静态资源访问"
-                    "• 参数值为正常的业务数据,无注入符号"
-                    "• 符合标准的HTTP请求格式"
-                    "请基于OWASP Top 10安全标准进行判断,保持高灵敏度但避免误报。"
+                    "你是一个URL安全快速检测系统。"
+                    "任务：快速判断URL是否为攻击，只输出判定结果。"
+                    "输出格式（严格遵守）："
+                    "- 如果是正常URL，输出：0"
+                    "- 如果是攻击URL，输出：1|攻击类型"
+                    "攻击类型包括：sql_injection, xss, command_injection, path_traversal, file_inclusion"
+                    "示例："
+                    "  正常URL → 0"
+                    "  SQL注入 → 1|sql_injection"
+                    "  XSS攻击 → 1|xss"
+                    "不要输出任何解释，只输出判定结果。"
+                )
+            },
+            {
+                "role": "user",
+                "content": f"URL: {url}\n判定结果："
+            }
+        ]
+        
+        return self._generate(messages, max_new_tokens, temperature, url)
+    
+    def deep_analyze(self, url: str, attack_type: str, max_new_tokens=512, temperature=0.3) -> dict:
+        """
+        第二阶段：深度分析模式
+        - 输出详细的结构化分析报告
+        """
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "你是一个Web安全专家，负责对攻击URL进行深度分析。"
+                    "请按以下结构输出详细分析报告：\n"
+                    "## 攻击类型\n[攻击分类]\n\n"
+                    "## 简要概述\n[一句话描述攻击意图]\n\n"
+                    "## 行为描述\n[详细描述URL中的恶意行为]\n\n"
+                    "## 成因分析\n[分析为何会产生此类攻击]\n\n"
+                    "## 判定依据\n[列出判定为攻击的关键特征]\n\n"
+                    "## 风险评估\n[评估攻击的危害程度]\n\n"
+                    "## 防护建议\n[给出具体的防护措施]"
                 )
             },
             {
                 "role": "user",
                 "content": (
-                    "请分析以下URL请求,判断其是否为恶意攻击:\n"
-                    f"URL: {url}\n\n"
-                    "请按以下格式回答:\n"
-                    "首先输出分类结果(0或1):\n"
-                    "- 0 表示正常URL\n"
-                    "- 1 表示异常URL\n"
-                    "然后说明判断理由,包括:\n"
-                    "- 如果是异常URL(1),请指出具体的攻击类型(如SQL注入、XSS、命令执行、路径遍历等)和恶意特征\n"
-                    "- 如果是正常URL(0),请说明为何判定为安全请求\n\n"
-                    "请直接以数字0或1开头回答。"
+                    f"请对以下攻击URL进行深度分析：\n"
+                    f"URL: {url}\n"
+                    f"初步判定类型: {attack_type}\n\n"
+                    f"请输出完整的分析报告："
                 )
             }
         ]
         
+        return self._generate(messages, max_new_tokens, temperature, url)
+    
+    def _generate(self, messages, max_new_tokens, temperature, url):
+        """内部生成方法"""
         text = self.tokenizer.apply_chat_template(
             messages, 
             tokenize=False, 
@@ -72,9 +94,7 @@ class QwenModel:
         
         start_time = perf_counter()
         with torch.no_grad():
-            # 根据temperature决定采样策略
             if temperature > 0:
-                # 使用采样模式
                 outputs = self.model.generate(
                     **inputs,
                     max_new_tokens=max_new_tokens,
@@ -85,7 +105,6 @@ class QwenModel:
                     pad_token_id=self.tokenizer.eos_token_id
                 )
             else:
-                # 使用贪婪解码模式(确定性输出)
                 outputs = self.model.generate(
                     **inputs,
                     max_new_tokens=max_new_tokens,
@@ -99,11 +118,8 @@ class QwenModel:
             skip_special_tokens=True
         ).strip()
         
-        elapsed = round(end_time - start_time, 3)
-        
-        # 返回原始响应,由外部解析
         return {
             "url": url,
             "raw_response": raw_response,
-            "elapsed_time_sec": elapsed
+            "elapsed_time_sec": round(end_time - start_time, 3)
         }

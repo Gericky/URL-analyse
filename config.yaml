@@ -2,8 +2,16 @@
 model:
   path: "./Qwen3-0.6B"
   dtype: "float16"
-  max_new_tokens: 128
-  temperature: 0.0
+  
+  # 第一阶段：快速检测
+  fast_detection:
+    max_new_tokens: 50        # 减少token数量提高速度
+    temperature: 0.0
+  
+  # 第二阶段：深度分析
+  deep_analysis:
+    max_new_tokens: 512       # 增加token数量支持详细分析
+    temperature: 0.3
 
 # 数据配置
 data:
@@ -13,13 +21,15 @@ data:
 
 # 规则引擎配置
 rules:
-  enabled: true                                    # 是否启用规则引擎
-  normal_rules_file: "./src/rules/rule_store/normal_rules.yaml"      # 正常规则文件
-  anomalous_rules_file: "./src/rules/rule_store/anomalous_rules.yaml"  # 异常规则文件
+  enabled: true
+  normal_rules_file: "./src/rules/rule_store/normal_rules.yaml"
+  anomalous_rules_file: "./src/rules/rule_store/anomalous_rules.yaml"
 
 # 输出配置
 output:
   dir: "./output"
-  all_results: "slm_results_10_all.json"
-  good_results: "slm_results_10_good.json"
-  bad_results: "slm_results_10_bad.json"
+  # 第一阶段输出
+  stage1_all: "stage1_realtime_all.json"
+  stage1_anomalous: "stage1_anomalous.txt"  # 异常URL列表
+  # 第二阶段输出
+  stage2_deep_analysis: "stage2_deep_analysis.json"

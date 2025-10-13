@@ -1,20 +1,11 @@
 """
-混合检测器 - 结合规则引擎和LLM模型进行URL安全检测
+第一阶段：实时监测 - 快速判定
 """
 
 class HybridDetector:
-    """混合检测器:规则引擎 + LLM模型"""
+    """混合检测器：规则引擎 + 快速模型检测"""
     
     def __init__(self, model, parser, rule_engine, config):
-        """
-        初始化混合检测器
-        
-        Args:
-            model: 模型实例
-            parser: 响应解析器实例
-            rule_engine: 规则引擎实例
-            config: 配置字典
-        """
         self.model = model
         self.parser = parser
         self.rule_engine = rule_engine
@@ -22,58 +13,60 @@ class HybridDetector:
     
     def detect(self, url: str) -> dict:
         """
-        执行混合检测
+        第一阶段快速检测
         
-        Args:
-            url: 待检测的URL
-            
         Returns:
-            dict: 检测结果字典
+            dict: {
+                "url": str,
+                "predicted": "0"/"1",
+                "attack_type": str,  # 如果是攻击，返回类型
+                "detection_method": "rule_normal"/"rule_anomalous"/"model",
+                ...
+            }
         """
-        # 1. 规则引擎检测 (优先级最高)
+        # 1. 规则引擎检测
         rule_prediction, matched_rules, rule_type = self.rule_engine.detect(url)
-        rule_summary = self.rule_engine.get_detection_summary(
-            matched_rules, rule_type, rule_prediction
-        )
         
-        # 2. 如果规则直接判定,则跳过模型推理
-        if rule_prediction is not None:
+        # 2. 如果匹配到正常规则
+        if rule_type == "normal":
             return {
                 "url": url,
-                "predicted": rule_prediction,
-                "rule_prediction": rule_prediction,
+                "predicted": "0",
+                "attack_type": "none",
+                "detection_method": "rule_normal",
                 "rule_matched": matched_rules,
-                "rule_summary": rule_summary,
-                "rule_type": rule_type,
-                "model_prediction": None,
-                "model_reason": "规则直接判定,未调用模型",
-                "reason": f"[规则直接判定] {rule_summary}",
-                "raw_response": None,
-                "elapsed_time_sec": 0,
-                "detection_method": "rule_only"
+                "reason": f"✅ 匹配正常规则: {matched_rules[0]['rule_name']}",
+                "elapsed_time_sec": 0
             }
         
-        # 3. 规则无法判定,调用模型推理
-        result = self.model.query(
+        # 3. 如果匹配到异常规则
+        if rule_type == "anomalous":
+            return {
+                "url": url,
+                "predicted": "1",
+                "attack_type": matched_rules[0]['attack_type'],
+                "detection_method": "rule_anomalous",
+                "rule_matched": matched_rules,
+                "reason": f"⚠️ 匹配异常规则: {matched_rules[0]['rule_name']}",
+                "elapsed_time_sec": 0
+            }
+        
+        # 4. 规则无匹配，调用模型快速检测
+        result = self.model.fast_detect(
             url,
-            max_new_tokens=self.config['model']['max_new_tokens'],
-            temperature=self.config['model']['temperature']
+            max_new_tokens=self.config['model']['fast_detection']['max_new_tokens'],
+            temperature=self.config['model']['fast_detection']['temperature']
         )
         
-        # 4. 解析模型响应
-        model_prediction, model_reason = self.parser.parse_url_detection_response(
+        # 5. 解析快速检测响应
+        predicted, attack_type = self.parser.parse_fast_detection_response(
             result['raw_response']
         )
         
-        # 5. 组合结果
-        result['rule_prediction'] = rule_prediction
-        result['rule_matched'] = matched_rules
-        result['rule_summary'] = rule_summary
-        result['rule_type'] = rule_type
-        result['model_prediction'] = model_prediction
-        result['model_reason'] = model_reason
-        result['predicted'] = model_prediction  # 使用模型判断
-        result['reason'] = f"[规则无匹配,模型判断] {model_reason}"
-        result['detection_method'] = "model_only"
+        result['predicted'] = predicted
+        result['attack_type'] = attack_type
+        result['detection_method'] = "model"
+        result['rule_matched'] = []
+        result['reason'] = f"🤖 模型快速判定: {'异常' if predicted == '1' else '正常'}"
         
         return result

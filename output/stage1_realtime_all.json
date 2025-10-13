@@ -1,0 +1,294 @@
+[
+  {
+    "url": "/103886/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.228,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/rcanimal/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.06,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/458010b88d9ce/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.061,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/cclogovs/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.062,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/using-localization/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.067,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/121006_dakotacwpressconf/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.069,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/50393994/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.062,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/169393/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.061,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/166636/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.066,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/labview_v2/",
+    "raw_response": "0",
+    "elapsed_time_sec": 0.071,
+    "predicted": "0",
+    "attack_type": "none",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 正常",
+    "true_label": "0"
+  },
+  {
+    "url": "/top.php?stuff='uname >q36497765 #",
+    "predicted": "1",
+    "attack_type": "sql_injection",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_SQL_002",
+        "rule_name": "SQL注入 - 注释符",
+        "attack_type": "sql_injection",
+        "severity": "high",
+        "matched_text": "#",
+        "description": "检测到SQL注释符"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: SQL注入 - 注释符",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/h21y8w52.nsf?<script>cross_site_scripting.nasl</script>",
+    "predicted": "1",
+    "attack_type": "xss",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_XSS_001",
+        "rule_name": "XSS - Script标签",
+        "attack_type": "xss",
+        "severity": "critical",
+        "matched_text": "<script>cross_site_scripting.nasl</script>",
+        "description": "检测到script标签"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: XSS - Script标签",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/ca000001.pl?action=showcart&hop=\\\"><script>alert('vulnerable')</script>&path=acatalog/",
+    "predicted": "1",
+    "attack_type": "xss",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_XSS_001",
+        "rule_name": "XSS - Script标签",
+        "attack_type": "xss",
+        "severity": "critical",
+        "matched_text": "<script>alert('vulnerable')</script>",
+        "description": "检测到script标签"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: XSS - Script标签",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/scripts/edit_image.php?dn=1&userfile=/etc/passwd&userfile_name= ;id;",
+    "predicted": "1",
+    "attack_type": "command_injection",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: 命令注入 - 管道符",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/javascript/mta.exe",
+    "raw_response": "1|sql_injection",
+    "elapsed_time_sec": 0.193,
+    "predicted": "1",
+    "attack_type": "sql_injection",
+    "detection_method": "model",
+    "rule_matched": [],
+    "reason": "🤖 模型快速判定: 异常",
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/colors/kernel/loadkernel.php?installpath=/etc/passwd\\x00",
+    "predicted": "1",
+    "attack_type": "path_traversal",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_PATH_002",
+        "rule_name": "路径遍历 - 系统敏感文件",
+        "attack_type": "path_traversal",
+        "severity": "critical",
+        "matched_text": "/etc/passwd",
+        "description": "检测到敏感系统文件访问"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: 路径遍历 - 系统敏感文件",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/cal/feedsplitter.php?format=../../../../../../../../../../etc/passwd\\x00&debug=1",
+    "predicted": "1",
+    "attack_type": "command_injection",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: 命令注入 - 管道符",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/phpwebfilemgr/index.php?f=../../../../../../../../../etc/passwd",
+    "predicted": "1",
+    "attack_type": "path_traversal",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_PATH_001",
+        "rule_name": "路径遍历 - 上级目录",
+        "attack_type": "path_traversal",
+        "severity": "high",
+        "matched_text": "../",
+        "description": "检测到目录遍历尝试"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: 路径遍历 - 上级目录",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/cgi-bin/script/cat_for_gen.php?ad=1&ad_direct=../&m_for_racine=</option></select><?phpinfo();?>",
+    "predicted": "1",
+    "attack_type": "command_injection",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_CMD_001",
+        "rule_name": "命令注入 - 管道符",
+        "attack_type": "command_injection",
+        "severity": "critical",
+        "matched_text": "&",
+        "description": "检测到shell元字符"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: 命令注入 - 管道符",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  },
+  {
+    "url": "/examples/jsp/cal/search.php?allwords=<br><script>foo</script>&cid=0&title=1&desc=1",
+    "predicted": "1",
+    "attack_type": "xss",
+    "detection_method": "rule_anomalous",
+    "rule_matched": [
+      {
+        "rule_id": "ANOMALOUS_XSS_001",
+        "rule_name": "XSS - Script标签",
+        "attack_type": "xss",
+        "severity": "critical",
+        "matched_text": "<script>foo</script>",
+        "description": "检测到script标签"
+      }
+    ],
+    "reason": "⚠️ 匹配异常规则: XSS - Script标签",
+    "elapsed_time_sec": 0,
+    "true_label": "1"
+  }
+]
