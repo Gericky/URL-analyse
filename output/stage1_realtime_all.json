@@ -2,7 +2,7 @@
   {
     "url": "/103886/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.228,
+    "elapsed_time_sec": 0.211,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -24,7 +24,7 @@
   {
     "url": "/458010b88d9ce/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.061,
+    "elapsed_time_sec": 0.055,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -35,7 +35,7 @@
   {
     "url": "/cclogovs/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.062,
+    "elapsed_time_sec": 0.056,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -46,7 +46,7 @@
   {
     "url": "/using-localization/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.067,
+    "elapsed_time_sec": 0.055,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -57,7 +57,7 @@
   {
     "url": "/121006_dakotacwpressconf/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.069,
+    "elapsed_time_sec": 0.055,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -68,7 +68,7 @@
   {
     "url": "/50393994/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.062,
+    "elapsed_time_sec": 0.056,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -90,7 +90,7 @@
   {
     "url": "/166636/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.066,
+    "elapsed_time_sec": 0.054,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -101,7 +101,7 @@
   {
     "url": "/labview_v2/",
     "raw_response": "0",
-    "elapsed_time_sec": 0.071,
+    "elapsed_time_sec": 0.056,
     "predicted": "0",
     "attack_type": "none",
     "detection_method": "model",
@@ -188,7 +188,7 @@
   {
     "url": "/javascript/mta.exe",
     "raw_response": "1|sql_injection",
-    "elapsed_time_sec": 0.193,
+    "elapsed_time_sec": 0.156,
     "predicted": "1",
     "attack_type": "sql_injection",
     "detection_method": "model",
