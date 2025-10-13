@@ -147,7 +147,8 @@ def process_file(filename, label):
 if __name__ == "__main__":
     total_start = perf_counter()
 
-    good_results = process_file("good-500.txt", "normal")
+    # good_results = process_file("good-500.txt", "normal")
+    good_results = process_file("good_fromE.txt", "normal")
     bad_results = process_file("bad-500.txt", "attack")
 
     all_results = good_results + bad_results
