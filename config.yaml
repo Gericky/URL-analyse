@@ -16,8 +16,10 @@ model:
 # 数据配置
 data:
   dir: "./data"
-  normal_file: "good-10.txt"
-  attack_file: "bad-10.txt"
+#  normal_file: "good-10.txt"
+#  attack_file: "bad-10.txt"
+  normal_file: "good-500-fromE.txt"
+  attack_file: "bad-500.txt"
 
 # 规则引擎配置
 rules:
