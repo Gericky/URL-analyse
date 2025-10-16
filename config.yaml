@@ -15,7 +15,7 @@ model:
 
 # 数据配置
 data:
-  dir: "./data"
+  dir: "./data/processed/WAF-github/part"
 #  normal_file: "good-10.txt"
 #  attack_file: "bad-10.txt"
   normal_file: "good-500-fromE.txt"
