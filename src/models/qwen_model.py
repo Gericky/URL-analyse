@@ -33,12 +33,16 @@ class QwenModel:
                     "输出格式（严格遵守）："
                     "- 如果是正常URL，输出：0"
                     "- 如果是攻击URL，输出：1|攻击类型"
-                    "攻击类型包括：sql_injection, xss, command_injection, path_traversal, file_inclusion"
+                    "攻击类型包括：sql_injection, xss, command_injection, path_traversal, file_inclusion,DDoS"
                     "示例："
                     "  正常URL → 0"
                     "  SQL注入 → 1|sql_injection"
                     "  XSS攻击 → 1|xss"
                     "不要输出任何解释，只输出判定结果。"
+                    "?d后面的内容是URL参数，请重点关注。"
+                    "比如/skypearl/cn/validatorAction.action?d=1497656987是正常URL，"
+                    "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
+
                 )
             },
             {
