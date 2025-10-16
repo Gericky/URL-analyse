@@ -4,7 +4,7 @@
 import json
 import os
 from typing import List, Dict
-
+from time import perf_counter
 class ResultStatistics:
     """结果统计分析器"""
     
@@ -55,6 +55,13 @@ class ResultStatistics:
         # 错误分析
         self.fp_results = [r for r in all_results if r['true_label'] == "0" and r['predicted'] == "1"]
         self.fn_results = [r for r in all_results if r['true_label'] == "1" and r['predicted'] == "0"]
+        # ✨ 新增：时长统计
+        self.rule_normal_time = sum(r.get('elapsed_time_sec', 0) for r in all_results if r.get('detection_method') == 'rule_normal')
+        self.rule_anomalous_time = sum(r.get('elapsed_time_sec', 0) for r in all_results if r.get('detection_method') == 'rule_anomalous')
+        self.model_time = sum(r.get('elapsed_time_sec', 0) for r in all_results if r.get('detection_method') == 'model')
+        
+        self.total_rule_time = self.rule_normal_time + self.rule_anomalous_time
+        self.total_model_time = self.model_time
     
     def print_stage1_basic_statistics(self, elapsed_time: float):
         """
@@ -70,12 +77,23 @@ class ResultStatistics:
             print(f"{'='*60}\n")
             return
         
+        # 计算实际检测总耗时（规则 + 模型）
+        actual_detection_time = self.total_rule_time + self.total_model_time
+        overhead_time = elapsed_time - actual_detection_time
+        
         print(f"\n{'='*60}")
         print(f"📊 第一阶段基础统计")
         print(f"{'='*60}")
-        print(f"⏱️  总用时: {elapsed_time:.2f} 秒")
+        print(f"⏱️  总运行时间: {elapsed_time:.2f} 秒")
+        print(f"   ├─ 实际检测耗时: {actual_detection_time:.4f} 秒 ({actual_detection_time/elapsed_time*100:.1f}%)")
+        print(f"   │  ├─ 规则检测: {self.total_rule_time:.4f} 秒")
+        print(f"   │  └─ 模型检测: {self.total_model_time:.4f} 秒")
+        print(f"   └─ 其他开销: {overhead_time:.4f} 秒 ({overhead_time/elapsed_time*100:.1f}%)")
+        print(f"      (文件I/O、数据处理等)")
+        print()
         print(f"📊 总URL数: {total}")
-        print(f"   平均每URL用时: {elapsed_time/total*1000:.2f} 毫秒")
+        print(f"   平均每URL总耗时: {elapsed_time/total*1000:.2f} 毫秒")
+        print(f"   平均每URL检测耗时: {actual_detection_time/total*1000:.2f} 毫秒")
         print()
         print(f"📂 输入数据集:")
         print(f"   正常URL数据集: {len(self.true_normal_results)} 条")
@@ -188,7 +206,7 @@ class ResultStatistics:
         print("=" * 60)
     
     def print_detection_method_statistics(self):
-        """打印检测方法统计"""
+        """打印检测方法统计（包含时长信息）"""
         total = len(self.all_results)
         
         if total == 0:
@@ -200,14 +218,50 @@ class ResultStatistics:
             return
         
         print("\n" + "=" * 60)
-        print("🔧 检测方法统计")
+        print("🔧 检测方法统计（数量 + 时长）")
         print("=" * 60)
-        print(f"📌 规则判定为正常:    {self.rule_normal_count:3d} 条 ({self.rule_normal_count/total*100:.1f}%)")
-        print(f"📌 规则判定为异常:    {self.rule_anomalous_count:3d} 条 ({self.rule_anomalous_count/total*100:.1f}%)")
-        print(f"📌 模型推理判定:      {self.model_count:3d} 条 ({self.model_count/total*100:.1f}%)")
-        print("-" * 60)
-        print(f"📊 规则命中率:        {(self.rule_normal_count + self.rule_anomalous_count)/total*100:.1f}%")
-        print(f"📊 模型调用率:        {self.model_count/total*100:.1f}%")
+        
+        # 规则检测统计
+        total_rule_count = self.rule_normal_count + self.rule_anomalous_count
+        print(f"\n🔍 规则引擎检测:")
+        print(f"   ├─ 总匹配数: {total_rule_count} 条 ({total_rule_count/total*100:.1f}%)")
+        print(f"   ├─ 总耗时: {self.total_rule_time:.4f} 秒")
+        
+        if total_rule_count > 0:
+            avg_rule_time = self.total_rule_time / total_rule_count
+            print(f"   ├─ 平均耗时: {avg_rule_time*1000:.4f} 毫秒/条")
+            print(f"   │")
+            print(f"   ├─ 判定为正常: {self.rule_normal_count} 条")
+            if self.rule_normal_count > 0:
+                print(f"   │  ├─ 耗时: {self.rule_normal_time:.4f} 秒")
+                print(f"   │  └─ 平均: {self.rule_normal_time/self.rule_normal_count*1000:.4f} 毫秒/条")
+            print(f"   │")
+            print(f"   └─ 判定为异常: {self.rule_anomalous_count} 条")
+            if self.rule_anomalous_count > 0:
+                print(f"      ├─ 耗时: {self.rule_anomalous_time:.4f} 秒")
+                print(f"      └─ 平均: {self.rule_anomalous_time/self.rule_anomalous_count*1000:.4f} 毫秒/条")
+        
+        # 模型检测统计
+        print(f"\n🤖 模型推理检测:")
+        print(f"   ├─ 检测数量: {self.model_count} 条 ({self.model_count/total*100:.1f}%)")
+        print(f"   ├─ 总耗时: {self.total_model_time:.4f} 秒")
+        if self.model_count > 0:
+            avg_model_time = self.total_model_time / self.model_count
+            print(f"   └─ 平均耗时: {avg_model_time*1000:.4f} 毫秒/条")
+        
+        # 效率对比
+        if total_rule_count > 0 and self.model_count > 0:
+            avg_rule_time = self.total_rule_time / total_rule_count
+            avg_model_time = self.total_model_time / self.model_count
+            speedup = avg_model_time / avg_rule_time
+            print(f"\n⚡ 效率对比:")
+            print(f"   └─ 规则比模型快 {speedup:.2f}x")
+        
+        # 整体统计
+        print(f"\n📊 整体命中率:")
+        print(f"   ├─ 规则命中率: {total_rule_count/total*100:.1f}%")
+        print(f"   └─ 模型调用率: {self.model_count/total*100:.1f}%")
+        
         print("=" * 60)
     
     def print_dataset_method_statistics(self):
@@ -403,9 +457,40 @@ class ResultStatistics:
         # 保存评估指标
         metrics = self.calculate_metrics()
         
-        # 扩展指标：添加分方法统计
+        # ✨ 新增：时长统计信息
+        total_rule_count = self.rule_normal_count + self.rule_anomalous_count
+        
+        # 扩展指标：添加时长统计
         extended_metrics = {
             **metrics,
+            'timing_statistics': {  # ✨ 新增部分
+                'rule_engine': {
+                    'total_count': total_rule_count,
+                    'total_time_sec': round(self.total_rule_time, 6),
+                    'avg_time_sec': round(self.total_rule_time / total_rule_count, 6) if total_rule_count > 0 else 0,
+                    'avg_time_ms': round(self.total_rule_time / total_rule_count * 1000, 4) if total_rule_count > 0 else 0,
+                    'normal_rules': {
+                        'count': self.rule_normal_count,
+                        'total_time_sec': round(self.rule_normal_time, 6),
+                        'avg_time_ms': round(self.rule_normal_time / self.rule_normal_count * 1000, 4) if self.rule_normal_count > 0 else 0
+                    },
+                    'anomalous_rules': {
+                        'count': self.rule_anomalous_count,
+                        'total_time_sec': round(self.rule_anomalous_time, 6),
+                        'avg_time_ms': round(self.rule_anomalous_time / self.rule_anomalous_count * 1000, 4) if self.rule_anomalous_count > 0 else 0
+                    }
+                },
+                'model_inference': {
+                    'total_count': self.model_count,
+                    'total_time_sec': round(self.total_model_time, 6),
+                    'avg_time_sec': round(self.total_model_time / self.model_count, 6) if self.model_count > 0 else 0,
+                    'avg_time_ms': round(self.total_model_time / self.model_count * 1000, 4) if self.model_count > 0 else 0
+                },
+                'speedup': round(
+                    (self.total_model_time / self.model_count) / (self.total_rule_time / total_rule_count),
+                    2
+                ) if (total_rule_count > 0 and self.model_count > 0) else 0
+            },
             'dataset_statistics': {
                 'normal_dataset': {
                     'total': len(self.true_normal_results),

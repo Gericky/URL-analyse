@@ -1,6 +1,7 @@
 """
 第一阶段：实时监测 - 快速判定
 """
+from time import perf_counter
 
 class HybridDetector:
     """混合检测器：规则引擎 + 快速模型检测"""
@@ -19,13 +20,16 @@ class HybridDetector:
             dict: {
                 "url": str,
                 "predicted": "0"/"1",
-                "attack_type": str,  # 如果是攻击，返回类型
+                "attack_type": str,
                 "detection_method": "rule_normal"/"rule_anomalous"/"model",
+                "elapsed_time_sec": float,
                 ...
             }
         """
-        # 1. 规则引擎检测
+        # 1. 规则引擎检测（计时）
+        rule_start = perf_counter()
         rule_prediction, matched_rules, rule_type = self.rule_engine.detect(url)
+        rule_elapsed = perf_counter() - rule_start
         
         # 2. 如果匹配到正常规则
         if rule_type == "normal":
@@ -36,7 +40,7 @@ class HybridDetector:
                 "detection_method": "rule_normal",
                 "rule_matched": matched_rules,
                 "reason": f"✅ 匹配正常规则: {matched_rules[0]['rule_name']}",
-                "elapsed_time_sec": 0
+                "elapsed_time_sec": rule_elapsed
             }
         
         # 3. 如果匹配到异常规则
@@ -48,7 +52,7 @@ class HybridDetector:
                 "detection_method": "rule_anomalous",
                 "rule_matched": matched_rules,
                 "reason": f"⚠️ 匹配异常规则: {matched_rules[0]['rule_name']}",
-                "elapsed_time_sec": 0
+                "elapsed_time_sec": rule_elapsed
             }
         
         # 4. 规则无匹配，调用模型快速检测
