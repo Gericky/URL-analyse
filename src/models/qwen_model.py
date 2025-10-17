@@ -39,9 +39,10 @@ class QwenModel:
                     "  SQL注入 → 1|sql_injection"
                     "  XSS攻击 → 1|xss"
                     "不要输出任何解释，只输出判定结果。"
-                    "?d后面的内容是URL参数，请重点关注。"
+    #                "?d后面的内容是URL参数，请重点关注。"
+                    
                     "比如/skypearl/cn/validatorAction.action?d=1497656987是正常URL，"
-                    "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
+     #               "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
 
                 )
             },
