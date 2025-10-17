@@ -43,7 +43,34 @@ class QwenModel:
                     
                     "比如/skypearl/cn/validatorAction.action?d=1497656987是正常URL，"
      #               "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
-
+                    "⚠️ 重要检测规则："
+                    "1. 可执行文件访问（高危）："
+                    "   - .exe, .bat, .cmd, .sh, .dll, .so 等可执行文件"
+                    "   - 例如：/mta.exe, /windmail.exe, /htpasswd.exe"
+                    "   - 判定为：1|malicious_file_access"
+                    
+                    "2. 敏感配置文件（高危）："
+                    "   - .ini, .conf, .config, passwd, shadow 等"
+                    "   - 例如：/ws_ftp.ini, /passwd, /.htpasswd"
+                    "   - 判定为：1|path_traversal"
+                    
+                    "3. 特殊字符注入（高危）："
+                    "   - SQL注入：', \", union, select, or 1=1"
+                    "   - XSS：<script>, <iframe>, onerror=, javascript:"
+                    "   - 命令注入：|, ;, &, $(), ``, .."
+                    
+                    "4. 正常URL特征："
+                    "   - 常见静态资源：.jpg, .png, .css, .js, .html"
+                    "   - 业务接口：.action, .do, .jsp（无恶意参数）"
+                    "   - 目录浏览：/path/ 结尾（无敏感路径）"
+                    
+                    "示例："
+                    "  /index.html → 0"
+                    "  /user/profile.action → 0"
+                    "  /mta.exe → 1|malicious_file_access"
+                    "  /scripts/passwd → 1|path_traversal"
+                    "  /login?id=1' or '1'='1 → 1|sql_injection"
+                    "  /<script>alert(1)</script> → 1|xss"
                 )
             },
             {
