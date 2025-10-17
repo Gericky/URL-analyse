@@ -62,7 +62,96 @@ class ResultStatistics:
         
         self.total_rule_time = self.rule_normal_time + self.rule_anomalous_time
         self.total_model_time = self.model_time
-    
+        # ✨ 新增：详细规则统计
+        self.rule_statistics = self._calculate_rule_statistics()
+        
+        # ✨ 新增：按检测方法分类的错误案例
+        self.fp_by_rule = [r for r in self.fp_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]
+        self.fp_by_model = [r for r in self.fp_results if r.get('detection_method') == 'model']
+        
+        self.fn_by_rule = [r for r in self.fn_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]
+        self.fn_by_model = [r for r in self.fn_results if r.get('detection_method') == 'model']        
+        
+    def _calculate_rule_statistics(self) -> Dict:
+        """
+        统计每条规则的使用情况
+        
+        Returns:
+            dict: {
+                "rule_id": {
+                    "rule_name": str,
+                    "attack_type": str,
+                    "total_matched": int,
+                    "correct": int,
+                    "false_positive": int,
+                    "false_negative": int,
+                    "accuracy": float,
+                    "avg_time_ms": float
+                }
+            }
+        """
+        rule_stats = {}
+        
+        for result in self.all_results:
+            # 只处理规则检测的结果
+            if result.get('detection_method') not in ['rule_normal', 'rule_anomalous']:
+                continue
+            
+            matched_rules = result.get('rule_matched', [])
+            if not matched_rules:
+                continue
+            
+            # 通常每个URL只匹配一条规则(优先级最高的)
+            for rule in matched_rules:
+                rule_id = rule.get('rule_id', 'unknown')
+                
+                if rule_id not in rule_stats:
+                    rule_stats[rule_id] = {
+                        'rule_name': rule.get('rule_name', 'Unknown'),
+                        'attack_type': rule.get('attack_type', 'unknown'),
+                        'severity': rule.get('severity', 'unknown'),
+                        'total_matched': 0,
+                        'correct': 0,
+                        'false_positive': 0,  # 规则判异常,实际正常
+                        'false_negative': 0,   # 规则判正常,实际异常
+                        'total_time': 0.0,
+                        'times': []
+                    }
+                
+                # 统计使用次数
+                rule_stats[rule_id]['total_matched'] += 1
+                
+                # 记录时间
+                elapsed = result.get('elapsed_time_sec', 0)
+                rule_stats[rule_id]['total_time'] += elapsed
+                rule_stats[rule_id]['times'].append(elapsed)
+                
+                # 判断正确性
+                predicted = result.get('predicted')
+                true_label = result.get('true_label')
+                
+                if predicted == true_label:
+                    rule_stats[rule_id]['correct'] += 1
+                else:
+                    # 误报: 判为异常(1),实际正常(0)
+                    if predicted == "1" and true_label == "0":
+                        rule_stats[rule_id]['false_positive'] += 1
+                    # 漏报: 判为正常(0),实际异常(1)
+                    elif predicted == "0" and true_label == "1":
+                        rule_stats[rule_id]['false_negative'] += 1
+        
+        # 计算准确率和平均时间
+        for rule_id, stats in rule_stats.items():
+            total = stats['total_matched']
+            if total > 0:
+                stats['accuracy'] = stats['correct'] / total
+                stats['avg_time_ms'] = (stats['total_time'] / total) * 1000
+            else:
+                stats['accuracy'] = 0.0
+                stats['avg_time_ms'] = 0.0
+        
+        return rule_stats
+
     def print_stage1_basic_statistics(self, elapsed_time: float):
         """
         打印第一阶段基础统计
@@ -363,63 +452,52 @@ class ResultStatistics:
         print("=" * 60)
     
     def print_error_analysis(self, max_display: int = 3):
-        """
-        打印错误分析（终端只显示前几个示例）
-        
-        Args:
-            max_display: 终端显示的最大示例数量（默认3个）
-        """
+        """打印错误分析(增强版:按检测方法分类)"""
         print("\n" + "=" * 60)
-        print("🔍 错误分析")
+        print("❌ 错误分析")
         print("=" * 60)
         
-        # 误报分析 (FP)
-        print(f"\n⚠️  误报 (False Positive) - 共 {len(self.fp_results)} 条:")
+        # 误报分析
+        print(f"\n🔴 误报 (False Positives): {len(self.fp_results)} 条")
         if len(self.fp_results) > 0:
-            fp_by_rule = [r for r in self.fp_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]
-            fp_by_model = [r for r in self.fp_results if r.get('detection_method') == 'model']
+            print(f"   ├─ 规则误报: {len(self.fp_by_rule)} 条 ({len(self.fp_by_rule)/len(self.fp_results)*100:.1f}%)")
+            print(f"   └─ 模型误报: {len(self.fp_by_model)} 条 ({len(self.fp_by_model)/len(self.fp_results)*100:.1f}%)")
             
-            print(f"   ├─ 规则引擎误报: {len(fp_by_rule)} 条 ({len(fp_by_rule)/len(self.fp_results)*100:.1f}%)")
-            print(f"   └─ 模型推理误报: {len(fp_by_model)} 条 ({len(fp_by_model)/len(self.fp_results)*100:.1f}%)")
+            # 显示规则误报详情
+            if len(self.fp_by_rule) > 0:
+                print(f"\n   📌 规则误报详情 (前{min(max_display, len(self.fp_by_rule))}条):")
+                for i, case in enumerate(self.fp_by_rule[:max_display], 1):
+                    rule_name = case.get('rule_matched', [{}])[0].get('rule_name', 'Unknown')
+                    print(f"      {i}. 规则: {rule_name}")
+                    print(f"         URL: {case['url'][:80]}...")
+                    print(f"         原因: {case.get('reason', 'N/A')}")
             
-            # 只显示前几个示例
-            display_count = min(max_display, len(self.fp_results))
-            print(f"\n   示例（显示前 {display_count} 条，完整列表见: stage1_false_positives.json）:")
-            for i, result in enumerate(self.fp_results[:display_count], 1):
-                url_display = result['url'][:70] + "..." if len(result['url']) > 70 else result['url']
-                print(f"   {i}. {url_display}")
-                print(f"      检测方法: {result.get('detection_method', 'unknown')}")
-                if result.get('detection_method') in ['rule_normal', 'rule_anomalous']:
-                    matched_rules = result.get('matched_rules', [])
-                    if matched_rules:
-                        rule_names = [r.get('rule_name', 'unknown') for r in matched_rules]
-                        print(f"      匹配规则: {', '.join(rule_names)}")
-        else:
-            print(f"   ✅ 无误报!")
+            # 显示模型误报详情
+            if len(self.fp_by_model) > 0:
+                print(f"\n   📌 模型误报详情 (前{min(max_display, len(self.fp_by_model))}条):")
+                for i, case in enumerate(self.fp_by_model[:max_display], 1):
+                    print(f"      {i}. 判定: {case.get('attack_type', 'unknown')}")
+                    print(f"         URL: {case['url'][:80]}...")
         
-        # 漏报分析 (FN)
-        print(f"\n❌ 漏报 (False Negative) - 共 {len(self.fn_results)} 条:")
+        # 漏报分析
+        print(f"\n🔵 漏报 (False Negatives): {len(self.fn_results)} 条")
         if len(self.fn_results) > 0:
-            fn_by_rule = [r for r in self.fn_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]
-            fn_by_model = [r for r in self.fn_results if r.get('detection_method') == 'model']
+            print(f"   ├─ 规则漏报: {len(self.fn_by_rule)} 条 ({len(self.fn_by_rule)/len(self.fn_results)*100:.1f}%)")
+            print(f"   └─ 模型漏报: {len(self.fn_by_model)} 条 ({len(self.fn_by_model)/len(self.fn_results)*100:.1f}%)")
             
-            print(f"   ├─ 规则引擎漏报: {len(fn_by_rule)} 条 ({len(fn_by_rule)/len(self.fn_results)*100:.1f}%)")
-            print(f"   └─ 模型推理漏报: {len(fn_by_model)} 条 ({len(fn_by_model)/len(self.fn_results)*100:.1f}%)")
+            # 显示规则漏报详情
+            if len(self.fn_by_rule) > 0:
+                print(f"\n   📌 规则漏报详情 (前{min(max_display, len(self.fn_by_rule))}条):")
+                for i, case in enumerate(self.fn_by_rule[:max_display], 1):
+                    rule_name = case.get('rule_matched', [{}])[0].get('rule_name', 'Normal Pattern')
+                    print(f"      {i}. 规则: {rule_name}")
+                    print(f"         URL: {case['url'][:80]}...")
             
-            # 只显示前几个示例
-            display_count = min(max_display, len(self.fn_results))
-            print(f"\n   示例（显示前 {display_count} 条，完整列表见: stage1_false_negatives.json）:")
-            for i, result in enumerate(self.fn_results[:display_count], 1):
-                url_display = result['url'][:70] + "..." if len(result['url']) > 70 else result['url']
-                print(f"   {i}. {url_display}")
-                print(f"      检测方法: {result.get('detection_method', 'unknown')}")
-                if result.get('detection_method') in ['rule_normal', 'rule_anomalous']:
-                    matched_rules = result.get('matched_rules', [])
-                    if matched_rules:
-                        rule_names = [r.get('rule_name', 'unknown') for r in matched_rules]
-                        print(f"      匹配规则: {', '.join(rule_names)}")
-        else:
-            print(f"   ✅ 无漏报!")
+            # 显示模型漏报详情
+            if len(self.fn_by_model) > 0:
+                print(f"\n   📌 模型漏报详情 (前{min(max_display, len(self.fn_by_model))}条):")
+                for i, case in enumerate(self.fn_by_model[:max_display], 1):
+                    print(f"      {i}. URL: {case['url'][:80]}...")
         
         print("=" * 60)
     
@@ -442,6 +520,46 @@ class ResultStatistics:
             print(f"  {attack_type:20s}: {count:3d} 条 ({percentage:.1f}%)")
         print("=" * 60)
     
+    def print_rule_detailed_statistics(self):
+        """打印每条规则的详细使用统计"""
+        if not self.rule_statistics:
+            print("\n" + "=" * 60)
+            print("📋 规则详细统计")
+            print("=" * 60)
+            print("⚠️  没有规则匹配记录")
+            print("=" * 60)
+            return
+        
+        print("\n" + "=" * 60)
+        print("📋 规则详细统计 (按匹配次数排序)")
+        print("=" * 60)
+        
+        # 按匹配次数排序
+        sorted_rules = sorted(
+            self.rule_statistics.items(),
+            key=lambda x: x[1]['total_matched'],
+            reverse=True
+        )
+        
+        for rule_id, stats in sorted_rules:
+            print(f"\n🔍 规则ID: {rule_id}")
+            print(f"   名称: {stats['rule_name']}")
+            print(f"   攻击类型: {stats['attack_type']}")
+            print(f"   严重级别: {stats['severity']}")
+            print(f"   匹配次数: {stats['total_matched']}")
+            print(f"   正确判断: {stats['correct']} ({stats['accuracy']*100:.1f}%)")
+            print(f"   误报 (FP): {stats['false_positive']}")
+            print(f"   漏报 (FN): {stats['false_negative']}")
+            print(f"   平均耗时: {stats['avg_time_ms']:.4f} 毫秒")
+        
+        print("\n" + "=" * 60)
+        print(f"📊 规则总数: {len(self.rule_statistics)}")
+        total_matched = sum(s['total_matched'] for s in self.rule_statistics.values())
+        total_correct = sum(s['correct'] for s in self.rule_statistics.values())
+        print(f"📊 总匹配次数: {total_matched}")
+        print(f"✅ 总正确次数: {total_correct} ({total_correct/total_matched*100:.1f}%)")
+        print("=" * 60)
+
     def save_results(self):
         """保存结果到文件"""
         os.makedirs(self.output_dir, exist_ok=True)
@@ -463,7 +581,7 @@ class ResultStatistics:
         # 扩展指标：添加时长统计
         extended_metrics = {
             **metrics,
-            'timing_statistics': {  # ✨ 新增部分
+            'timing_statistics': {
                 'rule_engine': {
                     'total_count': total_rule_count,
                     'total_time_sec': round(self.total_rule_time, 6),
@@ -517,31 +635,73 @@ class ResultStatistics:
         with open(metrics_file, 'w', encoding='utf-8') as f:
             json.dump(extended_metrics, f, ensure_ascii=False, indent=2)
         
-        # ✨ 修改：分别保存误报和漏报到两个独立的 JSON 文件（全部保存）
-        # 保存误报案例（False Positives）
+        # ✨ 新增：保存规则详细统计
+        if self.rule_statistics:
+            rule_stats_file = os.path.join(self.output_dir, 'rule_statistics.json')
+            # 移除times列表,只保留汇总数据
+            clean_stats = {}
+            for rule_id, stats in self.rule_statistics.items():
+                clean_stats[rule_id] = {
+                    k: v for k, v in stats.items() if k != 'times'
+                }
+            with open(rule_stats_file, 'w', encoding='utf-8') as f:
+                json.dump(clean_stats, f, ensure_ascii=False, indent=2)
+            print(f"💾 规则统计已保存: {rule_stats_file}")
+        
+        # ✨ 新增：保存按检测方法分类的误报
+        fp_by_method_file = os.path.join(self.output_dir, 'stage1_false_positives_by_method.json')
+        fp_by_method = {
+            "summary": {
+                "total": len(self.fp_results),
+                "by_rule": len(self.fp_by_rule),
+                "by_model": len(self.fp_by_model)
+            },
+            "rule_based_fp": self.fp_by_rule,
+            "model_based_fp": self.fp_by_model
+        }
+        with open(fp_by_method_file, 'w', encoding='utf-8') as f:
+            json.dump(fp_by_method, f, ensure_ascii=False, indent=2)
+        
+        # ✨ 新增：保存按检测方法分类的漏报
+        fn_by_method_file = os.path.join(self.output_dir, 'stage1_false_negatives_by_method.json')
+        fn_by_method = {
+            "summary": {
+                "total": len(self.fn_results),
+                "by_rule": len(self.fn_by_rule),
+                "by_model": len(self.fn_by_model)
+            },
+            "rule_based_fn": self.fn_by_rule,
+            "model_based_fn": self.fn_by_model
+        }
+        with open(fn_by_method_file, 'w', encoding='utf-8') as f:
+            json.dump(fn_by_method, f, ensure_ascii=False, indent=2)
+        
+        # ✅ 保存原有的误报/漏报文件（修复：定义变量）
         fp_file = os.path.join(self.output_dir, 'stage1_false_positives.json')
         fp_data = {
-            'total_count': len(self.fp_results),
-            'by_rule': len([r for r in self.fp_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]),
-            'by_model': len([r for r in self.fp_results if r.get('detection_method') == 'model']),
-            'cases': self.fp_results  # 保存全部误报案例
+            "total_count": len(self.fp_results),
+            "by_rule": len(self.fp_by_rule),
+            "by_model": len(self.fp_by_model),
+            "cases": self.fp_results
         }
         with open(fp_file, 'w', encoding='utf-8') as f:
             json.dump(fp_data, f, ensure_ascii=False, indent=2)
         
-        # 保存漏报案例（False Negatives）
         fn_file = os.path.join(self.output_dir, 'stage1_false_negatives.json')
         fn_data = {
-            'total_count': len(self.fn_results),
-            'by_rule': len([r for r in self.fn_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]),
-            'by_model': len([r for r in self.fn_results if r.get('detection_method') == 'model']),
-            'cases': self.fn_results  # 保存全部漏报案例
+            "total_count": len(self.fn_results),
+            "by_rule": len(self.fn_by_rule),
+            "by_model": len(self.fn_by_model),
+            "cases": self.fn_results
         }
         with open(fn_file, 'w', encoding='utf-8') as f:
             json.dump(fn_data, f, ensure_ascii=False, indent=2)
         
+        # 打印保存信息
         print(f"\n💾 第一阶段结果已保存: {stage1_all_file}")
         print(f"💾 评估指标已保存: {metrics_file}")
+        print(f"💾 误报分类已保存: {fp_by_method_file}")
+        print(f"💾 漏报分类已保存: {fn_by_method_file}")
         print(f"💾 误报案例已保存: {fp_file} (共 {len(self.fp_results)} 条)")
         print(f"💾 漏报案例已保存: {fn_file} (共 {len(self.fn_results)} 条)")
     
@@ -594,31 +754,28 @@ class ResultStatistics:
             print(f"{'='*60}\n")
             return
         
-        # 1. 基础统计
+        """生成完整报告"""
+        # 打印第一阶段基础统计信息（总数、用时等）
         self.print_stage1_basic_statistics(stage1_elapsed)
-        
-        # 2. 混淆矩阵
+        # 打印混淆矩阵（TP/TN/FP/FN分布）
         self.print_confusion_matrix()
-        
-        # 3. 整体评估指标
+        # 打印评估指标（准确率、召回率等）
         self.print_metrics()
-        
-        # 4. 检测方法统计
+        # 打印检测方法统计（规则/模型数量与时长）
         self.print_detection_method_statistics()
         
-        # 5. 数据集 × 检测方法交叉统计
+        # ✨ 新增：打印每条规则的详细使用统计
+        self.print_rule_detailed_statistics()
+        
+        # 打印数据集与检测方法交叉统计
         self.print_dataset_method_statistics()
-        
-        # 6. 检测方法性能对比
+        # 打印检测方法性能对比（规则与模型）
         self.print_method_performance_comparison()
-        
-        # 7. ✨ 修改：错误分析（终端只显示前3个示例）
-        self.print_error_analysis(max_display=3)
-        
-        # 8. 攻击类型分布
+        # 打印错误分析（误报/漏报案例）
+        self.print_error_analysis()
+        # 打印异常URL攻击类型分布
         self.print_attack_type_distribution()
-        
-        # 9. 保存结果（包括全部误报和漏报）
+        # 保存所有统计结果到文件
         self.save_results()
 
 
