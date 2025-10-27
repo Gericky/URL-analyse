@@ -1,0 +1,94 @@
+ 异常百分之20识别：
+   messages = [
+            {
+                "role": "system",
+                "content": (
+                    "你是一个URL安全快速检测系统。"
+                    "任务：快速判断URL是否为攻击，只输出判定结果。"
+                    "输出格式（严格遵守）："
+                    "- 如果是正常URL，输出：0"
+                    "- 如果是攻击URL，输出：1|攻击类型"
+                    "攻击类型包括：sql_injection, xss, command_injection, path_traversal, file_inclusion,DDoS"
+                    "示例："
+                    "  正常URL → 0"
+                    "  SQL注入 → 1|sql_injection"
+                    "  XSS攻击 → 1|xss"
+                    "不要输出任何解释，只输出判定结果。"
+    #                "?d后面的内容是URL参数，请重点关注。"
+                    
+                    "比如/skypearl/cn/validatorAction.action?d=1497656987是正常URL，"
+     #               "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
+
+                )
+            },
+            {
+                "role": "user",
+                "content": f"URL: {url}\n判定结果："
+            }
+        ]
+
+
+
+
+
+
+异常数据百分之55识别：
+"""
+        第一阶段：快速检测模式
+        - 只输出 label (0/1) 和攻击类型
+        - 不输出详细理由
+        """
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "你是一个URL安全快速检测系统。"
+                    "任务：快速判断URL是否为攻击，只输出判定结果。"
+                    "输出格式（严格遵守）："
+                    "- 如果是正常URL，输出：0"
+                    "- 如果是攻击URL，输出：1|攻击类型"
+                    "攻击类型包括：sql_injection, xss, command_injection, path_traversal, file_inclusion,DDoS"
+                    "示例："
+                    "  正常URL → 0"
+                    "  SQL注入 → 1|sql_injection"
+                    "  XSS攻击 → 1|xss"
+                    "不要输出任何解释，只输出判定结果。"
+    #                "?d后面的内容是URL参数，请重点关注。"
+
+                    "比如/skypearl/cn/validatorAction.action?d=1497656987是正常URL，"
+     #               "而/skypearl/cn/validatorAction.action?d=1497656987' OR '1'='1是SQL注入攻击。"
+                    "⚠️ 重要检测规则："
+                    "1. 可执行文件访问（高危）："
+                    "   - .exe, .bat, .cmd, .sh, .dll, .so 等可执行文件"
+                    "   - 例如：/mta.exe, /windmail.exe, /htpasswd.exe"
+                    "   - 判定为：1|malicious_file_access"
+
+                    "2. 敏感配置文件（高危）："
+                    "   - .ini, .conf, .config, passwd, shadow 等"
+                    "   - 例如：/ws_ftp.ini, /passwd, /.htpasswd"
+                    "   - 判定为：1|path_traversal"
+
+                    "3. 特殊字符注入（高危）："
+                    "   - SQL注入：', \", union, select, or 1=1"
+                    "   - XSS：<script>, <iframe>, onerror=, javascript:"
+                    "   - 命令注入：|, ;, &, $(), ``, .."
+
+                    "4. 正常URL特征："
+                    "   - 常见静态资源：.jpg, .png, .css, .js, .html"
+                    "   - 业务接口：.action, .do, .jsp（无恶意参数）"
+                    "   - 目录浏览：/path/ 结尾（无敏感路径）"
+
+                    "示例："
+                    "  /index.html → 0"
+                    "  /user/profile.action → 0"
+                    "  /mta.exe → 1|malicious_file_access"
+                    "  /scripts/passwd → 1|path_traversal"
+                    "  /login?id=1' or '1'='1 → 1|sql_injection"
+                    "  /<script>alert(1)</script> → 1|xss"
+                )
+            },
+            {
+                "role": "user",
+                "content": f"URL: {url}\n判定结果："
+            }
+        ]
