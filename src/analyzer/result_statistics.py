@@ -71,7 +71,14 @@ class ResultStatistics:
         
         self.fn_by_rule = [r for r in self.fn_results if r.get('detection_method') in ['rule_normal', 'rule_anomalous']]
         self.fn_by_model = [r for r in self.fn_results if r.get('detection_method') == 'model']        
+       
+        # ✨ 新增：RAG检测统计
+        self.rag_similarity_count = sum(1 for r in all_results if r.get('detection_method') == 'rag_similarity')
+        self.model_with_rag_count = sum(1 for r in all_results if r.get('detection_method') == 'model_with_rag')
         
+        # ✨ 更新模型统计（区分是否使用RAG）
+        self.model_pure_count = sum(1 for r in all_results if r.get('detection_method') == 'model')
+
     def _calculate_rule_statistics(self) -> Dict:
         """
         统计每条规则的使用情况
@@ -295,7 +302,7 @@ class ResultStatistics:
         print("=" * 60)
     
     def print_detection_method_statistics(self):
-        """打印检测方法统计（包含时长信息）"""
+        """打印检测方法统计（包含RAG信息）"""
         total = len(self.all_results)
         
         if total == 0:
@@ -330,9 +337,20 @@ class ResultStatistics:
                 print(f"      ├─ 耗时: {self.rule_anomalous_time:.4f} 秒")
                 print(f"      └─ 平均: {self.rule_anomalous_time/self.rule_anomalous_count*1000:.4f} 毫秒/条")
         
-        # 模型检测统计
+        # ✨ 新增：RAG相似度检测统计
+        if self.rag_similarity_count > 0:
+            rag_time = sum(r.get('elapsed_time_sec', 0) for r in self.all_results if r.get('detection_method') == 'rag_similarity')
+            print(f"\n🔎 RAG相似度检测:")
+            print(f"   ├─ 检测数量: {self.rag_similarity_count} 条 ({self.rag_similarity_count/total*100:.1f}%)")
+            print(f"   ├─ 总耗时: {rag_time:.4f} 秒")
+            if self.rag_similarity_count > 0:
+                print(f"   └─ 平均耗时: {rag_time/self.rag_similarity_count*1000:.4f} 毫秒/条")
+        
+        # 模型检测统计（区分是否使用RAG）
         print(f"\n🤖 模型推理检测:")
         print(f"   ├─ 检测数量: {self.model_count} 条 ({self.model_count/total*100:.1f}%)")
+        print(f"   │  ├─ RAG增强: {self.model_with_rag_count} 条")
+        print(f"   │  └─ 纯模型: {self.model_pure_count} 条")
         print(f"   ├─ 总耗时: {self.total_model_time:.4f} 秒")
         if self.model_count > 0:
             avg_model_time = self.total_model_time / self.model_count
@@ -349,6 +367,8 @@ class ResultStatistics:
         # 整体统计
         print(f"\n📊 整体命中率:")
         print(f"   ├─ 规则命中率: {total_rule_count/total*100:.1f}%")
+        if self.rag_similarity_count > 0:
+            print(f"   ├─ RAG命中率: {self.rag_similarity_count/total*100:.1f}%")
         print(f"   └─ 模型调用率: {self.model_count/total*100:.1f}%")
         
         print("=" * 60)
@@ -777,7 +797,8 @@ class ResultStatistics:
         self.print_attack_type_distribution()
         # 保存所有统计结果到文件
         self.save_results()
-
+    
+    
 
 def analyze_results(all_results: List[Dict], output_config: Dict, stage1_elapsed: float):
     """
@@ -818,6 +839,7 @@ def print_stage2_statistics(elapsed_time: float, output_file: str, deep_results:
 
 
 def print_two_stage_summary(stage1_elapsed: float, stage2_elapsed: float):
+
     """
     打印两阶段检测总结
     
@@ -833,3 +855,33 @@ def print_two_stage_summary(stage1_elapsed: float, stage2_elapsed: float):
     print(f"⏱️  第二阶段用时: {stage2_elapsed:.2f} 秒")
     print(f"⏱️  总用时: {total_elapsed:.2f} 秒")
     print(f"{'='*60}\n")
+
+def print_file_time_statistics(file_times):
+    """打印各文件处理时长统计"""
+    if not file_times:
+        return
+    
+    print(f"\n{'='*70}")
+    print(f"📁 各文件处理时长统计")
+    print(f"{'='*70}")
+    
+    total_time = 0
+    total_records = 0
+    
+    for filename, elapsed, count in file_times:
+        avg_time = elapsed / count if count > 0 else 0
+        print(f"📄 {filename:30s}")
+        print(f"   ⏱️  处理时长: {elapsed:8.2f} 秒")
+        print(f"   📊 数据量:   {count:8d} 条")
+        print(f"   ⚡ 平均耗时: {avg_time:8.4f} 秒/条")
+        print()
+        
+        total_time += elapsed
+        total_records += count
+    
+    print(f"{'-'*70}")
+    print(f"✅ 总耗时:   {total_time:8.2f} 秒")
+    print(f"📈 总数据量: {total_records:8d} 条")
+    avg_total = total_time / total_records if total_records > 0 else 0
+    print(f"⚡ 整体平均: {avg_total:8.4f} 秒/条")
+    print(f"{'='*70}\n")

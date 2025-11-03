@@ -5,19 +5,37 @@ model:
   
   # 第一阶段：快速检测
   fast_detection:
-    max_new_tokens: 50        # 减少token数量提高速度
+    max_new_tokens: 10
     temperature: 0.0
+    use_rag: true  # ✨ 新增：第一阶段是否使用RAG
   
   # 第二阶段：深度分析
   deep_analysis:
-    max_new_tokens: 512       # 增加token数量支持详细分析
+    max_new_tokens: 512
     temperature: 0.3
+    use_rag: true  # ✨ 新增：第二阶段是否使用RAG
+
+# RAG配置
+rag:
+  enabled: true
+  model_name: "BAAI/bge-small-zh-v1.5"
+  dimension: 512
+  use_gpu: true  # 是否使用GPU加速
+  index_path: "./data/rag/faiss.index"
+  metadata_path: "./data/rag/metadata.pkl"
+  
+  # 第一阶段RAG配置
+  fast_detection:
+    top_k: 3  # 快速检测时检索的案例数量
+    similarity_threshold: 0.85  # 相似度阈值（用于直接判定）
+  
+  # 第二阶段RAG配置
+  deep_analysis:
+    top_k: 5  # 深度分析时检索的案例数量
 
 # 数据配置
 data:
   dir: "./data/processed/WAF-github/part"
-#  normal_file: "good-10.txt"
-#  attack_file: "bad-10.txt"
   normal_file: "good-500-fromE.txt"
   attack_file: "bad-500.txt"
 
@@ -30,8 +48,6 @@ rules:
 # 输出配置
 output:
   dir: "./output"
-  # 第一阶段输出
   stage1_all: "stage1_realtime_all.json"
-  stage1_anomalous: "stage1_anomalous.txt"  # 异常URL列表
-  # 第二阶段输出
+  stage1_anomalous: "stage1_anomalous.txt"
   stage2_deep_analysis: "stage2_deep_analysis.json"

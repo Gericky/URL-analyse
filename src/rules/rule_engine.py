@@ -131,7 +131,43 @@ class RuleEngine:
         
         # 无匹配,需要模型判断
         return None, [], "none"
-    
+    def check(self, url: str) -> Dict:
+        """
+        检查URL是否匹配规则（兼容接口）
+        
+        Args:
+            url: 待检测的URL
+            
+        Returns:
+            dict: {
+                'matched': bool,           # 是否匹配到规则
+                'is_normal': bool,         # True=正常规则, False=异常规则
+                'rules': List[Dict]        # 匹配到的规则详情
+            }
+        """
+        prediction, matched_rules, rule_type = self.detect(url)
+        
+        if rule_type == "none":
+            # 没有匹配到任何规则
+            return {
+                'matched': False,
+                'is_normal': None,
+                'rules': []
+            }
+        elif rule_type == "normal":
+            # 匹配到正常规则
+            return {
+                'matched': True,
+                'is_normal': True,
+                'rules': matched_rules
+            }
+        else:  # rule_type == "anomalous"
+            # 匹配到异常规则
+            return {
+                'matched': True,
+                'is_normal': False,
+                'rules': matched_rules
+            }
     def get_detection_summary(self, matched_rules: List[Dict], rule_type: str, 
                             prediction: Optional[str]) -> str:
         """

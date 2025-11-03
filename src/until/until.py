@@ -12,12 +12,12 @@ def process_file(filename, label, query_func, data_dir):
         data_dir: 数据目录路径
     
     Returns:
-        list: 处理结果列表
+        tuple: (处理结果列表, 文件处理时长, 文件名)
     """
     filepath = os.path.join(data_dir, filename)
     if not os.path.exists(filepath):
         print(f"⚠️ 跳过不存在的文件: {filepath}")
-        return []
+        return [], 0, filename
     
     with open(filepath, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip()]
@@ -37,4 +37,5 @@ def process_file(filename, label, query_func, data_dir):
     
     file_elapsed = perf_counter() - file_start
     print(f"⏱️ 文件 {filename} 总用时: {file_elapsed:.2f} 秒\n")
-    return results
+    
+    return results, file_elapsed, filename

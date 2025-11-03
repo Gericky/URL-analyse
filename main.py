@@ -12,7 +12,8 @@ from src.until.until import process_file
 from src.analyzer.result_statistics import (
     analyze_results,
     print_stage2_statistics,
-    print_two_stage_summary
+    print_two_stage_summary,
+    print_file_time_statistics  # 新增导入
 )
 
 
@@ -68,21 +69,26 @@ def main():
     detector = HybridDetector(model, parser_analyzer, rule_engine, config)
     stage1_start = perf_counter()
     
+    # 用于记录各文件处理时长
+    file_times = []
+    
     # 处理正常URL
-    good_results = process_file(
+    good_results, good_elapsed, good_filename = process_file(
         filename=config['data']['normal_file'],
         label="normal",
         query_func=detector.detect,
         data_dir=config['data']['dir']
     )
+    file_times.append((good_filename, good_elapsed, len(good_results)))
     
     # 处理攻击URL
-    bad_results = process_file(
+    bad_results, bad_elapsed, bad_filename = process_file(
         filename=config['data']['attack_file'],
         label="attack",
         query_func=detector.detect,
         data_dir=config['data']['dir']
     )
+    file_times.append((bad_filename, bad_elapsed, len(bad_results)))
     
     all_stage1_results = good_results + bad_results
     stage1_elapsed = perf_counter() - stage1_start
@@ -111,12 +117,19 @@ def main():
         print(f"   python deep_analysis.py --input {stage1_all_file}")
         print(f"{'='*60}\n")
 
+        # 打印文件时长统计
+        print_file_time_statistics(file_times)
+        
         # 只进行第一阶段评估
         analyze_results(all_stage1_results, config['output'], stage1_elapsed)
 
     else:
         if len(anomalous_results) == 0:
             print("\n✅ 未检测到异常URL，跳过第二阶段分析")
+            
+            # 打印文件时长统计
+            print_file_time_statistics(file_times)
+            
             # 进行第一阶段评估
             analyze_results(all_stage1_results, config['output'], stage1_elapsed)
         else:
@@ -139,6 +152,9 @@ def main():
             # 打印两阶段总结
             print_two_stage_summary(stage1_elapsed, stage2_elapsed)
 
+            # 打印文件时长统计
+            print_file_time_statistics(file_times)
+            
             # 进行第一阶段详细评估
             analyze_results(all_stage1_results, config['output'], stage1_elapsed)
 
