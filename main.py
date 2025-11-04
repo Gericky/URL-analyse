@@ -13,7 +13,7 @@ from src.analyzer.result_statistics import (
     analyze_results,
     print_stage2_statistics,
     print_two_stage_summary,
-    print_file_time_statistics  # 新增导入
+    print_file_time_statistics
 )
 
 
@@ -54,10 +54,14 @@ def main():
     
     # ========== 初始化 ==========
     config = load_config(args.config)
+    
+    # ✨ 修改：传入完整配置
     model = QwenModel(
         model_path=config['model']['path'],
+        config=config,  # ← 传入完整配置
         dtype=config['model']['dtype']
     )
+    
     parser_analyzer = ResponseAnalyzer()
     rule_engine = load_rule_engine(config.get('rules', {}))
     

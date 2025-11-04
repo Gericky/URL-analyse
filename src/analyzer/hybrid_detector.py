@@ -2,7 +2,6 @@
 from time import perf_counter
 from typing import Dict
 
-# ✨ 新增导入
 from src.rag.rag_engine import RAGEngine
 
 
@@ -33,84 +32,6 @@ class HybridDetector:
         else:
             self.rag_engine = None
             print(f"⚠️  第一阶段RAG未启用")
-    
-    def _check_rag_similarity(self, url: str) -> Dict:
-        """
-        使用RAG进行相似度检查（快速判定）
-        
-        Args:
-            url: 待检测URL
-            
-        Returns:
-            dict: {
-                'matched': bool,  # 是否匹配到高相似度案例
-                'predicted': str,  # 预测结果 "0"/"1"
-                'similar_cases': list,  # 相似案例
-                'confidence': float  # 置信度
-            }
-        """
-        if not self.rag_engine:
-            return {'matched': False}
-        
-        # 检索相似案例
-        top_k = self.rag_config.get('top_k', 3)
-        threshold = self.rag_config.get('similarity_threshold', 0.85)
-        
-        similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=top_k)
-        
-        if not similar_cases:
-            return {'matched': False}
-        
-        # 检查是否有高相似度案例
-        best_case = similar_cases[0]
-        
-        if best_case['similarity_score'] >= threshold:
-            # 高相似度，直接使用案例结果
-            predicted = "1" if best_case['label'] == 'attack' else "0"
-            
-            return {
-                'matched': True,
-                'predicted': predicted,
-                'attack_type': 'similar_' + best_case['label'],
-                'similar_cases': similar_cases,
-                'confidence': best_case['similarity_score'],
-                'reason': f"与已知{best_case['label']}案例高度相似 (相似度: {best_case['similarity_score']:.2%})"
-            }
-        
-        return {
-            'matched': False,
-            'similar_cases': similar_cases
-        }
-    
-    def _build_rag_enhanced_prompt(self, url: str, similar_cases: list) -> str:
-        """
-        构建RAG增强的快速检测提示词
-        
-        Args:
-            url: 待检测URL
-            similar_cases: 相似案例列表
-            
-        Returns:
-            str: 增强后的提示词
-        """
-        prompt = f"""判断以下URL是否为攻击行为。
-
-URL: {url}
-
-参考相似案例:
-"""
-        for i, case in enumerate(similar_cases[:3], 1):
-            label_cn = "攻击" if case['label'] == 'attack' else "正常"
-            prompt += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
-        
-        prompt += """
-请根据以上相似案例和URL特征,仅回答:
-- "0" 表示正常访问
-- "1|攻击类型" 表示攻击行为
-
-回答:"""
-        
-        return prompt
     
     def detect(self, url: str) -> dict:
         """
@@ -154,61 +75,47 @@ URL: {url}
                     'elapsed_time_sec': elapsed
                 }
         
-        # ========== 第二步：RAG相似度检测（新增） ==========
-        if self.use_rag and self.rag_engine:
-            rag_result = self._check_rag_similarity(url)
-            
-            if rag_result.get('matched'):
-                # 找到高相似度案例，直接返回
-                elapsed = perf_counter() - start_time
-                return {
-                    'url': url,
-                    'predicted': rag_result['predicted'],
-                    'attack_type': rag_result['attack_type'],
-                    'rule_matched': [],
-                    'similar_cases': rag_result['similar_cases'],
-                    'detection_method': 'rag_similarity',
-                    'confidence': rag_result['confidence'],
-                    'reason': rag_result['reason'],
-                    'elapsed_time_sec': elapsed
-                }
+        # ========== 第二步：RAG相似度检测 ==========
+        similar_cases = []
         
-        # ========== 第三步：模型推理（RAG增强或普通） ==========
         if self.use_rag and self.rag_engine:
-            # 使用RAG增强的提示词
-            rag_check = self._check_rag_similarity(url)
-            similar_cases = rag_check.get('similar_cases', [])
+            # 检索相似案例
+            top_k = self.rag_config.get('top_k', 3)
+            threshold = self.rag_config.get('similarity_threshold', 0.85)
             
+            similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=top_k)
+            
+            # 检查是否有高相似度案例
             if similar_cases:
-                prompt = self._build_rag_enhanced_prompt(url, similar_cases)
-            else:
-                # 没有相似案例，使用普通提示词
-                prompt = f"""判断以下URL是否为攻击行为。仅回答:
-- "0" 表示正常访问
-- "1|攻击类型" 表示攻击行为
-
-URL: {url}
-
-回答:"""
-        else:
-            # 不使用RAG，普通提示词
-            prompt = f"""判断以下URL是否为攻击行为。仅回答:
-- "0" 表示正常访问
-- "1|攻击类型" 表示攻击行为
-
-URL: {url}
-
-回答:"""
+                best_case = similar_cases[0]
+                if best_case['similarity_score'] >= threshold:
+                    # 高相似度，直接返回
+                    elapsed = perf_counter() - start_time
+                    predicted = "1" if best_case['label'] == 'attack' else "0"
+                    
+                    return {
+                        'url': url,
+                        'predicted': predicted,
+                        'attack_type': 'similar_' + best_case['label'],
+                        'rule_matched': [],
+                        'similar_cases': similar_cases,
+                        'detection_method': 'rag_similarity',
+                        'confidence': best_case['similarity_score'],
+                        'reason': f"与已知{best_case['label']}案例高度相似 (相似度: {best_case['similarity_score']:.2%})",
+                        'elapsed_time_sec': elapsed
+                    }
         
-        # 调用模型
-        response = self.model.generate(
-            prompt,
-            max_new_tokens=self.config['model']['fast_detection']['max_new_tokens'],
-            temperature=self.config['model']['fast_detection']['temperature']
+        # ========== 第三步：模型推理 ==========
+        # ✨ 调用 model.fast_detect()，不再传递参数（从config读取）
+        model_result = self.model.fast_detect(
+            url,
+            similar_cases=similar_cases if similar_cases else None  # RAG增强
         )
         
         # 解析响应
-        predicted, attack_type = self.parser.parse_fast_detection_response(response)
+        predicted, attack_type = self.parser.parse_fast_detection_response(
+            model_result['response']
+        )
         elapsed = perf_counter() - start_time
         
         result = {
@@ -216,13 +123,13 @@ URL: {url}
             'predicted': predicted,
             'attack_type': attack_type,
             'rule_matched': [],
-            'detection_method': 'model_with_rag' if (self.use_rag and similar_cases) else 'model',
+            'detection_method': 'model_with_rag' if similar_cases else 'model',
             'reason': f"模型判定: {attack_type}" if predicted == "1" else "模型判定: 正常访问",
             'elapsed_time_sec': elapsed
         }
         
         # 如果使用了RAG，添加相似案例信息
-        if self.use_rag and similar_cases:
+        if similar_cases:
             result['similar_cases'] = similar_cases
         
         return result
