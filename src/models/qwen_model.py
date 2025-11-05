@@ -113,6 +113,17 @@ class QwenModel:
                 "content": user_prompt
             }
         ]
+        #     # ✨ 打印完整的提示词（用于调试）
+        #     # ✨ 打印完整的提示词（无论是否使用 RAG）
+        # print("\n" + "="*60)
+        # if similar_cases:
+        #     print("🔍 RAG 增强提示词:")
+        # else:
+        #     print("📝 基础提示词 (无 RAG):")
+        # print("="*60)
+        # print(f"【System】\n{self.fast_detection_prompt}\n")
+        # print(f"【User】\n{user_prompt}")
+        # print("="*60 + "\n")
         
         return self._generate(messages, max_new_tokens, temperature, url)
     

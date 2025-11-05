@@ -112,7 +112,7 @@ class HybridDetector:
             similar_cases=similar_cases if similar_cases else None  # RAG增强
         )
         
-        # 解析响应
+         # 解析响应
         predicted, attack_type = self.parser.parse_fast_detection_response(
             model_result['response']
         )

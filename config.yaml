@@ -8,18 +8,21 @@ model:
     max_new_tokens: 10
     temperature: 0.0
     use_rag: true  # ✨ 新增：第一阶段是否使用RAG
+    prompt: ./prompt/base_fast_detection.txt
+
   
   # 第二阶段：深度分析
   deep_analysis:
     max_new_tokens: 512
     temperature: 0.3
     use_rag: true  # ✨ 新增：第二阶段是否使用RAG
+    prompt: ./prompt/base_deep_analysis.txt
 
 # RAG配置
 rag:
-  enabled: true
-  model_name: "BAAI/bge-small-zh-v1.5"
-  dimension: 512
+  enabled: true  # 是否启用RAG功能
+  model_name: "./bge-small-en-v1.5"
+  dimension: 384
   use_gpu: true  # 是否使用GPU加速
   index_path: "./data/rag/faiss.index"
   metadata_path: "./data/rag/metadata.pkl"
@@ -27,7 +30,7 @@ rag:
   # 第一阶段RAG配置
   fast_detection:
     top_k: 3  # 快速检测时检索的案例数量
-    similarity_threshold: 0.85  # 相似度阈值（用于直接判定）
+    similarity_threshold: 0.90  # 相似度阈值（用于直接判定）
   
   # 第二阶段RAG配置
   deep_analysis:
@@ -35,13 +38,20 @@ rag:
 
 # 数据配置
 data:
-  dir: "./data/processed/WAF-github/part"
-  normal_file: "good-500-fromE.txt"
-  attack_file: "bad-500.txt"
+#  dir: "./data/processed/WAF-github/part"
+#  normal_file: "good-20000.txt"
+#  attack_file: "bad-20000.txt"
+#  dir: "./data/processed/CCF-BDCI2022/total"
+#  normal_file: "all_normal.txt"
+#  attack_file: "all_attacks.txt"
+
+   dir: "./data/processed/CSIC-2010/part"
+   normal_file: "normal-1000.txt"
+   attack_file: "attack-1000.txt"
 
 # 规则引擎配置
 rules:
-  enabled: true
+  enabled: false
   normal_rules_file: "./src/rules/rule_store/normal_rules.yaml"
   anomalous_rules_file: "./src/rules/rule_store/anomalous_rules.yaml"
 
