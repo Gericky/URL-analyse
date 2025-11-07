@@ -32,6 +32,13 @@ class HybridDetector:
         else:
             self.rag_engine = None
             print(f"⚠️  第一阶段RAG未启用")
+         # ✨✨✨ 添加这行：获取模型信息
+        model_info = self.model.get_model_info('fast_detection')
+        self.using_lora = model_info['using_lora']
+        
+        print(f"\n📋 混合检测器初始化:")
+        print(f"   - 使用模型: {'LoRA微调模型' if self.using_lora else '原始模型'}")
+        print(f"   - 规则引擎: {'启用' if config.get('rules', {}).get('enabled') else '禁用'}")
     
     def detect(self, url: str) -> dict:
         """
@@ -112,10 +119,18 @@ class HybridDetector:
             similar_cases=similar_cases if similar_cases else None  # RAG增强
         )
         
-         # 解析响应
-        predicted, attack_type = self.parser.parse_fast_detection_response(
-            model_result['response']
-        )
+        # ✨✨✨ 修改这部分：根据模型类型选择解析方法
+        if self.using_lora:
+            # 使用LoRA模型时，用新的解析方法
+            parsed = self.parser.parse_lora_response(model_result['response'])
+            predicted = parsed['predicted']
+            attack_type = parsed['attack_type']
+        else:
+            # 使用原始模型时，用原来的解析方法
+            predicted, attack_type = self.parser.parse_fast_detection_response(
+                model_result['response']
+            )
+        
         elapsed = perf_counter() - start_time
         
         result = {
@@ -123,7 +138,7 @@ class HybridDetector:
             'predicted': predicted,
             'attack_type': attack_type,
             'rule_matched': [],
-            'detection_method': 'model_with_rag' if similar_cases else 'model',
+            'detection_method': 'llm_lora' if self.using_lora else ('model_with_rag' if similar_cases else 'model'),
             'reason': f"模型判定: {attack_type}" if predicted == "1" else "模型判定: 正常访问",
             'elapsed_time_sec': elapsed
         }

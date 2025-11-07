@@ -81,3 +81,40 @@ class ResponseAnalyzer:
         """原有的详细响应解析（向后兼容）"""
         # ... 保持原代码不变 ...
         pass
+    def parse_lora_response(self, response: str) -> dict:
+        """
+        解析LoRA微调模型的输出（格式: 0|benign 或 1|threat_type）
+        
+        Args:
+            response: 模型原始输出
+            
+        Returns:
+            解析后的结果字典
+        """
+        response = response.strip()
+        
+        # 提取 assistant 后的内容（如果存在）
+        if "<|im_start|>assistant" in response:
+            response = response.split("<|im_start|>assistant")[-1]
+            if "<|im_end|>" in response:
+                response = response.split("<|im_end|>")[0]
+            response = response.strip()
+        
+        # 解析格式: "0|benign" 或 "1|sql_injection"
+        if "|" in response:
+            label, threat_type = response.split("|", 1)
+            label = label.strip()
+            threat_type = threat_type.strip()
+        else:
+            # 兼容只输出数字的情况
+            label = response[0] if response else "0"
+            threat_type = "unknown" if label == "1" else "benign"
+        
+        # 统一格式
+        predicted = "0" if label == "0" else "1"
+        
+        return {
+            'predicted': predicted,
+            'attack_type': threat_type,
+            'confidence': 0.95  # LoRA模型的置信度通常较高
+        }

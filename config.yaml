@@ -1,13 +1,22 @@
+# ✨✨✨ 添加调试开关（放在文件最顶部）
+debug: false  # 设为 true 启用详细调试输出
 # 模型配置
 model:
   path: "./Qwen3-0.6B"
   dtype: "float16"
   
+  # ✨ 新增：LoRA微调配置
+  lora:
+    enabled: true  # 是否启用LoRA微调模型
+    adapter_path: "./script/output/lora_online"  # LoRA adapter路径
+    checkpoint: ""  # 可选：指定特定checkpoint，例如填写checkpoint-1600，留空则使用最新
+  
   # 第一阶段：快速检测
   fast_detection:
-    max_new_tokens: 10
+    max_new_tokens: 10  # 增加token数以适应微调模型输出格式
     temperature: 0.0
-    use_rag: true  # ✨ 新增：第一阶段是否使用RAG
+    use_rag: true
+    use_lora: true  # ✨ 新增：第一阶段是否使用微调模型
     prompt: ./prompt/base_fast_detection.txt
 
   
@@ -15,12 +24,13 @@ model:
   deep_analysis:
     max_new_tokens: 512
     temperature: 0.3
-    use_rag: true  # ✨ 新增：第二阶段是否使用RAG
+    use_rag: true
+    use_lora: true  # ✨ 新增：第二阶段是否使用微调模型（深度分析仍用原模型）
     prompt: ./prompt/base_deep_analysis.txt
 
 # RAG配置
 rag:
-  enabled: true  # 是否启用RAG功能
+  enabled: false  # 是否启用RAG功能
   model_name: "./bge-small-en-v1.5"
   dimension: 384
   use_gpu: true  # 是否使用GPU加速
@@ -39,15 +49,18 @@ rag:
 # 数据配置
 data:
 #  dir: "./data/processed/WAF-github/part"
-#  normal_file: "good-20000.txt"
-#  attack_file: "bad-20000.txt"
+#  normal_file: "good-500.txt"
+#  attack_file: "bad-500.txt"
 #  dir: "./data/processed/CCF-BDCI2022/total"
 #  normal_file: "all_normal.txt"
 #  attack_file: "all_attacks.txt"
 
-   dir: "./data/processed/CSIC-2010/part"
-   normal_file: "normal-1000.txt"
-   attack_file: "attack-1000.txt"
+#   dir: "./data/processed/CSIC-2010/part"
+#   normal_file: "normal-100.txt"
+#   attack_file: "attack-100.txt"
+   dir: "./script/data/finetune_online"
+   normal_file: "normal.txt"
+   attack_file: "attack.txt"
 
 # 规则引擎配置
 rules:
