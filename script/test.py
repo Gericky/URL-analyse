@@ -1,7 +1,9 @@
 """
 模型评估脚本 - 验证 LoRA 微调效果
 """
-
+import torch
+print(torch.__version__)  # 应类似 2.6.0.dev...
+print(torch.cuda.is_available())
 import os
 import json
 import torch
@@ -15,9 +17,10 @@ from peft import PeftModel
 # ========================
 
 BASE_MODEL = "d:/code/URL-analyse/Qwen3-0.6B"
-LORA_PATH = "d:/code/URL-analyse/script/output/lora_online"  # 移除 /test
-TEST_DATA = "d:/code/URL-analyse/script/data/finetune_online/val.jsonl"
-
+# LORA_PATH = "d:/code/URL-analyse/script/output/lora_online"
+# TEST_DATA = "d:/code/URL-analyse/script/data/finetune_online/test/val.jsonl"
+LORA_PATH = "d:/code/URL-analyse/script/output/lora_online_v2"
+TEST_DATA = "d:/code/URL-analyse/script/data/finetune_online/raw/test/val.jsonl"
 # ========================
 # 加载模型
 # ========================
@@ -81,9 +84,10 @@ def predict(url, instruction="判断以下URL是否存在安全威胁"):
             **inputs,
             max_new_tokens=50,
             do_sample=False,
-            temperature=1.0,
+            # temperature=1.0,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id
+            # enable_thinking=False
         )
     
     result = tokenizer.decode(outputs[0], skip_special_tokens=False)

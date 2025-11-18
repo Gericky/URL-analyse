@@ -285,12 +285,12 @@ URL: {url}
         return result
     
     def _build_lora_fast_prompt(self, url: str, similar_cases=None) -> str:
-        """构建LoRA微调模型的快速检测prompt（指令格式）"""
-        system_content = """你是一个URL安全检测系统,专门识别恶意URL。请判断给定URL是否存在威胁。
-输出格式要求: 
-- 如果URL安全,输出: 0|benign
-- 如果URL存在威胁,输出: 1|威胁类型 (如 phishing, malware, sql_injection, xss, command_injection 等)"""
+        """构建LoRA微调模型的快速检测prompt（使用配置文件中的prompt）"""
         
+        # ✨ 使用配置文件加载的 system prompt
+        system_content = self.fast_detection_prompt
+        
+        # 如果有 RAG 案例,添加到 system 中
         if similar_cases:
             rag_context = "\n\n参考案例:\n"
             for i, case in enumerate(similar_cases[:3], 1):
@@ -298,22 +298,28 @@ URL: {url}
                 rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
             system_content += rag_context
         
+        # 构建完整 prompt
         prompt = f"""<|im_start|>system
-{system_content}
-<|im_end|>
-<|im_start|>user
-判断以下URL是否存在安全威胁
-输入URL: {url}<|im_end|>
-<|im_start|>assistant
-"""
+    {system_content}
+    <|im_end|>
+    <|im_start|>user
+    判断以下URL是否存在安全威胁
+    输入URL: {url}<|im_end|>
+    <|im_start|>assistant
+    """
         return prompt
-    
-    def _build_lora_deep_prompt(self, url: str, attack_type: str, similar_cases=None) -> str:
-        """构建LoRA微调模型的深度分析prompt"""
-        system_content = f"""你是一个URL安全分析系统。请对检测到的威胁URL进行详细分析。
 
-初步判定: {attack_type}"""
+
+    def _build_lora_deep_prompt(self, url: str, attack_type: str, similar_cases=None) -> str:
+        """构建LoRA微调模型的深度分析prompt（使用配置文件中的prompt）"""
         
+        # ✨ 使用配置文件加载的 system prompt
+        system_content = self.deep_analysis_prompt
+        
+        # 添加初步判定信息
+        system_content += f"\n\n初步判定: {attack_type}"
+        
+        # 如果有 RAG 案例,添加参考
         if similar_cases:
             rag_context = "\n\n参考案例:\n"
             for i, case in enumerate(similar_cases[:5], 1):
@@ -322,13 +328,13 @@ URL: {url}
             system_content += rag_context
         
         prompt = f"""<|im_start|>system
-{system_content}
-<|im_end|>
-<|im_start|>user
-请详细分析以下URL的威胁情况:
-{url}<|im_end|>
-<|im_start|>assistant
-"""
+    {system_content}
+    <|im_end|>
+    <|im_start|>user
+    请详细分析以下URL的威胁情况:
+    {url}<|im_end|>
+    <|im_start|>assistant
+    """
         return prompt
     
     def _generate(self, model, text: str, max_new_tokens: int, temperature: float, url: str) -> dict:

@@ -1,6 +1,6 @@
 """
 在线检测数据准备脚本 (LoRA-online)
-生成简洁标签格式: 0|Benign, 1|SQLi, 1|XSS 等
+生成指令格式: {"instruction": "...", "input": "...", "output": "..."}
 """
 import os
 import sys
@@ -21,7 +21,6 @@ STANDARD_LABELS = {
     'LFI': '1|LFI',           # Local File Inclusion / Path Traversal
     'RCE': '1|RCE',           # Remote Code Execution
     'CMDi': '1|CMDi',         # Command Injection
-
 }
 
 # ========== 数据源映射配置 ==========
@@ -40,16 +39,8 @@ DATA_SOURCE_CONFIG = {
     'WAF-github': {
         'base_dir': '../data/processed/WAF-github/total',
         'files': {
-            'normal_urls.txt': 'Benign',
             'sqli_urls.txt': 'SQLi',
             'xss_urls.txt': 'XSS'
-        }
-    },
-    'CSIC-2010': {
-        'base_dir': '../data/processed/CSIC-2010/total',
-        'files': {
-            'normal_urls.txt': 'Benign',
-            # attack_urls.txt 无细分类型，暂不使用
         }
     }
 }
@@ -62,7 +53,6 @@ TARGET_SAMPLES_PER_CLASS = {
     'LFI': 5000,
     'RCE': 5000,
     'CMDi': 5000,
-    'PathTraversal': 5000
 }
 
 
@@ -208,18 +198,22 @@ def balance_samples(samples_by_label: Dict[str, List[Dict]]) -> Dict[str, List[D
 
 def create_training_sample(sample_dict: Dict, sample_id: int) -> Dict:
     """
-    创建训练样本（极简格式）
+    创建训练样本（指令格式）
     
     格式:
-    Input: /path?x=1
-    Output: 1|SQLi
+    {
+        "instruction": "判断以下URL是否存在安全威胁",
+        "input": "请判断以下URL是否为攻击：/path?x=1\n只需输出检测结果。",
+        "output": "1|SQLi"
+    }
     """
+    url = sample_dict['url']
+    standard_label = sample_dict['standard_label']
+    
     return {
-        'id': f'sample_{sample_id:06d}',
-        'input': sample_dict['url'],
-        'output': sample_dict['standard_label'],
-        'raw_label': sample_dict['label'],
-        'source': sample_dict['source']
+        'instruction': '判断以下URL是否存在安全威胁',
+        'input': f'请判断以下URL是否为攻击：{url}\n只需输出检测结果。',
+        'output': standard_label
     }
 
 
@@ -295,6 +289,14 @@ def main():
         for i, sample in enumerate(final_samples)
     ]
     
+    # ========== 打印样本预览 ==========
+    print("\n📝 样本格式预览:")
+    for i, sample in enumerate(training_data[:3], 1):
+        print(f"\n  样本 {i}:")
+        print(f"    instruction: {sample['instruction']}")
+        print(f"    input: {sample['input'][:100]}...")
+        print(f"    output: {sample['output']}")
+    
     # ========== 划分训练集/验证集 ==========
     print("\n✂️  划分数据集...")
     split_ratio = 0.9
@@ -308,7 +310,7 @@ def main():
     
     # ========== 保存数据 ==========
     print("\n💾 保存数据...")
-    output_dir = './data/finetune_online/raw'   #这里测试使用
+    output_dir = './data/finetune_online/raw'
     os.makedirs(output_dir, exist_ok=True)
     
     # 保存训练集
@@ -325,25 +327,30 @@ def main():
             f.write(json.dumps(sample, ensure_ascii=False) + '\n')
     print(f"  ✅ {val_path}")
     
-    # 保存样本预览
-    preview_samples = {
-        label: [s for s in train_data if s['raw_label'] == label][:5]
-        for label in STANDARD_LABELS.keys()
-    }
+    # 保存样本预览（按标签分类）
+    print("\n📋 生成样本预览...")
+    preview_samples = {}
+    for label in STANDARD_LABELS.keys():
+        matching_samples = [s for s in train_data if s['output'].endswith(label)]
+        if matching_samples:
+            preview_samples[label] = matching_samples[:5]  # 每个标签保存5个样本
+    
     preview_path = os.path.join(output_dir, 'sample_preview.json')
     with open(preview_path, 'w', encoding='utf-8') as f:
         json.dump(preview_samples, f, ensure_ascii=False, indent=2)
     print(f"  ✅ {preview_path}")
     
     # 保存数据统计
+    label_distribution = defaultdict(int)
+    for sample in training_data:
+        output_label = sample['output']  # 如 "1|SQLi"
+        label_distribution[output_label] += 1
+    
     stats = {
         'total_samples': len(final_samples),
         'train_samples': len(train_data),
         'val_samples': len(val_data),
-        'distribution': {
-            label: len([s for s in training_data if s['raw_label'] == label])
-            for label in STANDARD_LABELS.keys()
-        },
+        'distribution': dict(label_distribution),
         'sources': list(DATA_SOURCE_CONFIG.keys())
     }
     stats_path = os.path.join(output_dir, 'data_stats.json')
@@ -360,14 +367,14 @@ def main():
     print("=" * 70)
     
     print("\n📊 数据分布:")
-    for label, count in stats['distribution'].items():
+    for output_label, count in sorted(label_distribution.items()):
         percentage = count / len(training_data) * 100
-        print(f"  {label:15s}: {count:6d} 条 ({percentage:5.1f}%)")
+        print(f"  {output_label:15s}: {count:6d} 条 ({percentage:5.1f}%)")
     
     print("\n💡 下一步:")
     print(f"  1. 查看样本预览: {preview_path}")
     print(f"  2. 检查数据统计: {stats_path}")
-    print("  3. 运行训练脚本: python scripts/train_lora_online.py")
+    print("  3. 运行训练脚本: python script/train_lora_online.py")
     print("=" * 70)
 
 

@@ -22,11 +22,12 @@ from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 # ========================
 
 BASE_MODEL = "d:/code/URL-analyse/Qwen3-0.6B"
-DATA_DIR = "d:/code/URL-analyse/script/data/finetune_online"
+# DATA_DIR = "d:/code/URL-analyse/script/data/finetune_online"
+DATA_DIR = "d:/code/URL-analyse/script/data/finetune_online/raw"
 # DATA_DIR = "d:/code/URL-analyse/script/data/finetune_online/test"
 TRAIN_PATH = os.path.join(DATA_DIR, "train.jsonl")
 VAL_PATH = os.path.join(DATA_DIR, "val.jsonl")
-OUTPUT_DIR = "d:/code/URL-analyse/script/output/lora_online"
+OUTPUT_DIR = "d:/code/URL-analyse/script/output/lora_online_v2"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -70,7 +71,8 @@ print("⚙️ 设置 LoRA 参数...")
 lora_config = LoraConfig(
     r=16,
     lora_alpha=32,
-    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+    # target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+    target_modules=["q_proj", "v_proj"],
     lora_dropout=0.05,
     bias="none",
     task_type="CAUSAL_LM"
@@ -114,7 +116,7 @@ PROMPT_TEMPLATE = """<|im_start|>system
 你是一个URL安全检测系统,专门识别恶意URL。请判断给定URL是否存在威胁。
 输出格式要求: 
 - 如果URL安全,输出: 0|benign
-- 如果URL存在威胁,输出: 1|威胁类型 (如 phishing, malware, defacement 等)
+- 如果URL存在威胁,输出: 1|威胁类型 (如 SQli,XSS,RCE等)
 <|im_end|>
 <|im_start|>user
 {instruction}

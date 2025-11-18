@@ -1,152 +1,168 @@
-#代码有误，未修正
 import os
 import json
+from glob import glob
 from collections import defaultdict
 
-def process_atrdf_dataset(input_path, output_dir):
-    """
-    处理ATRDF数据集JSON文件，提取URL和Attack_Tag
-    
-    Args:
-        input_path: 输入JSON文件路径
-        output_dir: 输出目录路径
-    """
-    try:
-        # 读取JSON文件
-        with open(input_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        
-        # 按攻击类型分类存储
-        attack_dict = defaultdict(list)
-        all_attacks = []
-        
-        # 遍历数据
-        for item in data:
-            url = item.get('url', '').strip()
-            attack_tag = item.get('Attack_Tag', '').strip()
-            
-            if not url:
-                continue
-            
-            # 添加到对应攻击类型列表
-            if attack_tag:
-                # 标准化攻击类型名称（去除空格，转小写，用下划线连接）
-                tag_normalized = attack_tag.lower().replace(' ', '_').replace('-', '_')
-                attack_dict[tag_normalized].append(url)
-                all_attacks.append(url)
-        
-        # 保存各攻击类型的URL
-        stats = {}
-        for attack_type, urls in attack_dict.items():
-            # 去重
-            urls_unique = list(set(urls))
-            
-            # 保存到文件
-            output_path = os.path.join(output_dir, f"{attack_type}.txt")
-            with open(output_path, 'w', encoding='utf-8') as f:
-                for url in urls_unique:
-                    f.write(url + '\n')
-            
-            stats[attack_type] = {
-                'original': len(urls),
-                'unique': len(urls_unique),
-                'file': output_path
-            }
-            print(f"✅ {attack_type}: 原始{len(urls)}条 → 去重后{len(urls_unique)}条")
-            print(f"   → {output_path}\n")
-        
-        # 保存所有攻击URL的合并文件
-        if all_attacks:
-            all_attacks_unique = list(set(all_attacks))
-            all_attacks_path = os.path.join(output_dir, "all_attacks.txt")
-            with open(all_attacks_path, 'w', encoding='utf-8') as f:
-                for url in all_attacks_unique:
-                    f.write(url + '\n')
-            print(f"✅ 所有攻击URL合并: 原始{len(all_attacks)}条 → 去重后{len(all_attacks_unique)}条")
-            print(f"   → {all_attacks_path}\n")
-        
-        return stats, len(all_attacks_unique)
-        
-    except Exception as e:
-        print(f"❌ 处理文件失败: {e}")
-        import traceback
-        traceback.print_exc()
-        return {}, 0
-
-
-def main():
-    """主函数: 处理ATRDF数据集"""
+def process_atrdf():
+    """处理ATRDF数据集，按攻击类型提取URL"""
     
     # 定义路径
-    raw_dir = os.path.join(".", "raw", "ATRDF-github")
-    output_dir = os.path.join(".", "processed", "ATRDF", "total")
+    raw_dir = 'raw/ATRDF-github/train'
+    total_dir = 'processed/ATRDF/total'
     
-    # 创建输出目录
-    os.makedirs(output_dir, exist_ok=True)
+    # 确保输出目录存在
+    os.makedirs(total_dir, exist_ok=True)
     
-    print(f"\n{'=' * 60}")
-    print(f"📂 ATRDF 数据集处理")
-    print(f"{'=' * 60}")
-    print(f"📁 输入目录: {os.path.abspath(raw_dir)}")
-    print(f"📁 输出目录: {os.path.abspath(output_dir)}")
-    print(f"{'=' * 60}\n")
+    # 存储按攻击类型分类的URL (使用set自动去重)
+    attack_urls = defaultdict(set)
     
-    # 查找所有JSON文件
-    json_files = []
-    for filename in os.listdir(raw_dir):
-        if filename.endswith('.json'):
-            json_files.append(filename)
+    # 获取所有JSON文件
+    json_files = glob(os.path.join(raw_dir, '*.json'))
     
     if not json_files:
-        print("⚠️ 未找到JSON文件")
+        print(f"❌ 未找到JSON文件: {raw_dir}")
         return
     
-    print(f"📋 找到{len(json_files)}个JSON文件:\n")
-    for f in sorted(json_files):
-        print(f"   - {f}")
-    print()
+    print(f"找到 {len(json_files)} 个JSON文件\n")
     
-    # 处理每个JSON文件
-    total_stats = defaultdict(lambda: {'original': 0, 'unique': 0})
-    total_attacks = 0
+    # 处理每个文件
+    total_records = 0
+    skipped_records = 0
+    skip_reasons = defaultdict(int)  # 统计跳过原因
     
-    print(f"{'=' * 60}")
-    print(f"📦 开始处理:")
-    print(f"{'=' * 60}\n")
-    
-    for json_file in sorted(json_files):
-        input_path = os.path.join(raw_dir, json_file)
+    for json_file in json_files:
+        print(f"处理文件: {os.path.basename(json_file)}")
         
-        print(f"🔍 处理文件: {json_file}")
-        print(f"{'─' * 60}")
-        
-        stats, attack_count = process_atrdf_dataset(input_path, output_dir)
-        
-        # 累计统计
-        for attack_type, stat in stats.items():
-            total_stats[attack_type]['original'] += stat['original']
-            total_stats[attack_type]['unique'] += stat['unique']
-        
-        total_attacks += attack_count
-        
-        print(f"{'─' * 60}\n")
+        try:
+            # 尝试多种编码
+            content = None
+            for encoding in ['utf-8', 'utf-8-sig', 'latin1', 'gbk']:
+                try:
+                    with open(json_file, 'r', encoding=encoding) as f:
+                        content = f.read()
+                    break
+                except UnicodeDecodeError:
+                    continue
+            
+            if not content:
+                print(f"  ⚠️  无法读取文件")
+                continue
+            
+            # 尝试解析JSON
+            data = []
+            try:
+                # 先尝试作为JSON数组
+                parsed = json.loads(content)
+                if isinstance(parsed, dict):
+                    data = [parsed]  # 单个对象转为列表
+                elif isinstance(parsed, list):
+                    data = parsed
+            except json.JSONDecodeError:
+                # 如果失败，尝试按行解析(JSONL格式)
+                for line_num, line in enumerate(content.strip().split('\n'), 1):
+                    line = line.strip().rstrip(',')
+                    if line:
+                        try:
+                            data.append(json.loads(line))
+                        except json.JSONDecodeError as e:
+                            skip_reasons[f'JSON解析失败(行{line_num})'] += 1
+                            continue
+            
+            print(f"  📦 解析到 {len(data)} 条记录")
+            
+            # 提取URL和攻击类型
+            file_count = 0
+            file_skip = 0
+            
+            for idx, record in enumerate(data, 1):
+                try:
+                    # 提取URL
+                    url = None
+                    if 'request' in record:
+                        url = record['request'].get('url')
+                    elif 'url' in record:
+                        url = record['url']
+                    
+                    # 提取攻击类型
+                    attack_tag = None
+                    if 'request' in record:
+                        attack_tag = record['request'].get('Attack_Tag')
+                    elif 'Attack_Tag' in record:
+                        attack_tag = record['Attack_Tag']
+                    
+                    # 调试输出（前几条）
+                    if idx <= 3:
+                        print(f"    记录{idx}: URL={'有' if url else '无'}, Attack_Tag={attack_tag or '无'}")
+                    
+                    # 验证和清理
+                    if not url:
+                        skip_reasons['缺少URL'] += 1
+                        file_skip += 1
+                        continue
+                    
+                    if not attack_tag:
+                        skip_reasons['缺少Attack_Tag'] += 1
+                        file_skip += 1
+                        continue
+                    
+                    # 去除末尾的 HTTP/1.1
+                    url = url.strip()
+                    if url.endswith(' HTTP/1.1'):
+                        url = url[:-9].strip()
+                    
+                    # 标准化攻击类型名称
+                    attack_tag = attack_tag.strip().upper().replace(' ', '_')
+                    
+                    # 添加到对应分类
+                    attack_urls[attack_tag].add(url)
+                    file_count += 1
+                    total_records += 1
+                        
+                except Exception as e:
+                    skip_reasons[f'处理异常: {type(e).__name__}'] += 1
+                    file_skip += 1
+                    continue
+            
+            print(f"  ✅ 成功提取 {file_count} 条记录 (跳过 {file_skip} 条)")
+            skipped_records += file_skip
+            
+        except Exception as e:
+            print(f"  ❌ 处理失败: {str(e)}")
+            continue
     
-    # 输出总体统计
-    print(f"{'=' * 60}")
-    print(f"✅ 数据处理完成!")
-    print(f"{'=' * 60}")
-    print(f"📂 输出目录: {os.path.abspath(output_dir)}")
-    print(f"\n📊 攻击类型统计:")
-    print(f"{'─' * 60}")
+    # 保存分类结果
+    print(f"\n{'='*60}")
+    print(f"💾 保存分类结果:")
+    print(f"{'='*60}")
     
-    for attack_type in sorted(total_stats.keys()):
-        stat = total_stats[attack_type]
-        print(f"   • {attack_type:30s}: {stat['original']:5d}条 (去重后{stat['unique']:5d}条)")
+    for attack_type, urls in sorted(attack_urls.items()):
+        if urls:
+            output_file = os.path.join(total_dir, f'{attack_type}.txt')
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                for url in sorted(urls):
+                    f.write(url + '\n')
+            
+            print(f"  📄 {attack_type:20s}: {len(urls):5d} 条 -> {attack_type}.txt")
     
-    print(f"{'─' * 60}")
-    print(f"   🎯 总计攻击URL数量: {total_attacks}条")
-    print(f"{'=' * 60}\n")
+    # 统计信息
+    print(f"{'='*60}")
+    print(f"\n处理完成!")
+    print(f"{'='*60}")
+    print(f"📊 统计:")
+    print(f"   成功记录:  {total_records:5d} 条")
+    print(f"   跳过记录:  {skipped_records:5d} 条")
+    print(f"   攻击类型:  {len(attack_urls):5d} 种")
+    print(f"   总URL数:   {sum(len(urls) for urls in attack_urls.values()):5d} 条 (去重后)")
+    
+    # 显示跳过原因
+    if skip_reasons:
+        print(f"\n⚠️  跳过原因统计:")
+        for reason, count in sorted(skip_reasons.items(), key=lambda x: x[1], reverse=True):
+            print(f"   {reason:30s}: {count:5d} 条")
+    
+    print(f"\n文件已保存到: {total_dir}")
+    print(f"{'='*60}")
 
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    process_atrdf()

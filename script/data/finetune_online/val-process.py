@@ -2,9 +2,9 @@ import json
 import re
 
 # 你可以自行修改这些路径
-input_path = "./val.jsonl"      # 原始 jsonl 文件路径
-normal_path = "./normal.txt"        # 输出正常样本
-attack_path = "./attack.txt"        # 输出攻击样本
+input_path = "./raw/val.jsonl"      # 原始 jsonl 文件路径
+normal_path = "./raw/normal.txt"        # 输出正常样本
+attack_path = "./raw/attack.txt"        # 输出攻击样本
 
 def extract_url(text):
     """从提示文本中提取URL"""
