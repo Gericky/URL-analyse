@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 class VectorStore:
     """FAISS向量存储管理器"""
     
-    def __init__(self, model_name: str = "BAAI/bge-small-zh-v1.5", dimension: int = 512):
+    def __init__(self, model_name: str, dimension: int):
         """
         初始化向量存储
         
@@ -22,7 +22,7 @@ class VectorStore:
         self.dimension = dimension
         self.index = None
         self.metadata = []
-        print(f"✅ BGE模型加载完成")
+        print(f"✅ BGE模型加载完成 (维度: {dimension})")
     
     def encode(self, texts: List[str]) -> np.ndarray:
         """

@@ -23,8 +23,8 @@ class RAGEngine:
     def _init_vector_store(self):
         """初始化向量存储"""
         self.vector_store = VectorStore(
-            model_name=self.config.get('model_name', 'BAAI/bge-small-en-v1.5'),
-            dimension=self.config.get('dimension', 512)
+            model_name=self.config.get('model_name','BAAI/bge-small-en-v1.5'),
+            dimension=self.config.get('dimension', 384)
         )
         
         # 加载已有的向量库
