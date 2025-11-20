@@ -1,6 +1,6 @@
 """混合检测器 - 规则引擎 + LLM"""
 from time import perf_counter
-from typing import Dict
+from typing import Dict, List
 
 from src.rag.rag_engine import RAGEngine
 
@@ -22,23 +22,25 @@ class HybridDetector:
         self.parser = parser
         self.rule_engine = rule_engine
         self.config = config
+        self.model_config = config.get('model', {})
         
         # ✨ 初始化RAG引擎（用于第一阶段）
-        self.use_rag = config.get('model', {}).get('fast_detection', {}).get('use_rag', False)
+        self.use_rag = self.model_config.get('fast_detection', {}).get('use_rag', False)
         if self.use_rag and config.get('rag', {}).get('enabled', False):
             self.rag_engine = RAGEngine(config['rag'])
-            self.rag_config = config['rag'].get('fast_detection', {})
             print(f"✅ 第一阶段RAG已启用")
         else:
             self.rag_engine = None
             print(f"⚠️  第一阶段RAG未启用")
-         # ✨✨✨ 添加这行：获取模型信息
+        
+        # 获取模型信息
         model_info = self.model.get_model_info('fast_detection')
         self.using_lora = model_info['using_lora']
         
         print(f"\n📋 混合检测器初始化:")
         print(f"   - 使用模型: {'LoRA微调模型' if self.using_lora else '原始模型'}")
         print(f"   - 规则引擎: {'启用' if config.get('rules', {}).get('enabled') else '禁用'}")
+        print(f"   - RAG增强: {'启用' if self.use_rag else '禁用'}")
     
     def detect(self, url: str) -> dict:
         """
@@ -82,69 +84,91 @@ class HybridDetector:
                     'elapsed_time_sec': elapsed
                 }
         
-        # ========== 第二步：RAG相似度检测 ==========
+        # ========== 第二步：RAG检索相似案例和知识 ==========
         similar_cases = []
+        knowledge_context = ""
         
         if self.use_rag and self.rag_engine:
-            # 检索相似案例
-            top_k = self.rag_config.get('top_k', 3)
-            threshold = self.rag_config.get('similarity_threshold', 0.85)
+            fast_config = self.model_config.get('fast_detection', {})
             
-            similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=top_k)
+            # 检索相似URL案例
+            rag_top_k = fast_config.get('rag_top_k', 3)
+            similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=rag_top_k)
             
-            # 检查是否有高相似度案例
+            # 检索相关知识
+            rag_knowledge_top_k = fast_config.get('rag_knowledge_top_k', 2)
+            knowledge_context = self.rag_engine.enhance_prompt_with_knowledge(
+                url, top_k=rag_knowledge_top_k
+            )
+            # ✨ 添加调试输出
+            if self.config.get('debug', False):
+                print(f"\n🔍 RAG检索结果:")
+                print(f"   - 相似案例数: {len(similar_cases)}")
+                print(f"   - 知识库长度: {len(knowledge_context)} 字符")
+                if knowledge_context:
+                    print(f"   - 知识预览: {knowledge_context[:200]}...")
+            
+            # 检查是否有高相似度案例（可直接返回）
+            similarity_threshold = self.config.get('rag', {}).get('similarity_threshold', 0.90)
             if similar_cases:
                 best_case = similar_cases[0]
-                if best_case['similarity_score'] >= threshold:
+                if best_case['similarity_score'] >= similarity_threshold:
                     # 高相似度，直接返回
                     elapsed = perf_counter() - start_time
-                    predicted = "1" if best_case['label'] == 'attack' else "0"
+                    predicted = "1" if best_case['label'] != 'normal' else "0"
                     
                     return {
                         'url': url,
                         'predicted': predicted,
-                        'attack_type': 'similar_' + best_case['label'],
+                        'attack_type': best_case['label'],
                         'rule_matched': [],
-                        'similar_cases': similar_cases,
+                        'similar_cases': similar_cases[:3],  # 只返回前3个
                         'detection_method': 'rag_similarity',
                         'confidence': best_case['similarity_score'],
                         'reason': f"与已知{best_case['label']}案例高度相似 (相似度: {best_case['similarity_score']:.2%})",
                         'elapsed_time_sec': elapsed
                     }
         
-        # ========== 第三步：模型推理 ==========
-        # ✨ 调用 model.fast_detect()，不再传递参数（从config读取）
+        # ========== 第三步：模型推理（RAG增强）==========
+        # 调用模型，传入RAG检索的信息
         model_result = self.model.fast_detect(
             url,
-            similar_cases=similar_cases if similar_cases else None  # RAG增强
+            similar_cases=similar_cases if similar_cases else None,
+            knowledge_context=knowledge_context if knowledge_context else None
         )
         
-        # ✨✨✨ 修改这部分：根据模型类型选择解析方法
+        # 根据模型类型选择解析方法
         if self.using_lora:
-            # 使用LoRA模型时，用新的解析方法
             parsed = self.parser.parse_lora_response(model_result['response'])
             predicted = parsed['predicted']
             attack_type = parsed['attack_type']
         else:
-            # 使用原始模型时，用原来的解析方法
             predicted, attack_type = self.parser.parse_fast_detection_response(
                 model_result['response']
             )
         
         elapsed = perf_counter() - start_time
         
+        # 确定检测方法
+        if self.using_lora:
+            detection_method = 'llm_lora_with_rag' if (similar_cases or knowledge_context) else 'llm_lora'
+        else:
+            detection_method = 'model_with_rag' if (similar_cases or knowledge_context) else 'model'
+        
         result = {
             'url': url,
             'predicted': predicted,
             'attack_type': attack_type,
             'rule_matched': [],
-            'detection_method': 'llm_lora' if self.using_lora else ('model_with_rag' if similar_cases else 'model'),
+            'detection_method': detection_method,
             'reason': f"模型判定: {attack_type}" if predicted == "1" else "模型判定: 正常访问",
             'elapsed_time_sec': elapsed
         }
         
-        # 如果使用了RAG，添加相似案例信息
+        # 如果使用了RAG，添加相似案例和知识信息
         if similar_cases:
-            result['similar_cases'] = similar_cases
+            result['similar_cases'] = similar_cases[:3]  # 只保留前3个
+        if knowledge_context:
+            result['used_knowledge'] = True
         
         return result

@@ -1,121 +1,57 @@
 """构建RAG向量索引"""
-import os
 import sys
-import logging
+import os
 
-# 添加项目根目录到Python路径
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# 添加项目根目录到路径
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
-from src.until.config_loader import load_config
 from src.rag.vector_store import VectorStore
-
-logging.basicConfig(level=logging.INFO, format='%(message)s')
-logger = logging.getLogger(__name__)
+from src.until.config_loader import load_config
 
 
-def load_urls(filepath: str) -> list:
-    """从文件加载URL列表"""
-    with open(filepath, 'r', encoding='utf-8') as f:
-        # 每行格式: URL\t参数（可选）
-        # 只取第一列作为URL
-        urls = []
-        for line in f:
-            line = line.strip()
-            if line:
-                # 如果有tab，只取第一部分
-                url = line.split('\t')[0] if '\t' in line else line
-                urls.append(url)
-        return urls
-
-
-def main():
-    """主函数：构建RAG向量索引"""
-    
-    print("=" * 60)
-    print("🔧 RAG向量库构建工具")
-    print("=" * 60)
-    
-    # ========== 加载配置 ==========
+def build_index():
+    """构建向量索引"""
+    # 加载配置
     config = load_config()
-    rag_config = config['rag']
-    data_config = config['data']
+    rag_config = config.get('rag', {})
     
-    # ========== 初始化向量存储（不加载旧索引） ==========
-    print("\n" + "=" * 60)
-    print("🚀 初始化向量存储")
-    print("=" * 60)
-    
+    # 初始化向量存储
+    print("🚀 初始化向量存储...")
     vector_store = VectorStore(
-        model_name=rag_config['model_name'],
-        dimension=rag_config['dimension']
+        model_name=rag_config.get('model_name', 'BAAI/bge-small-en-v1.5'),
+        dimension=rag_config.get('dimension', 384)
     )
-    print("=" * 60)
     
-    # ========== 加载训练数据 ==========
-    print("\n📂 加载训练数据...")
+    # 1. 添加URL历史（从文件夹加载）
+    url_history_folder = rag_config.get('url_history_folder', './data/rag/url_history')
+    print(f"\n📚 加载URL历史文件夹: {url_history_folder}")
+    vector_store.add_url_history_folder(url_history_folder)
     
-    normal_file = os.path.join(data_config['dir'], data_config['normal_file'])
-    attack_file = os.path.join(data_config['dir'], data_config['attack_file'])
+    # 2. 添加知识库文档
+    chunks_folder = rag_config.get('chunks_folder', './data/rag/chunks')
+    print(f"\n📚 加载知识库文档: {chunks_folder}")
+    vector_store.add_knowledge_documents(chunks_folder)
     
-    normal_urls = load_urls(normal_file)
-    attack_urls = load_urls(attack_file)
+    # 3. 保存向量索引
+    index_path = rag_config.get('index_path', './data/rag/faiss.index')
+    metadata_path = rag_config.get('metadata_path', './data/rag/metadata.pkl')
     
-    print(f"✅ 正常URL: {len(normal_urls)} 条")
-    print(f"✅ 攻击URL: {len(attack_urls)} 条")
-    
-    # ========== 合并数据 ==========
-    all_urls = normal_urls + attack_urls
-    all_labels = ['normal'] * len(normal_urls) + ['attack'] * len(attack_urls)
-    
-    # ========== 构建向量索引 ==========
-    print("\n" + "=" * 60)
-    print("📊 构建向量索引")
-    print("=" * 60)
-    print(f"正常URL: {len(normal_urls)} 条")
-    print(f"攻击URL: {len(attack_urls)} 条")
-    print(f"总计: {len(all_urls)} 条")
-    print("=" * 60 + "\n")
-    
-    print(f"🔄 正在编码 {len(all_urls)} 条URL...")
-    vector_store.build_index(all_urls, all_labels)
-    
-    # ========== 保存向量库 ==========
-    index_path = rag_config['index_path']
-    metadata_path = rag_config['metadata_path']
-    
-    # 确保输出目录存在
     os.makedirs(os.path.dirname(index_path), exist_ok=True)
     
+    print(f"\n💾 保存向量索引...")
     vector_store.save(index_path, metadata_path)
     
-    # ========== 完成 ==========
-    print("\n" + "=" * 60)
-    print("✅ 向量库构建完成!")
-    print("=" * 60)
+    print(f"\n✅ 向量索引构建完成!")
+    print(f"   - 索引文件: {index_path}")
+    print(f"   - 元数据文件: {metadata_path}")
+    print(f"   - 总文档数: {len(vector_store.metadata)}")
     
-    # ========== 测试检索 ==========
-    print("\n" + "=" * 60)
-    print("🧪 测试向量检索")
-    print("=" * 60)
-    
-    test_urls = [
-        "/api/user?id=1' or 1=1--",
-        "/api/user?id=123",
-        "/admin/login"
-    ]
-    
-    for test_url in test_urls:
-        print(f"\n查询: {test_url}")
-        results = vector_store.search(test_url, top_k=3)
-        
-        for i, (idx, similarity) in enumerate(results, 1):
-            case = vector_store.metadata[idx]
-            print(f"  {i}. [{case['label']:6s}] 相似度: {similarity:.2%} | {case['url'][:60]}")
-    
-    print("\n" + "=" * 60)
-    print("🎉 测试完成!")
-    print("=" * 60)
+    # 统计信息
+    url_count = sum(1 for m in vector_store.metadata if m.get('type') == 'url_case')
+    knowledge_count = sum(1 for m in vector_store.metadata if m.get('type') == 'knowledge')
+    print(f"   - URL案例: {url_count}")
+    print(f"   - 知识文档: {knowledge_count}")
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    build_index()

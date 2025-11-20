@@ -1,5 +1,5 @@
 # ✨✨✨ 添加调试开关（放在文件最顶部）
-debug: false  # 设为 true 启用详细调试输出
+debug: true  # 设为 true 启用详细调试输出
 # 模型配置
 model:
   path: "./Qwen3-0.6B"
@@ -7,60 +7,63 @@ model:
   
   # ✨ 新增：LoRA微调配置
   lora:
-    enabled: true  # 是否启用LoRA微调模型
-    adapter_path: "./script/output/lora_online"  # LoRA adapter路径
-    checkpoint: ""  # 可选：指定特定checkpoint，例如填写checkpoint-1600，留空则使用最新
+    enabled: false
+    adapter_path: "./script/output/lora_online_v2"
+    checkpoint: ""
   
   # 第一阶段：快速检测
   fast_detection:
-    max_new_tokens: 10  # 增加token数以适应微调模型输出格式
+    max_new_tokens: 10
     temperature: 0.0
-    use_rag: true
-    use_lora: true  # ✨ 新增：第一阶段是否使用微调模型
+    use_rag: true  # ✨ 启用RAG
+    use_lora: true
     prompt: ./prompt/base_fast_detection.txt
-
+    # ✨ RAG配置
+    rag_top_k: 3  # 检索相似案例数量
+    rag_knowledge_top_k: 1  # 检索知识库数量
   
   # 第二阶段：深度分析
   deep_analysis:
     max_new_tokens: 512
     temperature: 0.3
-    use_rag: true
-    use_lora: true  # ✨ 新增：第二阶段是否使用微调模型（深度分析仍用原模型）
+    use_rag: true  # ✨ 启用RAG
+    use_lora: true
     prompt: ./prompt/base_deep_analysis.txt
+    # ✨ RAG配置
+    rag_top_k: 5  # 检索相似案例数量
+    rag_knowledge_top_k: 3  # 检索知识库数量
 
 # RAG配置
 rag:
-  enabled: false  # 是否启用RAG功能
+  enabled: false
   model_name: "./bge-small-en-v1.5"
   dimension: 384
-  use_gpu: true  # 是否使用GPU加速
+  use_gpu: true
+  
+  # ✨ 修改：url_history 改为文件夹
+  url_history_folder: "./data/rag/url_history"  # 存放各种攻击类型的URL文件夹
+  chunks_folder: "./data/rag/chunks"  # 攻击知识库
+  
   index_path: "./data/rag/faiss.index"
   metadata_path: "./data/rag/metadata.pkl"
   
-  # 第一阶段RAG配置
-  fast_detection:
-    top_k: 3  # 快速检测时检索的案例数量
-    similarity_threshold: 0.90  # 相似度阈值（用于直接判定）
-  
-  # 第二阶段RAG配置
-  deep_analysis:
-    top_k: 5  # 深度分析时检索的案例数量
-
+  # 相似度阈值
+  similarity_threshold: 0.90
 # 数据配置
 data:
-#  dir: "./data/processed/WAF-github/part"
-#  normal_file: "good-500.txt"
-#  attack_file: "bad-500.txt"
+# dir: "./data/processed/WAF-github/part"
+# normal_file: "good-500.txt"
+# attack_file: "bad-500.txt"
 #  dir: "./data/processed/CCF-BDCI2022/total"
 #  normal_file: "all_normal.txt"
 #  attack_file: "all_attacks.txt"
 
-#   dir: "./data/processed/CSIC-2010/part"
-#   normal_file: "normal-100.txt"
-#   attack_file: "attack-100.txt"
-   dir: "./script/data/finetune_online"
-   normal_file: "normal.txt"
-   attack_file: "attack.txt"
+   dir: "./data/processed/CSIC-2010/part"
+   normal_file: "normal-100.txt"
+   attack_file: "attack-100.txt"
+#    dir: "./script/data/finetune_online/raw"  #第二次微调
+#    normal_file: "normal.txt"
+#    attack_file: "attack.txt"
 
 # 规则引擎配置
 rules:

@@ -48,7 +48,7 @@ class RAGEngine:
     
     def retrieve_similar_cases(self, url: str, top_k: int = 5) -> List[Dict]:
         """
-        检索相似的URL案例
+        检索相似的URL案例（只在URL案例中检索）
         
         Args:
             url: 待检测的URL
@@ -60,23 +60,92 @@ class RAGEngine:
         if not self.vector_store or not self.vector_store.index:
             return []
         
-        # 1. 向量检索（返回余弦相似度）
-        search_results = self.vector_store.search(url, top_k=top_k)
+        # ✨ 改动：调用新方法，只在URL案例中检索
+        search_results = self.vector_store.search_in_url_cases_only(url, top_k=top_k)
         
-        # 2. 转换为相似案例
+        # 转换为相似案例
         similar_cases = []
         for idx, similarity_score in search_results:
-            # ✅ similarity_score 已经是余弦相似度 [0, 1]
-            
-            # 获取元数据
             case_data = self.vector_store.metadata[idx]
-            
             similar_cases.append({
-                'url': case_data['url'],
-                'label': case_data['label'],  # 'normal' or 'attack'
-                'similarity_score': similarity_score,  # ✅ 余弦相似度
+                'url': case_data.get('url', ''),
+                'label': case_data.get('label', ''),
+                'similarity_score': similarity_score,
                 'metadata': case_data.get('metadata', {})
             })
         
         return similar_cases
+    def retrieve_knowledge(self, query: str, top_k: int = 3) -> List[Dict]:
+        """
+        检索相关的攻击知识（只在知识库文档中检索）
+        
+        Args:
+            query: 查询文本（URL或描述）
+            top_k: 返回前k个最相关的知识
+            
+        Returns:
+            相关知识列表
+        """
+        if not self.vector_store or not self.vector_store.index:
+            return []
+        
+        # ✨ 改动：调用新方法，只在知识库文档中检索
+        search_results = self.vector_store.search_in_knowledge_only(query, top_k=top_k)
+        
+        # 转换为知识列表
+        knowledge_list = []
+        for idx, similarity_score in search_results:
+            case_data = self.vector_store.metadata[idx]
+            knowledge_list.append({
+                'attack_id': case_data.get('attack_id', ''),
+                'source': case_data.get('source', ''),
+                'similarity_score': similarity_score,
+            })
+        
+        return knowledge_list
     
+    def get_knowledge_content(self, attack_id: str) -> str:
+        """
+        获取完整的知识内容
+        
+        Args:
+            attack_id: 攻击类型ID
+            
+        Returns:
+            知识内容文本
+        """
+        chunks_folder = self.config.get('chunks_folder', './data/rag/chunks')
+        file_path = os.path.join(chunks_folder, f"{attack_id}.txt")
+        
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        return ""
+    
+    def enhance_prompt_with_knowledge(self, url: str, top_k: int = 2) -> str:
+        """
+        用知识库增强提示词
+        
+        Args:
+            url: 待分析的URL
+            top_k: 检索top k个知识
+            
+        Returns:
+            增强后的上下文文本
+        """
+        knowledge_list = self.retrieve_knowledge(url, top_k=top_k)
+        
+        if not knowledge_list:
+            context_parts = ["\n## 相关攻击知识库:\n", "无相关知识"]
+            return "".join(context_parts)
+        
+        context_parts = ["\n## 相关攻击知识库:\n"]
+        
+        for i, knowledge in enumerate(knowledge_list, 1):
+            content = self.get_knowledge_content(knowledge['attack_id'])
+            if content:
+                context_parts.append(f"\n### 知识 {i} (相似度: {knowledge['similarity_score']:.2f})")
+                context_parts.append(content)
+                context_parts.append("\n")
+        
+        return "".join(context_parts)

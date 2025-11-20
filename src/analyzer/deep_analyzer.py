@@ -20,15 +20,24 @@ class DeepAnalyzer:
         self.model = model
         self.parser = parser
         self.config = config
+        self.model_config = config.get('model', {})
         
-        # ✨ 初始化RAG引擎
-        self.use_rag = config.get('model', {}).get('deep_analysis', {}).get('use_rag', False)
+        # ✨ 初始化RAG引擎（用于第二阶段）
+        self.use_rag = self.model_config.get('deep_analysis', {}).get('use_rag', False)
         if self.use_rag and config.get('rag', {}).get('enabled', False):
-            self.rag_engine = RAGEngine(config.get('rag', {'enabled': False}))
-            self.rag_top_k = config.get('rag', {}).get('deep_analysis', {}).get('top_k', 5)
+            self.rag_engine = RAGEngine(config['rag'])
+            print(f"✅ 第二阶段RAG已启用")
         else:
             self.rag_engine = None
-            self.rag_top_k = 0
+            print(f"⚠️  第二阶段RAG未启用")
+        
+        # 获取模型信息
+        model_info = self.model.get_model_info('deep_analysis')
+        self.using_lora = model_info['using_lora']
+        
+        print(f"\n📋 深度分析器初始化:")
+        print(f"   - 使用模型: {'LoRA微调模型' if self.using_lora else '原始模型'}")
+        print(f"   - RAG增强: {'启用' if self.use_rag else '禁用'}")
     
     def analyze(self, url: str, stage1_result: dict = None) -> dict:
         """
@@ -42,33 +51,62 @@ class DeepAnalyzer:
             dict: 深度分析结果
         """
         print(f"\n🔍 深度分析: {url[:80]}...")
+        start_time = perf_counter()
         
         # 获取攻击类型
         attack_type = stage1_result.get('attack_type', 'unknown') if stage1_result else 'unknown'
         
-        # ✨ 获取相似案例（如果启用RAG）
+        # ✨ RAG检索相似案例和知识
         similar_cases = []
-        if self.use_rag and self.rag_engine:
-            similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=self.rag_top_k)
+        knowledge_context = ""
         
-        # ✨ 调用 model.deep_analyze()，不再传递参数（从config读取）
+        if self.use_rag and self.rag_engine:
+            deep_config = self.model_config.get('deep_analysis', {})
+            
+            # 检索相似URL案例
+            rag_top_k = deep_config.get('rag_top_k', 5)
+            similar_cases = self.rag_engine.retrieve_similar_cases(url, top_k=rag_top_k)
+            
+            # 检索相关知识
+            rag_knowledge_top_k = deep_config.get('rag_knowledge_top_k', 3)
+            knowledge_context = self.rag_engine.enhance_prompt_with_knowledge(
+                url, top_k=rag_knowledge_top_k
+            )
+            
+            if similar_cases:
+                print(f"   📚 检索到 {len(similar_cases)} 个相似案例")
+            if knowledge_context:
+                print(f"   📖 检索到相关攻击知识")
+        
+        # ✨ 调用模型深度分析（传入RAG增强信息）
         model_result = self.model.deep_analyze(
             url,
             attack_type,
-            similar_cases=similar_cases if similar_cases else None  # RAG增强
+            similar_cases=similar_cases if similar_cases else None,
+            knowledge_context=knowledge_context if knowledge_context else None
         )
         
         # 解析响应
         report = self.parser.parse_deep_analysis_response(model_result['response'])
         
-        return {
+        elapsed = perf_counter() - start_time
+        
+        result = {
             'url': url,
+            'attack_type': attack_type,
             'stage1_info': stage1_result,
             'deep_analysis': report,
-            'similar_cases': similar_cases,
             'raw_response': model_result['response'],
-            'elapsed_time_sec': model_result['elapsed_time']
+            'elapsed_time_sec': elapsed
         }
+        
+        # ✨ 如果使用了RAG，添加相似案例和知识信息
+        if similar_cases:
+            result['similar_cases'] = similar_cases[:5]  # 只保留前5个
+        if knowledge_context:
+            result['used_knowledge'] = True
+        
+        return result
     
     def batch_analyze(self, anomalous_results: List[dict]) -> List[dict]:
         """
@@ -83,9 +121,17 @@ class DeepAnalyzer:
         deep_results = []
         total = len(anomalous_results)
         
+        print(f"\n{'='*60}")
+        print(f"🚀 开始批量深度分析 (共 {total} 个异常URL)")
+        print(f"{'='*60}")
+        
         for i, result in enumerate(anomalous_results, 1):
             print(f"\n[{i}/{total}] ", end='')
             analysis = self.analyze(result['url'], result)
             deep_results.append(analysis)
+        
+        print(f"\n{'='*60}")
+        print(f"✅ 深度分析完成")
+        print(f"{'='*60}\n")
         
         return deep_results

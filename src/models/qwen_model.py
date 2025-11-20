@@ -6,7 +6,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 from time import perf_counter
 import os
-
+from typing import List, Dict, Optional
 
 class QwenModel:
     def __init__(self, model_path: str, config: dict, dtype: str = "float16"):
@@ -161,13 +161,15 @@ class QwenModel:
         else:
             return self.base_model
     
-    def fast_detect(self, url: str, similar_cases=None) -> dict:
+    def fast_detect(self, url: str, similar_cases: Optional[List[Dict]] = None,
+                    knowledge_context: Optional[str] = None) -> dict:
         """
         第一阶段：快速检测模式
         
         Args:
             url: 待检测URL
             similar_cases: RAG检索的相似案例列表（可选）
+            knowledge_context: RAG检索的知识库内容（可选）
         
         Returns:
             包含response和elapsed_time的字典
@@ -182,18 +184,26 @@ class QwenModel:
         
         # ========== 构建prompt ==========
         if use_lora and model == self.lora_model:
-            prompt = self._build_lora_fast_prompt(url, similar_cases)
+            prompt = self._build_lora_fast_prompt(url, similar_cases, knowledge_context)
             text = prompt
         else:
             # 使用原始chat格式
             user_prompt = f"URL: {url}\n判定结果："
             
+            # ✨ 添加RAG上下文
+            rag_parts = []
             if similar_cases:
-                rag_context = "\n\n参考相似案例:\n"
+                rag_context = "\n参考相似案例:\n"
                 for i, case in enumerate(similar_cases[:3], 1):
-                    label_cn = "攻击" if case['label'] == 'attack' else "正常"
+                    label_cn = "攻击" if case['label'] != 'normal' else "正常"
                     rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
-                user_prompt = rag_context + "\n" + user_prompt
+                rag_parts.append(rag_context)
+            
+            if knowledge_context:
+                rag_parts.append(knowledge_context)
+            
+            if rag_parts:
+                user_prompt = "\n".join(rag_parts) + "\n" + user_prompt
             
             messages = [
                 {"role": "system", "content": self.fast_detection_prompt},
@@ -209,7 +219,7 @@ class QwenModel:
         
         # ✨ 调试输出（仅在debug模式）
         if self.debug:
-            self._print_debug_fast(url, model, use_lora, text)
+            self._print_debug_fast(url, model, use_lora, text, similar_cases, knowledge_context)
         
         # ========== 生成 ==========
         result = self._generate(model, text, max_new_tokens, temperature, url)
@@ -220,7 +230,9 @@ class QwenModel:
         
         return result
     
-    def deep_analyze(self, url: str, attack_type: str, similar_cases=None) -> dict:
+    def deep_analyze(self, url: str, attack_type: str, 
+                     similar_cases: Optional[List[Dict]] = None,
+                     knowledge_context: Optional[str] = None) -> dict:
         """
         第二阶段：深度分析模式
         
@@ -228,6 +240,7 @@ class QwenModel:
             url: 待分析URL
             attack_type: 第一阶段识别的攻击类型
             similar_cases: RAG检索的相似案例列表（可选）
+            knowledge_context: RAG检索的知识库内容（可选）
         
         Returns:
             包含response和elapsed_time的字典
@@ -242,7 +255,7 @@ class QwenModel:
         
         # ========== 构建prompt ==========
         if use_lora and model == self.lora_model:
-            prompt = self._build_lora_deep_prompt(url, attack_type, similar_cases)
+            prompt = self._build_lora_deep_prompt(url, attack_type, similar_cases, knowledge_context)
             text = prompt
         else:
             user_prompt = f"""请对以下URL进行深度安全分析：
@@ -250,14 +263,22 @@ class QwenModel:
 URL: {url}
 初步判定: {attack_type}"""
             
+            # ✨ 添加RAG上下文
+            rag_parts = []
             if similar_cases:
                 rag_context = "\n\n### 参考相似案例:\n"
                 for i, case in enumerate(similar_cases[:5], 1):
-                    label_cn = "攻击" if case['label'] == 'attack' else "正常"
+                    label_cn = "攻击" if case['label'] != 'normal' else "正常"
                     rag_context += f"\n**案例{i}** (相似度: {case['similarity_score']:.2%})\n"
                     rag_context += f"- URL: `{case['url'][:80]}{'...' if len(case['url']) > 80 else ''}`\n"
                     rag_context += f"- 类型: {label_cn}\n"
-                user_prompt = user_prompt + rag_context + "\n\n### 分析任务\n基于以上相似案例和你的知识，请对目标URL进行深度分析。"
+                rag_parts.append(rag_context)
+            
+            if knowledge_context:
+                rag_parts.append("\n" + knowledge_context)
+            
+            if rag_parts:
+                user_prompt = user_prompt + "".join(rag_parts) + "\n\n### 分析任务\n基于以上信息，请对目标URL进行深度分析。"
             
             messages = [
                 {"role": "system", "content": self.deep_analysis_prompt},
@@ -273,7 +294,7 @@ URL: {url}
         
         # ✨ 调试输出（仅在debug模式）
         if self.debug:
-            self._print_debug_deep(url, attack_type, model, use_lora, text)
+            self._print_debug_deep(url, attack_type, model, use_lora, text, similar_cases, knowledge_context)
         
         # ========== 生成 ==========
         result = self._generate(model, text, max_new_tokens, temperature, url)
@@ -284,19 +305,27 @@ URL: {url}
         
         return result
     
-    def _build_lora_fast_prompt(self, url: str, similar_cases=None) -> str:
+    def _build_lora_fast_prompt(self, url: str, similar_cases: Optional[List[Dict]] = None,
+                                knowledge_context: Optional[str] = None) -> str:
         """构建LoRA微调模型的快速检测prompt（使用配置文件中的prompt）"""
         
-        # ✨ 使用配置文件加载的 system prompt
         system_content = self.fast_detection_prompt
         user_content = f"判断以下URL是否存在安全威胁\n输入URL: {url}"
+        
+        # ✨ 添加RAG上下文
+        rag_parts = []
         if similar_cases:
             rag_context = "\n参考案例:\n"
             for i, case in enumerate(similar_cases[:3], 1):
-                label_cn = "威胁" if case['label'] == 'attack' else "安全"
+                label_cn = "威胁" if case['label'] != 'normal' else "安全"
                 rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
-            # ✅ RAG拼接到user开头
-            user_content = rag_context + "\n" + user_content
+            rag_parts.append(rag_context)
+        
+        if knowledge_context:
+            rag_parts.append("\n" + knowledge_context)
+        
+        if rag_parts:
+            user_content = "".join(rag_parts) + "\n" + user_content
         
         prompt = f"""<|im_start|>system
 {system_content}<|im_end|>
@@ -307,25 +336,32 @@ URL: {url}
         return prompt
 
 
-    def _build_lora_deep_prompt(self, url: str, attack_type: str, similar_cases=None) -> str:
+    def _build_lora_deep_prompt(self, url: str, attack_type: str, 
+                                similar_cases: Optional[List[Dict]] = None,
+                                knowledge_context: Optional[str] = None) -> str:
         """构建LoRA微调模型的深度分析prompt（使用配置文件中的prompt）"""
         
-        # ✨ 使用配置文件加载的 system prompt
         system_content = self.deep_analysis_prompt
         
-         # ✅ 修改：RAG案例和初步判定都移到user部分
         user_content = f"""请详细分析以下URL的威胁情况:
 
 URL: {url}
 初步判定: {attack_type}"""
         
+        # ✨ 添加RAG上下文
+        rag_parts = []
         if similar_cases:
             rag_context = "\n\n参考案例:\n"
             for i, case in enumerate(similar_cases[:5], 1):
-                label_cn = "威胁" if case['label'] == 'attack' else "安全"
+                label_cn = "威胁" if case['label'] != 'normal' else "安全"
                 rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
-            # ✅ RAG添加到user内容中
-            user_content = user_content + rag_context
+            rag_parts.append(rag_context)
+        
+        if knowledge_context:
+            rag_parts.append("\n" + knowledge_context)
+        
+        if rag_parts:
+            user_content = user_content + "".join(rag_parts)
         
         prompt = f"""<|im_start|>system
 {system_content}<|im_end|>
@@ -375,20 +411,31 @@ URL: {url}
     
     # ========== 调试输出方法（仅在debug=true时调用）==========
     
-    def _print_debug_fast(self, url: str, model, use_lora: bool, text: str):
+    def _print_debug_fast(self, url: str, model, use_lora: bool, text: str,
+                         similar_cases: Optional[List[Dict]] = None,
+                         knowledge_context: Optional[str] = None):
         """打印快速检测的调试信息"""
         print("\n" + "="*80)
         print("🔍 【调试】快速检测阶段")
         print("="*80)
         print(f"📌 URL: {url[:100]}{'...' if len(url) > 100 else ''}")
         print(f"🤖 模型: {'LoRA微调模型' if (use_lora and model == self.lora_model) else '原始基础模型'}")
+        
+        # ✨ 显示RAG增强状态
+        if similar_cases:
+            print(f"📚 相似案例: {len(similar_cases)} 个")
+        if knowledge_context:
+            print(f"📖 知识库: 已启用")
+        
         print("\n" + "-"*80)
         print("📝 完整输入Prompt:")
         print("-"*80)
         print(text)
         print("-"*80)
     
-    def _print_debug_deep(self, url: str, attack_type: str, model, use_lora: bool, text: str):
+    def _print_debug_deep(self, url: str, attack_type: str, model, use_lora: bool, text: str,
+                         similar_cases: Optional[List[Dict]] = None,
+                         knowledge_context: Optional[str] = None):
         """打印深度分析的调试信息"""
         print("\n" + "="*80)
         print("🔍 【调试】深度分析阶段")
@@ -396,6 +443,13 @@ URL: {url}
         print(f"📌 URL: {url[:100]}{'...' if len(url) > 100 else ''}")
         print(f"🎯 初步判定: {attack_type}")
         print(f"🤖 模型: {'LoRA微调模型' if (use_lora and model == self.lora_model) else '原始基础模型'}")
+        
+        # ✨ 显示RAG增强状态
+        if similar_cases:
+            print(f"📚 相似案例: {len(similar_cases)} 个")
+        if knowledge_context:
+            print(f"📖 知识库: 已启用")
+        
         print("\n" + "-"*80)
         print("📝 完整输入Prompt:")
         print("-"*80)
