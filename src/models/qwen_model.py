@@ -289,24 +289,21 @@ URL: {url}
         
         # ✨ 使用配置文件加载的 system prompt
         system_content = self.fast_detection_prompt
-        
-        # 如果有 RAG 案例,添加到 system 中
+        user_content = f"判断以下URL是否存在安全威胁\n输入URL: {url}"
         if similar_cases:
-            rag_context = "\n\n参考案例:\n"
+            rag_context = "\n参考案例:\n"
             for i, case in enumerate(similar_cases[:3], 1):
                 label_cn = "威胁" if case['label'] == 'attack' else "安全"
                 rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
-            system_content += rag_context
+            # ✅ RAG拼接到user开头
+            user_content = rag_context + "\n" + user_content
         
-        # 构建完整 prompt
         prompt = f"""<|im_start|>system
-    {system_content}
-    <|im_end|>
-    <|im_start|>user
-    判断以下URL是否存在安全威胁
-    输入URL: {url}<|im_end|>
-    <|im_start|>assistant
-    """
+{system_content}<|im_end|>
+<|im_start|>user
+{user_content}<|im_end|>
+<|im_start|>assistant
+"""
         return prompt
 
 
@@ -316,25 +313,26 @@ URL: {url}
         # ✨ 使用配置文件加载的 system prompt
         system_content = self.deep_analysis_prompt
         
-        # 添加初步判定信息
-        system_content += f"\n\n初步判定: {attack_type}"
+         # ✅ 修改：RAG案例和初步判定都移到user部分
+        user_content = f"""请详细分析以下URL的威胁情况:
+
+URL: {url}
+初步判定: {attack_type}"""
         
-        # 如果有 RAG 案例,添加参考
         if similar_cases:
             rag_context = "\n\n参考案例:\n"
             for i, case in enumerate(similar_cases[:5], 1):
                 label_cn = "威胁" if case['label'] == 'attack' else "安全"
-                rag_context += f"{i}. {label_cn}: {case['url'][:60]}...\n"
-            system_content += rag_context
+                rag_context += f"{i}. {label_cn} (相似度 {case['similarity_score']:.1%}): {case['url'][:60]}...\n"
+            # ✅ RAG添加到user内容中
+            user_content = user_content + rag_context
         
         prompt = f"""<|im_start|>system
-    {system_content}
-    <|im_end|>
-    <|im_start|>user
-    请详细分析以下URL的威胁情况:
-    {url}<|im_end|>
-    <|im_start|>assistant
-    """
+{system_content}<|im_end|>
+<|im_start|>user
+{user_content}<|im_end|>
+<|im_start|>assistant
+"""
         return prompt
     
     def _generate(self, model, text: str, max_new_tokens: int, temperature: float, url: str) -> dict:
